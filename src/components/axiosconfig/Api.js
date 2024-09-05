@@ -1,13 +1,28 @@
 import axios from 'axios';
 
+// Get token from localStorage or any other method you use
+const getToken = () => {
+  return localStorage.getItem('jwtToken');
+};
+
 // Create an instance of axios with base configurations
 const api = axios.create({
-  baseURL: 'https://api.example.com',  // Replace with your API's base URL
+  baseURL: 'http://localhost:8080',  // Update this to your backend's base URL
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer <your-token-here>',  // If you need token-based authentication
   },
   timeout: 10000, // 10 seconds timeout for requests
+});
+
+// Add a request interceptor to inject token
+api.interceptors.request.use((config) => {
+  const token = getToken();  // Retrieve token from storage
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+}, (error) => {
+  return Promise.reject(error);
 });
 
 // Example GET request
