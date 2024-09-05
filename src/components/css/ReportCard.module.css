@@ -1,60 +1,121 @@
 .card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    padding: 1rem;
-  }
-  
-  .address {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .victimCount {
-    color: #4b5563;
-    margin-bottom: 0.5rem;
-  }
-  
-  .status {
-    display: inline-block;
-    padding: 0.25rem 0.5rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-  
-  .statusWaiting {
-    background-color: #fef3c7;
-    color: #d97706;
-  }
-  
-  .statusVisited {
-    background-color: #d1fae5;
-    color: #059669;
-  }
-  
-  .statusFalse {
-    background-color: #fee2e2;
-    color: #dc2626;
-  }
-  
-  .buttonGroup {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1rem;
-  }
-  
-  .button {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    border-radius: 0.25rem;
-    border: 1px solid #d1d5db;
-    background-color: white;
-    color: #374151;
-    cursor: pointer;
-    margin-left: 0.5rem;
-  }
-  
-  .button:hover {
-    background-color: #f3f4f6;
-  }
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+}
+
+.address {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.victimCount {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.statusWaiting {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.statusVisited {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.statusFalse {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: #374151;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.button:hover {
+  background-color: #f3f4f6;
+}
+
+.buttonSuccess {
+  background-color: #d1fae5;
+  color: #059669;
+  border: none;
+}
+
+.buttonSuccess:disabled {
+  background-color: #d1fae5;
+  cursor: not-allowed;
+}
+
+.buttonDanger {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: none;
+}
+
+.buttonDanger:disabled {
+  background-color: #fee2e2;
+  cursor: not-allowed;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.buttonTweet {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.buttonTweet:hover {
+  background-color: #2563eb;
+}

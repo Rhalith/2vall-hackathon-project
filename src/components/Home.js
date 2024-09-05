@@ -233,6 +233,7 @@ export default function Home() {
                   address={report.address}
                   victimCount={report.victimCount}
                   status={report.status}
+                  tweet={report.tweet} // Passing the tweet URL to the ReportCard
                   onStatusChange={(newStatus) => handleStatusChange(report.id, newStatus)}
                 />
               ))
