@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './css/ReportCard.module.css';
 import Popup from './Popup'; // Import the Popup component
 import LeafletMap from './LeafletMap'; // Import the LeafletMap component
-import {jwtDecode} from 'jwt-decode'; // Import jwtDecode to decode JWT token
+import { jwtDecode } from 'jwt-decode'; // Import jwtDecode to decode JWT token
 
 export default function ReportCard({ address, victimCount, status, tweet, coordinates, phoneNumber, needs, language, onUpdateStatus }) {
   const [isTweetVisible, setIsTweetVisible] = useState(false);
@@ -10,6 +10,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
   const [isDropdownVisible, setIsDropdownVisible] = useState(false); // State for dropdown visibility
   const [userRole, setUserRole] = useState(null); // State to store user role if logged in
 
+  // On component mount, check for a stored JWT token
   useEffect(() => {
     const token = localStorage.getItem('jwtToken');
     if (token) {
@@ -32,11 +33,6 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
 
   const toggleDropdown = () => {
     setIsDropdownVisible(!isDropdownVisible);
-  };
-
-  const handleStatusChange = (newStatus) => {
-    onUpdateStatus(newStatus); // Update backend with the new status
-    setIsDropdownVisible(false); // Close the dropdown after status change
   };
 
   // Define text for different languages
@@ -81,21 +77,35 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
     },
   };
 
-  // Turkish to English status mapping
+  // Turkish to English status translation
   const statusTranslation = {
     'Yardım Bekliyor': text[language].helpNeeded,
     'Gidildi': text[language].visited,
     'Asılsız': text[language].falseReport,
   };
 
-  // Convert status from Turkish to the preferred language
+  // English to Turkish status translation for saving in the database
+  const reverseStatusTranslation = {
+    [text.EN.helpNeeded]: 'Yardım Bekliyor',
+    [text.EN.visited]: 'Gidildi',
+    [text.EN.falseReport]: 'Asılsız',
+  };
+
+  // Convert the Turkish status to the selected language for display
   const translatedStatus = statusTranslation[status] || status;
 
-  // This maps the dropdown labels to actual statuses
+  // This maps the dropdown labels to the actual statuses (in selected language)
   const statusMapping = {
     [text[language].changeToVisited]: text[language].visited,
     [text[language].changeToFalse]: text[language].falseReport,
     [text[language].changeToHelpNeeded]: text[language].helpNeeded,
+  };
+
+  // When the status changes, translate it back to Turkish before sending to backend
+  const handleStatusChange = (newStatus) => {
+    const statusInTurkish = reverseStatusTranslation[newStatus] || newStatus;
+    onUpdateStatus(statusInTurkish); // Send Turkish status to the backend
+    setIsDropdownVisible(false); // Close the dropdown after status change
   };
 
   // Check if phoneNumber or needs are empty, "N/A", or "yok", and display the fallback message
