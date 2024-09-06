@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
-import {jwtDecode} from 'jwt-decode'; // Import jwtDecode to decode the JWT token
+import { jwtDecode } from 'jwt-decode'; // Import jwtDecode to decode the JWT token
 import ReportCard from './ReportCard'; // Import updated ReportCard component
 import styles from './css/Home.module.css';
 import api from './axiosconfig/Api';
@@ -104,7 +104,6 @@ export default function Home() {
     localStorage.setItem('language', language === 'TR' ? 'EN' : 'TR'); // Save new language to localStorage
   };
 
-
   // Load saved language preference from localStorage
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language');
@@ -127,6 +126,7 @@ export default function Home() {
       neighborhoodPlaceholder: 'Mahalle',
       login: 'Giriş Yap',
       logout: 'Çıkış Yap',
+      noResults: 'Sonuç bulunamadı',
     },
     EN: {
       welcome: 'Earthquake Victim Reports',
@@ -140,6 +140,7 @@ export default function Home() {
       neighborhoodPlaceholder: 'Neighborhood',
       login: 'Log In',
       logout: 'Log Out',
+      noResults: 'No results found',
     },
   };
 
@@ -192,6 +193,27 @@ export default function Home() {
     setRegion(e.target.value);
     setDistrict(''); // Reset district when region changes
     setNeighborhood(''); // Reset neighborhood when region changes
+  };
+
+  // Function to handle updating status of a report
+  const handleUpdateStatus = async (reportId, newStatus) => {
+    try {
+      // Make a PATCH request to update the report status
+      const response = await api.patch(`/api/reports/updateStatus/${reportId}`, { newStatus });
+  
+      if (response.status === 200) {
+        // Update the state to reflect the new status of the report
+        setAllReports((prevReports) => {
+          return prevReports.map((report) =>
+            report.id === reportId ? { ...report, newStatus } : report
+          );
+        });
+        // Re-apply filters to the updated reports
+        handleFilterReports();
+      }
+    } catch (error) {
+      console.error('Error updating report status:', error);
+    }
   };
 
   return (
@@ -339,24 +361,25 @@ export default function Home() {
 
           {/* Display the Filtered Reports */}
           <div className={styles.grid}>
-  {filteredReports.length > 0 ? (
-    filteredReports.map((report) => (
-      <ReportCard
-        key={report.id}
-        address={report.locationHierarchy}
-        victimCount={report.victimCount}
-        status={report.status}
-        tweet={report.tweet}
-        coordinates={[report.coordinates.latitude, report.coordinates.longitude]} // Pass coordinates here
-        phoneNumber={report.phoneNumber} // Pass phoneNumber here
-        needs={report.needs} // Pass needs here
-        language={language} // Pass the selected language here
-      />
-    ))
-  ) : (
-    <p>{text[language].noResults}</p>
-  )}
-</div>
+            {filteredReports.length > 0 ? (
+              filteredReports.map((report) => (
+                <ReportCard
+                  key={report.id}
+                  address={report.locationHierarchy}
+                  victimCount={report.victimCount}
+                  status={report.status}
+                  tweet={report.tweet}
+                  coordinates={[report.coordinates.latitude, report.coordinates.longitude]} // Pass coordinates here
+                  phoneNumber={report.phoneNumber}
+                  needs={report.needs}
+                  language={language} // Pass the language for translation
+                  onUpdateStatus={(newStatus) => handleUpdateStatus(report.id, newStatus)} // Pass the update handler
+                />
+              ))
+            ) : (
+              <p>{text[language].noResults}</p>
+            )}
+          </div>
         </div>
       </main>
     </div>

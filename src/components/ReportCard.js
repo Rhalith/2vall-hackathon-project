@@ -1,11 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './css/ReportCard.module.css';
 import Popup from './Popup'; // Import the Popup component
 import LeafletMap from './LeafletMap'; // Import the LeafletMap component
+import {jwtDecode} from 'jwt-decode'; // Import jwtDecode to decode JWT token
 
-export default function ReportCard({ address, victimCount, status, tweet, coordinates, phoneNumber, needs, language }) {
+export default function ReportCard({ address, victimCount, status, tweet, coordinates, phoneNumber, needs, language, onUpdateStatus }) {
   const [isTweetVisible, setIsTweetVisible] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false); // State for dropdown visibility
+  const [userRole, setUserRole] = useState(null); // State to store user role if logged in
+
+  useEffect(() => {
+    const token = localStorage.getItem('jwtToken');
+    if (token) {
+      try {
+        const decoded = jwtDecode(token);
+        setUserRole(decoded.roles); // Set the user role from JWT token
+      } catch (error) {
+        console.error('Error decoding token:', error);
+      }
+    }
+  }, []);
 
   const toggleTweetVisibility = () => {
     setIsTweetVisible(!isTweetVisible);
@@ -13,6 +28,15 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
 
   const toggleMap = () => {
     setIsMapOpen(!isMapOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownVisible(!isDropdownVisible);
+  };
+
+  const handleStatusChange = (newStatus) => {
+    onUpdateStatus(newStatus); // Update backend with the new status
+    setIsDropdownVisible(false); // Close the dropdown after status change
   };
 
   // Define text for different languages
@@ -31,6 +55,10 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       phoneNumber: 'Telefon Numarası',
       needs: 'İhtiyaç Listesi',
       noInfo: 'Bilgi bulunamadı!',
+      changeStatus: 'Durumunu Değiştir',
+      changeToVisited: 'Gidildi olarak değiştir',
+      changeToFalse: 'Asılsız olarak değiştir',
+      changeToHelpNeeded: 'Yardım Bekliyor olarak değiştir',
     },
     EN: {
       estimatedVictims: 'Estimated Victim Count',
@@ -46,12 +74,38 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       phoneNumber: 'Phone Number',
       needs: 'Needs List',
       noInfo: 'No information found!',
+      changeStatus: 'Change Status',
+      changeToVisited: 'Mark as Visited',
+      changeToFalse: 'Mark as False Report',
+      changeToHelpNeeded: 'Mark as Help Needed',
     },
+  };
+
+  // This maps the dropdown labels to actual statuses
+  const statusMapping = {
+    [text[language].changeToVisited]: text[language].visited,
+    [text[language].changeToFalse]: text[language].falseReport,
+    [text[language].changeToHelpNeeded]: text[language].helpNeeded,
   };
 
   // Check if phoneNumber or needs are empty, "N/A", or "yok", and display the fallback message
   const displayPhoneNumber = phoneNumber && phoneNumber.toLowerCase() !== 'n/a' && phoneNumber.toLowerCase() !== 'yok' ? phoneNumber : text[language].noInfo;
   const displayNeeds = needs && needs.toLowerCase() !== 'n/a' && needs.toLowerCase() !== 'yok' ? needs : text[language].noInfo;
+
+  const statusOptions = {
+    [text[language].helpNeeded]: [
+      { label: text[language].changeToVisited, className: styles.visitedButton },
+      { label: text[language].changeToFalse, className: styles.falseReportButton },
+    ],
+    [text[language].visited]: [
+      { label: text[language].changeToFalse, className: styles.falseReportButton },
+      { label: text[language].changeToHelpNeeded, className: styles.helpNeededButton },
+    ],
+    [text[language].falseReport]: [
+      { label: text[language].changeToVisited, className: styles.visitedButton },
+      { label: text[language].changeToHelpNeeded, className: styles.helpNeededButton },
+    ],
+  };
 
   return (
     <div className={styles.card}>
@@ -83,6 +137,28 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
           {text[language].seeLocation}
         </button>
       </div>
+
+      {/* Dropdown slider for logged-in users with roles */}
+      {userRole && (
+        <div className={styles.statusDropdown}>
+          <button onClick={toggleDropdown} className={styles.buttonStatus}>
+            {text[language].changeStatus}
+          </button>
+          {isDropdownVisible && (
+            <div className={styles.dropdownContent}>
+              {statusOptions[status].map((option) => (
+                <button
+                  key={option.label}
+                  onClick={() => handleStatusChange(statusMapping[option.label])} // Send actual status, not label
+                  className={option.className}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Dropdown slider for showing the tweet */}
       <div className={`${styles.tweetContainer} ${isTweetVisible ? styles.visible : ''}`}>
