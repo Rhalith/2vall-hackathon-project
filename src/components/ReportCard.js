@@ -1,12 +1,18 @@
 import { useState } from 'react';
-import Popup from './Popup'; // Import the reusable Popup component
+import Popup from './Popup'; // Import the Popup component
 import styles from './css/ReportCard.module.css';
+import LeafletMap from './LeafletMap'; // Import the LeafletMap component
 
 export default function ReportCard({ address, victimCount, status, tweet }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isMapOpen, setIsMapOpen] = useState(false);
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
+  };
+
+  const toggleMap = () => {
+    setIsMapOpen(!isMapOpen);
   };
 
   return (
@@ -26,13 +32,24 @@ export default function ReportCard({ address, victimCount, status, tweet }) {
         <button className={`${styles.button} ${styles.buttonTweet}`} onClick={togglePopup}>
           Tweeti Gör
         </button>
+        <button className={`${styles.button} ${styles.buttonMap}`} onClick={toggleMap}>
+          Konumu Gör
+        </button>
       </div>
 
-      {/* Render the Popup component when isPopupOpen is true */}
+      {/* Popup for the Tweet */}
       {isPopupOpen && (
         <Popup 
           content={tweet ? <p>{tweet}</p> : <p>Tweet bulunamadı!</p>} 
           onClose={togglePopup} 
+        />
+      )}
+
+      {/* Popup for the Leaflet Map */}
+      {isMapOpen && (
+        <Popup
+          content={<LeafletMap address={address} />} // Show the map based on address
+          onClose={toggleMap}
         />
       )}
     </div>
