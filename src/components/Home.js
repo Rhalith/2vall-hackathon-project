@@ -116,7 +116,7 @@ export default function Home() {
   // Language options for text
   const text = {
     TR: {
-      welcome: 'Deprem Mağduru Raporları',
+      welcome: 'Depremzede Raporları',
       seeAllLocations: 'Tüm konumları gör',
       helpWaiting: 'Yardım Bekliyor',
       visited: 'Gidildi',

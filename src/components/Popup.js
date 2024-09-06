@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import styles from './css/Popup.module.css';
 
 export default function Popup({ content, onClose }) {
-  // Close the popup when clicking outside the content or pressing the escape key
+  // Close the popup when pressing the escape key
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {

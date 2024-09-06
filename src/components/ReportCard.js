@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import Popup from './Popup'; // Import the Popup component
 import styles from './css/ReportCard.module.css';
+import Popup from './Popup'; // Import the Popup component
 import LeafletMap from './LeafletMap'; // Import the LeafletMap component
 
 export default function ReportCard({ address, victimCount, status, tweet, coordinates, phoneNumber, needs, language }) {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isTweetVisible, setIsTweetVisible] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
 
-  const togglePopup = () => {
-    setIsPopupOpen(!isPopupOpen);
+  const toggleTweetVisibility = () => {
+    setIsTweetVisible(!isTweetVisible);
   };
 
   const toggleMap = () => {
@@ -23,7 +23,8 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       helpNeeded: 'Yardım Bekliyor',
       visited: 'Gidildi',
       falseReport: 'Asılsız',
-      seeTweet: 'Tweeti Gör',
+      showTweet: 'Tweeti göster',
+      hideTweet: 'Tweeti gizle',
       seeLocation: 'Konumu Gör',
       noTweet: 'Tweet bulunamadı!',
       importantInfo: 'Önemli Bilgiler',
@@ -37,7 +38,8 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       helpNeeded: 'Help Needed',
       visited: 'Visited',
       falseReport: 'False Report',
-      seeTweet: 'See Tweet',
+      showTweet: 'Show Tweet',
+      hideTweet: 'Hide Tweet',
       seeLocation: 'See Location',
       noTweet: 'Tweet not found!',
       importantInfo: 'Important Information',
@@ -53,56 +55,43 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
 
   return (
     <div className={styles.card}>
-      <div className={styles.cardHeader}>{address}</div>
-      <div className={styles.cardContent}>
-        <p>{text[language].estimatedVictims}: {victimCount}</p>
-        <p>{text[language].status}: {status}</p>
-        
-        {/* Display Important Information */}
-        <div className={styles.importantInfo}>
-          <p><strong>{text[language].importantInfo}:</strong></p>
-          <p>{text[language].phoneNumber}: {displayPhoneNumber}</p>
-          <p>{text[language].needs}: {displayNeeds}</p>
-        </div>
+      <div className={styles.address}>{address}</div>
+      <div className={styles.victimCount}>{text[language].estimatedVictims}: {victimCount}</div>
+      <div className={`${styles.status} ${status === text[language].helpNeeded ? styles.statusWaiting : status === text[language].visited ? styles.statusVisited : styles.statusFalse}`}>
+        {status}
       </div>
-      <div className={styles.cardFooter}>
+
+      {/* Display Important Information */}
+      <div className={styles.importantInfo}>
+        <p><strong>{text[language].importantInfo}:</strong></p>
+        <p>{text[language].phoneNumber}: {displayPhoneNumber}</p>
+        <p>{text[language].needs}: {displayNeeds}</p>
+      </div>
+
+      <div className={styles.buttonGroup}>
         <button 
-          className={`${styles.button} ${styles.buttonSuccess}`} 
-          disabled={status === text[language].visited}
+          className={styles.buttonTweet} 
+          onClick={toggleTweetVisibility}
         >
-          {text[language].visited}
+          {isTweetVisible ? text[language].hideTweet : text[language].showTweet}
         </button>
+
         <button 
-          className={`${styles.button} ${styles.buttonDanger}`} 
-          disabled={status === text[language].falseReport}
-        >
-          {text[language].falseReport}
-        </button>
-        <button 
-          className={`${styles.button} ${styles.buttonTweet}`} 
-          onClick={togglePopup}
-        >
-          {text[language].seeTweet}
-        </button>
-        <button 
-          className={`${styles.button} ${styles.buttonMap}`} 
+          className={styles.buttonMap} 
           onClick={toggleMap}
         >
           {text[language].seeLocation}
         </button>
       </div>
 
-      {/* Popup for the Tweet */}
-      {isPopupOpen && (
-        <Popup 
-          content={tweet ? <p>{tweet}</p> : <p>{text[language].noTweet}</p>} 
-          onClose={togglePopup} 
-        />
-      )}
+      {/* Dropdown slider for showing the tweet */}
+      <div className={`${styles.tweetContainer} ${isTweetVisible ? styles.visible : ''}`}>
+        <p>{tweet ? tweet : text[language].noTweet}</p>
+      </div>
 
       {/* Popup for the Leaflet Map */}
       {isMapOpen && (
-        <Popup
+        <Popup 
           content={<LeafletMap coordinates={coordinates} address={address} />} // Pass coordinates and address to LeafletMap
           onClose={toggleMap}
         />

@@ -40,7 +40,7 @@
 
 .buttonGroup {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 1rem;
 }
 
@@ -57,6 +57,29 @@
 
 .button:hover {
   background-color: #f3f4f6;
+}
+
+.buttonTweet {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  margin-right: 0.5rem; /* Add space between Tweet and Location button */
+}
+
+.buttonTweet:hover {
+  background-color: #2563eb;
+}
+
+.buttonMap {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+}
+
+.buttonMap:hover {
+  background-color: #2563eb;
 }
 
 .buttonSuccess {
@@ -81,41 +104,34 @@
   cursor: not-allowed;
 }
 
-.modal {
-  position: fixed;
-  z-index: 1000;
-  left: 0;
+
+/* Dropdown Tweet container */
+.tweetContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.tweetContainer.visible {
+  max-height: 300px; /* Adjust to fit the content */
+  opacity: 1;
+  padding: 0.5rem;
+  background-color: #f1f5f9;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
+}
+
+/* Map Popup container */
+.mapPopup {
+  position: absolute;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.modalContent {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
-
-.closeButton {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.buttonTweet {
-  background-color: #1da1f2;
-  color: white;
-}
-
-.buttonTweet:hover {
-  background-color: #2563eb;
 }
