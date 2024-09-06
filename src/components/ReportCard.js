@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './css/ReportCard.module.css';
 import Popup from './Popup'; // Import the Popup component
 import LeafletMap from './LeafletMap'; // Import the LeafletMap component
+import FeedbackPopup from './FeedbackPopup'; // Import the FeedbackPopup component
 import { jwtDecode } from 'jwt-decode'; // Import jwtDecode to decode JWT token
 
 export default function ReportCard({ address, victimCount, status, tweet, coordinates, phoneNumber, needs, language, onUpdateStatus }) {
@@ -10,6 +11,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
   const [isDropdownVisible, setIsDropdownVisible] = useState(false); // State for dropdown visibility
   const [userRole, setUserRole] = useState(null); // State to store user role if logged in
   const [isCopied, setIsCopied] = useState(false); // State to track if the address was copied
+  const [isFeedbackPopupOpen, setIsFeedbackPopupOpen] = useState(false); // State for feedback popup
 
   // On component mount, check for a stored JWT token
   useEffect(() => {
@@ -67,6 +69,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       changeToFalse: 'Asılsız olarak değiştir',
       changeToHelpNeeded: 'Yardım Bekliyor olarak değiştir',
       copied: 'Kopyalandı!',
+      feedback: 'Geri Bildirim',
     },
     EN: {
       estimatedVictims: 'Estimated Victim Count',
@@ -88,6 +91,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       changeToFalse: 'Mark as False Report',
       changeToHelpNeeded: 'Mark as Help Needed',
       copied: 'Copied!',
+      feedback: 'Feedback',
     },
   };
 
@@ -141,6 +145,15 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
     ],
   };
 
+  // Handle feedback popup visibility
+  const handleOpenFeedbackPopup = () => {
+    setIsFeedbackPopupOpen(true); // Open feedback popup
+  };
+
+  const handleCloseFeedbackPopup = () => {
+    setIsFeedbackPopupOpen(false); // Close feedback popup
+  };
+
   return (
     <div className={styles.card}>
       <div className={styles.address}>{address}</div>
@@ -180,32 +193,34 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
         </button>
       </div>
 
-      {/* Dropdown slider for logged-in users with roles */}
-      {userRole && (
-        <div className={styles.statusDropdown}>
-          <button onClick={toggleDropdown} className={styles.buttonStatus}>
-            {text[language].changeStatus}
-          </button>
-          {isDropdownVisible && (
-            <div className={styles.dropdownContent}>
-              {statusOptions[translatedStatus].map((option) => (
-                <button
-                  key={option.label}
-                  onClick={() => handleStatusChange(statusMapping[option.label])} // Send actual status, not label
-                  className={option.className}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
-
       {/* Dropdown slider for showing the tweet */}
       <div className={`${styles.tweetContainer} ${isTweetVisible ? styles.visible : ''}`}>
         <p>{tweet ? tweet : text[language].noTweet}</p>
       </div>
+      {/* Show the "Geri Bildirim" button only after the tweet is visible */}
+      {isTweetVisible && (
+        <>
+          <button 
+            className={styles.buttonFeedback} 
+            onClick={handleOpenFeedbackPopup}
+          >
+            {text[language].feedback}
+          </button>
+        </>
+      )}
+
+      {/* Feedback Popup */}
+      {isFeedbackPopupOpen && (
+        <FeedbackPopup
+        tweet={tweet}
+        address={address}
+        language={language} // Pass language prop here
+        onClose={handleCloseFeedbackPopup}
+        onSubmit={(feedbackData) => console.log("Feedback submitted:", feedbackData)}
+        />
+      )}
+
+
 
       {/* Popup for the Leaflet Map */}
       {isMapOpen && (
