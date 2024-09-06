@@ -143,3 +143,16 @@
   margin-top: 1rem;
   transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
 }
+
+.buttonShare {
+  background-color: #10b981; /* Green background */
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.buttonShare:hover {
+  background-color: #059669; /* Darker green on hover */
+}

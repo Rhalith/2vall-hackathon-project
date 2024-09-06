@@ -10,6 +10,9 @@ import styles from './css/AllLocationsMap.module.css';
 
 export default function AllLocationsMap() {
   const [groupedLocations, setGroupedLocations] = useState([]);
+  const [language, setLanguage] = useState('TR'); // Language state (default to TR)
+  const [copiedReportId, setCopiedReportId] = useState(null); // Track which report has been copied
+
   const navigate = useNavigate();
 
   const groupLocationsByCoordinates = (reports) => {
@@ -67,10 +70,42 @@ export default function AllLocationsMap() {
     });
   };
 
+  const copyToClipboard = (text, reportId) => {
+    navigator.clipboard.writeText(text);
+    setCopiedReportId(reportId); // Mark this report as copied
+    setTimeout(() => setCopiedReportId(null), 2000); // Reset after 2 seconds
+  };
+
+  // Define text for different languages
+  const text = {
+    TR: {
+      backButton: 'Ana Sayfaya Dön',
+      copy: 'Kopyala',
+      copied: 'Kopyalandı',
+      victimCount: 'Tahmini mağdur sayısı',
+      status: 'Durum',
+      switchLang: 'EN',
+    },
+    EN: {
+      backButton: 'Go Back to Homepage',
+      copy: 'Copy',
+      copied: 'Copied',
+      victimCount: 'Estimated Victim Count',
+      status: 'Status',
+      switchLang: 'TR',
+    },
+  };
+
   return (
     <div className={styles.mapContainer}>
+      {/* TR/EN Language Toggle Button */}
+      <button onClick={() => setLanguage((prev) => (prev === 'TR' ? 'EN' : 'TR'))} className={styles.langButton}>
+        {text[language].switchLang}
+      </button>
+
+      {/* Back Button */}
       <button onClick={() => navigate('/')} className={styles.backButton}>
-        Ana Sayfaya Dön
+        {text[language].backButton}
       </button>
 
       <MapContainer center={defaultCenter} zoom={6} className={styles.map}>
@@ -85,20 +120,27 @@ export default function AllLocationsMap() {
             position={[location.lat, location.lon]}
             icon={createCustomMarkerIcon(location.count)}
           >
-<Popup className={styles.popupContainer}>
-  {location.reports.map((report, index) => (
-    <div key={index} className={styles.popupReport}>
-      <div className={styles.popupAddress}>
-        {report.locationHierarchy}
-      </div>
-      <div className={styles.popupDetails}>
-        <span>Tahmini mağdur sayısı:</span> {report.victimCount || 'Bilinmiyor'}
-        <br />
-        <span>Durum:</span> {report.status}
-      </div>
-    </div>
-  ))}
-</Popup>
+            <Popup className={styles.popupContainer}>
+              {location.reports.map((report, index) => (
+                <div key={index} className={styles.popupReport}>
+                  <div className={styles.popupAddress}>
+                    {report.locationHierarchy}
+                    {/* Add Copy Button with feedback */}
+                    <button
+                      onClick={() => copyToClipboard(report.locationHierarchy, report.id)}
+                      className={styles.copyButton}
+                    >
+                      {copiedReportId === report.id ? text[language].copied : text[language].copy}
+                    </button>
+                  </div>
+                  <div className={styles.popupDetails}>
+                    <span>{text[language].victimCount}:</span> {report.victimCount || 'Bilinmiyor'}
+                    <br />
+                    <span>{text[language].status}:</span> {report.status}
+                  </div>
+                </div>
+              ))}
+            </Popup>
           </Marker>
         ))}
       </MapContainer>

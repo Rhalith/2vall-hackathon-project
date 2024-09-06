@@ -9,6 +9,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false); // State for dropdown visibility
   const [userRole, setUserRole] = useState(null); // State to store user role if logged in
+  const [isCopied, setIsCopied] = useState(false); // State to track if the address was copied
 
   // On component mount, check for a stored JWT token
   useEffect(() => {
@@ -35,6 +36,15 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
     setIsDropdownVisible(!isDropdownVisible);
   };
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(address).then(() => {
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false); // Reset after 2 seconds
+      }, 2000);
+    });
+  };
+
   // Define text for different languages
   const text = {
     TR: {
@@ -46,6 +56,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       showTweet: 'Tweeti göster',
       hideTweet: 'Tweeti gizle',
       seeLocation: 'Konumu Gör',
+      shareLocation: 'Konumu Paylaş',
       noTweet: 'Tweet bulunamadı!',
       importantInfo: 'Önemli Bilgiler',
       phoneNumber: 'Telefon Numarası',
@@ -55,6 +66,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       changeToVisited: 'Gidildi olarak değiştir',
       changeToFalse: 'Asılsız olarak değiştir',
       changeToHelpNeeded: 'Yardım Bekliyor olarak değiştir',
+      copied: 'Kopyalandı!',
     },
     EN: {
       estimatedVictims: 'Estimated Victim Count',
@@ -65,6 +77,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       showTweet: 'Show Tweet',
       hideTweet: 'Hide Tweet',
       seeLocation: 'See Location',
+      shareLocation: 'Share Location',
       noTweet: 'Tweet not found!',
       importantInfo: 'Important Information',
       phoneNumber: 'Phone Number',
@@ -74,6 +87,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       changeToVisited: 'Mark as Visited',
       changeToFalse: 'Mark as False Report',
       changeToHelpNeeded: 'Mark as Help Needed',
+      copied: 'Copied!',
     },
   };
 
@@ -155,6 +169,14 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
           onClick={toggleMap}
         >
           {text[language].seeLocation}
+        </button>
+
+        {/* New "Konumu Paylaş" Button */}
+        <button 
+          className={styles.buttonShare} 
+          onClick={copyToClipboard}
+        >
+          {isCopied ? text[language].copied : text[language].shareLocation}
         </button>
       </div>
 
