@@ -3,7 +3,7 @@ import Popup from './Popup'; // Import the Popup component
 import styles from './css/ReportCard.module.css';
 import LeafletMap from './LeafletMap'; // Import the LeafletMap component
 
-export default function ReportCard({ address, victimCount, status, tweet, coordinates, language }) {
+export default function ReportCard({ address, victimCount, status, tweet, coordinates, phoneNumber, needs, language }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
 
@@ -26,6 +26,10 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       seeTweet: 'Tweeti Gör',
       seeLocation: 'Konumu Gör',
       noTweet: 'Tweet bulunamadı!',
+      importantInfo: 'Önemli Bilgiler',
+      phoneNumber: 'Telefon Numarası',
+      needs: 'İhtiyaç Listesi',
+      noInfo: 'Bilgi bulunamadı!',
     },
     EN: {
       estimatedVictims: 'Estimated Victim Count',
@@ -36,8 +40,16 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       seeTweet: 'See Tweet',
       seeLocation: 'See Location',
       noTweet: 'Tweet not found!',
+      importantInfo: 'Important Information',
+      phoneNumber: 'Phone Number',
+      needs: 'Needs List',
+      noInfo: 'No information found!',
     },
   };
+
+  // Check if phoneNumber or needs are empty, "N/A", or "yok", and display the fallback message
+  const displayPhoneNumber = phoneNumber && phoneNumber.toLowerCase() !== 'n/a' && phoneNumber.toLowerCase() !== 'yok' ? phoneNumber : text[language].noInfo;
+  const displayNeeds = needs && needs.toLowerCase() !== 'n/a' && needs.toLowerCase() !== 'yok' ? needs : text[language].noInfo;
 
   return (
     <div className={styles.card}>
@@ -45,6 +57,13 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       <div className={styles.cardContent}>
         <p>{text[language].estimatedVictims}: {victimCount}</p>
         <p>{text[language].status}: {status}</p>
+        
+        {/* Display Important Information */}
+        <div className={styles.importantInfo}>
+          <p><strong>{text[language].importantInfo}:</strong></p>
+          <p>{text[language].phoneNumber}: {displayPhoneNumber}</p>
+          <p>{text[language].needs}: {displayNeeds}</p>
+        </div>
       </div>
       <div className={styles.cardFooter}>
         <button 

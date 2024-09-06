@@ -348,6 +348,8 @@ export default function Home() {
         status={report.status}
         tweet={report.tweet}
         coordinates={[report.coordinates.latitude, report.coordinates.longitude]} // Pass coordinates here
+        phoneNumber={report.phoneNumber} // Pass phoneNumber here
+        needs={report.needs} // Pass needs here
         language={language} // Pass the selected language here
       />
     ))
