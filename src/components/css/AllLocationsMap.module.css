@@ -4,10 +4,10 @@
     height: 100vh;
     width: 100%;
     margin: 0;
-  }
-  
-  /* Button positioned at the top center, floating on top of the map */
-  .backButton {
+}
+
+/* Button positioned at the top center, floating on top of the map */
+.backButton {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -16,34 +16,36 @@
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #3b82f6;
+    background-color: #2a52be; /* Blue */
     color: #fff;
     border: none;
     border-radius: 5px;
-  }
-  
-  .backButton:hover {
-    background-color: #2563eb;
-  }
-  
-  /* Full-page map */
-  .map {
+    transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+    background-color: #0e2d6f; /* Darker blue for better contrast */
+}
+
+/* Full-page map */
+.map {
     height: 100%;
     width: 100%;
-  }
-  
-  /* Custom marker style */
-  .customMarker {
+}
+
+/* Custom marker style */
+.customMarker {
     text-align: center;
     font-size: 14px;
     color: white;
-    background-color: #3b82f6;
+    background-color: #2a52be; /* Same blue */
     border-radius: 50%;
     line-height: 30px;
-  }
-  
-  .markerIcon {
-    background-color: #3b82f6;
+    border: 2px solid #fff; /* White border for better contrast */
+}
+
+.markerIcon {
+    background-color: #2a52be;
     color: white;
     width: 30px;
     height: 30px;
@@ -52,67 +54,67 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-  }
-  
-  /* Marker popup */
-  .popupContainer {
-    max-width: 300px; /* Adjust width */
-    max-height: 400px; /* Set maximum height */
-    overflow-y: auto;  /* Make content scrollable */
-    padding-right: 10px; /* Prevent content from being cut off */
-  }
-  
-  .popupReport {
+    border: 2px solid #fff; /* Border for better contrast */
+}
+
+/* Marker popup */
+.popupContainer {
+    max-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.popupReport {
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .popupReport:last-child {
+    border-bottom: 2px solid #999; /* Darker gray for better visibility */
+}
+
+.popupReport:last-child {
     border-bottom: none;
-  }
-  
-  .popupAddress {
+}
+
+.popupAddress {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #374151;
+    color: #202020; /* Dark gray */
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .popupDetails {
-    color: #4b5563;
+}
+
+.popupDetails {
+    color: #303030; /* Slightly darker gray */
     font-size: 14px;
-  }
-  
-  .popupDetails span {
+}
+
+.popupDetails span {
     font-weight: bold;
-  }
-  
-  /* Clipboard button inside the popup */
+}
+
 /* Clipboard button inside the popup */
-/* Clipboard (Kopyala/Copy) button inside the popup */
 .copyButton {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 12px;
     margin-left: 10px;
-    color: #3b82f6;
-  }
-  
-  .copyButton:hover {
-    color: #2563eb;
-  }
-  /* Small "copied" feedback message */
-  .copiedText {
-    font-size: 12px;
-    color: green;
-    margin-left: 5px;
-  }
+    color: #2a52be; /* Same blue */
+}
 
-  /* Language switcher button */
+.copyButton:hover {
+    color: #0e2d6f; /* Darker shade for hover state */
+}
+
+/* Small "copied" feedback message */
+.copiedText {
+    font-size: 12px;
+    color: #006400; /* Darker green for better contrast */
+    margin-left: 5px;
+}
+
+/* Language switcher button */
 .langButton {
     position: absolute;
     top: 10px;
@@ -122,30 +124,32 @@
     font-size: 14px;
     cursor: pointer;
     background-color: #f3f4f6;
-    color: #374151;
-    border: 1px solid #d1d5db;
+    color: #202020;
+    border: 1px solid #999; /* Darker gray for better contrast */
     border-radius: 5px;
-  }
-  
-  .langButton:hover {
-    background-color: #e5e7eb;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 600px) {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.langButton:hover {
+    background-color: #e0e0e0;
+    color: #202020;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
     .popupContainer {
-      max-width: 200px;
+        max-width: 200px;
     }
-  
+
     .markerIcon {
-      width: 25px;
-      height: 25px;
-      font-size: 12px;
-      line-height: 25px;
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+        line-height: 25px;
     }
-  
+
     .backButton {
-      padding: 8px 15px;
-      font-size: 14px;
+        padding: 8px 15px;
+        font-size: 14px;
     }
-  }
+}

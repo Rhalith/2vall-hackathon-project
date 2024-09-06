@@ -4,11 +4,12 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f3f4f6; /* Light background color */
+  background-color: #f3f4f6; /* Light background color for readability */
   position: relative;
   padding: 0 100px; /* Add padding to make space for the logos */
 }
 
+/* Logos on the left and right */
 .leftLogo,
 .rightLogo {
   position: absolute;
@@ -32,6 +33,7 @@
   height: auto;
 }
 
+/* Login Form Styling */
 .loginForm {
   background-color: white;
   padding: 30px;
@@ -41,24 +43,26 @@
   width: 100%;
   text-align: center;
   position: relative;
-  z-index: 1; /* Bring the form above background */
+  z-index: 1; /* Ensure form is above background */
 }
 
 .loginForm h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #202020; /* Darker text for readability */
 }
 
 .input {
   width: 95%;
   padding: 12px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #999; /* Darker gray for better contrast */
   border-radius: 4px;
   font-size: 16px;
+  background-color: #ffffff;
 }
 
+/* Password wrapper and toggle visibility */
 .passwordWrapper {
   position: relative;
 }
@@ -69,15 +73,16 @@
   top: 40%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #3b82f6;
+  color: #0053a0; /* Accessible blue for toggle */
   font-size: 14px;
   user-select: none;
 }
 
+/* Button Styling */
 .button {
   width: 100%;
   padding: 12px;
-  background-color: #3b82f6;
+  background-color: #0053a0; /* Accessible blue for button */
   color: white;
   border: none;
   border-radius: 4px;
@@ -86,10 +91,47 @@
 }
 
 .button:hover {
-  background-color: #2563eb;
+  background-color: #003f80; /* Darker shade for hover */
 }
 
+/* Error message styling */
 .errorMessage {
-  color: red;
+  color: #d32f2f; /* Red with better contrast for accessibility */
   margin-top: 15px;
+  font-weight: bold; /* Bold for better visibility */
+}
+
+/* Adjustments for color-blind accessibility */
+
+/* Focus state for inputs and buttons */
+.input:focus,
+.button:focus {
+  outline: 3px solid #2563eb; /* Clear focus indicator for all users */
+}
+
+/* High-contrast error message */
+.errorMessage {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Additional styling for improved visibility */
+input::placeholder {
+  color: #9ca3af; /* Softer gray for placeholders */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .leftLogo,
+  .rightLogo {
+    display: none; /* Hide logos on smaller screens */
+  }
+
+  .loginForm {
+    padding: 20px;
+  }
+
+  .input {
+    width: 100%; /* Full-width input on small screens */
+  }
 }

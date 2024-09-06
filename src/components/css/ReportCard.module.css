@@ -1,4 +1,4 @@
-/* Existing styles */
+/* Card container */
 .card {
   background-color: white;
   border-radius: 0.5rem;
@@ -12,10 +12,11 @@
 }
 
 .victimCount {
-  color: #4b5563;
+  color: #374151; /* Dark gray for better contrast */
   margin-bottom: 0.5rem;
 }
 
+/* Status container */
 .status {
   display: inline-block;
   padding: 0.25rem 0.5rem;
@@ -24,48 +25,54 @@
   font-weight: 500;
 }
 
+/* Status colors */
 .statusWaiting {
-  background-color: #fef3c7;
-  color: #d97706;
+  background-color: #fef08a; /* Yellow for waiting */
+  color: #92400e; /* Dark brown text for contrast */
 }
 
 .statusVisited {
-  background-color: #d1fae5;
-  color: #059669;
+  background-color: #86efac; /* Light green background */
+  color: #065f46; /* Dark green for text */
 }
 
 .statusFalse {
-  background-color: #fee2e2;
-  color: #dc2626;
+  background-color: #fecaca; /* Light red background */
+  color: #b91c1c; /* Dark red for text */
 }
 
+/* Button group container */
 .buttonGroup {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
 }
 
+/* Tweet button */
 .buttonTweet {
-  background-color: #1da1f2;
+  background-color: #1d4ed8; /* Darker blue for accessibility */
   color: white;
   border: none;
   padding: 0.5rem 1.25rem;
   margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 .buttonTweet:hover {
-  background-color: #2563eb;
+  background-color: #1e40af; /* Slightly darker blue on hover */
 }
 
+/* Map button */
 .buttonMap {
-  background-color: #3b82f6;
+  background-color: #2563eb; /* Brighter blue for visibility */
   color: white;
   border: none;
   padding: 0.5rem 1.25rem;
+  cursor: pointer;
 }
 
 .buttonMap:hover {
-  background-color: #2563eb;
+  background-color: #1e3a8a; /* Darker blue on hover */
 }
 
 /* Dropdown for status change */
@@ -75,20 +82,21 @@
 }
 
 .buttonStatus {
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: #e5e7eb; /* Light gray for button background */
+  color: #1f2937; /* Dark gray for button text */
   border: 1px solid #d1d5db;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
 .buttonStatus:hover {
-  background-color: #e5e7eb;
+  background-color: #d1d5db; /* Darker gray on hover */
 }
 
+/* Dropdown content */
 .dropdownContent {
   margin-top: 0.5rem;
-  background-color: #f9fafb;
+  background-color: #f3f4f6; /* Light gray background */
   border-radius: 0.375rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
@@ -100,30 +108,29 @@
   text-align: left;
   padding: 0.5rem;
   cursor: pointer;
-  background-color: #f9fafb;
+  background-color: #f3f4f6;
   border: none;
 }
 
 .dropdownContent button:hover {
-  background-color: #f3f4f6;
+  background-color: #e5e7eb; /* Slight hover effect */
 }
 
-
-/* CSS updates */
+/* Status buttons in dropdown */
 .visitedButton {
-  background-color: #d1fae5;
-  color: #059669;
+  background-color: #bbf7d0; /* Light green for visited */
+  color: #065f46; /* Dark green text */
   margin-bottom: 0.5rem;
 }
 
 .falseReportButton {
-  background-color: #fee2e2;
-  color: #dc2626;
+  background-color: #fecaca; /* Light red for false report */
+  color: #b91c1c; /* Dark red text */
 }
 
 .helpNeededButton {
-  background-color: #fef08a; /* Yellow background */
-  color: #ca8a04; /* Dark yellow text */
+  background-color: #fef08a; /* Yellow for help needed */
+  color: #92400e; /* Dark brown text */
 }
 
 /* Tweet container slider */
@@ -144,8 +151,9 @@
   transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
 }
 
+/* Share button */
 .buttonShare {
-  background-color: #10b981; /* Green background */
+  background-color: #10b981; /* Accessible green */
   color: white;
   border: none;
   padding: 0.5rem 1.25rem;
@@ -154,5 +162,5 @@
 }
 
 .buttonShare:hover {
-  background-color: #059669; /* Darker green on hover */
+  background-color: #047857; /* Darker green on hover */
 }

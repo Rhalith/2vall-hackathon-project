@@ -1,5 +1,3 @@
-/* src/components/css/Register.module.css */
-
 .registerContainer {
     display: flex;
     flex-direction: column;
@@ -26,13 +24,14 @@
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
+    color: #1f2937; /* Darker gray for better contrast */
   }
   
   .registerForm {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for visibility */
     max-width: 400px;
     width: 100%;
     text-align: center;
@@ -42,9 +41,11 @@
     width: 95%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #999; /* Darker gray for better contrast */
     border-radius: 4px;
     font-size: 16px;
+    color: #1f2937; /* Improved contrast */
+    background-color: #f9fafb; /* Slightly lighter background for clarity */
   }
   
   .passwordWrapper {
@@ -53,11 +54,11 @@
   
   .passwordToggle {
     position: absolute;
-    right: 2px;
-    top: 35%;
+    right: 10px;
+    top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #3b82f6;
+    color: #2563eb; /* Darker blue for improved accessibility */
     font-size: 14px;
     user-select: none;
   }
@@ -65,19 +66,43 @@
   .button {
     width: 100%;
     padding: 12px;
-    background-color: #3b82f6;
+    background-color: #2563eb; /* Darker blue for better contrast */
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
   }
   
   .button:hover {
-    background-color: #2563eb;
+    background-color: #1e3a8a; /* Darker shade for hover state */
   }
   
+  /* Improved color scheme for error messages */
   .errorMessage {
-    color: red;
+    color: #dc2626; /* Clear red for errors */
     margin-top: 15px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  /* Focus state for accessibility */
+  .registerForm input:focus {
+    outline: 3px solid #2563eb; /* Darker blue for focus state */
+    background-color: #ffffff; /* Ensure input background is white on focus */
+  }
+  
+  @media (max-width: 600px) {
+    .registerForm {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .button {
+      padding: 10px;
+    }
   }
