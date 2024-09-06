@@ -85,6 +85,9 @@ export default function AllLocationsMap() {
       victimCount: 'Tahmini mağdur sayısı',
       status: 'Durum',
       switchLang: 'EN',
+      helpNeeded: 'Yardım Bekliyor',
+      visited: 'Gidildi',
+      falseReport: 'Asılsız',
     },
     EN: {
       backButton: 'Go Back to Homepage',
@@ -93,7 +96,22 @@ export default function AllLocationsMap() {
       victimCount: 'Estimated Victim Count',
       status: 'Status',
       switchLang: 'TR',
+      helpNeeded: 'Help Needed',
+      visited: 'Visited',
+      falseReport: 'False Report',
     },
+  };
+
+  // Turkish to English status translation
+  const statusTranslation = {
+    'Yardım Bekliyor': text[language].helpNeeded,
+    'Gidildi': text[language].visited,
+    'Asılsız': text[language].falseReport,
+  };
+
+  // Convert the Turkish status to the selected language for display
+  const translateStatus = (status) => {
+    return statusTranslation[status] || status;
   };
 
   return (
@@ -136,7 +154,7 @@ export default function AllLocationsMap() {
                   <div className={styles.popupDetails}>
                     <span>{text[language].victimCount}:</span> {report.victimCount || 'Bilinmiyor'}
                     <br />
-                    <span>{text[language].status}:</span> {report.status}
+                    <span>{text[language].status}:</span> {translateStatus(report.status)}
                   </div>
                 </div>
               ))}
