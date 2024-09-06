@@ -20,6 +20,7 @@ export default function Home() {
   const [neighborhoodsByDistrict, setNeighborhoodsByDistrict] = useState({}); // State for neighborhoods grouped by district
   const [user, setUser] = useState(null); // Track if the user is logged in
   const [language, setLanguage] = useState('TR'); // Default language
+  const [sortDirection, setSortDirection] = useState('asc'); // Sort direction for victim count
 
   const navigate = useNavigate(); // Initialize the useNavigate hook
 
@@ -127,6 +128,7 @@ export default function Home() {
       login: 'Giriş Yap',
       logout: 'Çıkış Yap',
       noResults: 'Sonuç bulunamadı',
+      sortByVictims: 'Mağdur sayısına göre sırala',
     },
     EN: {
       welcome: 'Earthquake Victim Reports',
@@ -141,6 +143,7 @@ export default function Home() {
       login: 'Log In',
       logout: 'Log Out',
       noResults: 'No results found',
+      sortByVictims: 'Sort by Victim Count',
     },
   };
 
@@ -169,6 +172,19 @@ export default function Home() {
     setFilteredReports(filtered);
   };
 
+  // Function to handle sorting by victim count
+  const handleSortByVictims = () => {
+    const sortedReports = [...filteredReports].sort((a, b) => {
+      if (sortDirection === 'asc') {
+        return a.victimCount - b.victimCount; // Ascending sort
+      } else {
+        return b.victimCount - a.victimCount; // Descending sort
+      }
+    });
+    setFilteredReports(sortedReports);
+    setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc'); // Toggle sorting direction
+  };
+
   // Whenever the region, district, or neighborhood changes, filter the reports
   useEffect(() => {
     handleFilterReports();
@@ -195,20 +211,28 @@ export default function Home() {
     setNeighborhood(''); // Reset neighborhood when region changes
   };
 
-  // Function to handle updating status of a report
+  // Function to handle updating the status of a report
   const handleUpdateStatus = async (reportId, newStatus) => {
     try {
       // Make a PATCH request to update the report status
       const response = await api.patch(`/api/reports/updateStatus/${reportId}`, { newStatus });
-  
+
       if (response.status === 200) {
-        // Update the state to reflect the new status of the report
+        // Update the state to reflect the new status of the report in allReports
         setAllReports((prevReports) => {
           return prevReports.map((report) =>
-            report.id === reportId ? { ...report, newStatus } : report
+            report.id === reportId ? { ...report, status: newStatus } : report
           );
         });
-        // Re-apply filters to the updated reports
+
+        // Update the state to reflect the new status of the report in filteredReports
+        setFilteredReports((prevFilteredReports) => {
+          return prevFilteredReports.map((report) =>
+            report.id === reportId ? { ...report, status: newStatus } : report
+          );
+        });
+
+        // Optionally, reapply the filters again after the update
         handleFilterReports();
       }
     } catch (error) {
@@ -250,25 +274,7 @@ export default function Home() {
         <div className={styles.content}>
           <h1 className={styles.title}>{text[language].welcome}</h1>
 
-          {/* Button to navigate to all locations map */}
-          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-            <button 
-              onClick={() => navigate('/locations')} // Navigate to /locations
-              style={{
-                padding: '10px 20px',
-                fontSize: '16px',
-                cursor: 'pointer',
-                backgroundColor: '#3b82f6',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '5px',
-              }}
-            >
-              {text[language].seeAllLocations}
-            </button>
-          </div>
-
-          {/* Combined Form with Search Bar, Dropdowns, and Filter Buttons */}
+          {/* Combined Form with Search Bar, Dropdowns, Filter Buttons, and Sort Button */}
           <form onSubmit={handleSearch} className={styles.form}>
             <div className={styles.formRow}>
               {/* Search Bar */}
@@ -355,6 +361,26 @@ export default function Home() {
                 onClick={() => toggleStatusFilter('Asılsız')}
               >
                 {text[language].false}
+              </button>
+
+              {/* Button to navigate to all locations map */}
+              <button 
+                type="button"
+                className={styles.allLocationsButton}
+                onClick={() => navigate('/locations')} // Navigate to /locations
+              >
+                {text[language].seeAllLocations}
+              </button>
+            </div>
+
+            {/* Sort by Victim Count Button */}
+            <div className={styles.sortButtonWrapper}>
+              <button
+                type="button"
+                className={styles.sortButton}
+                onClick={handleSortByVictims}
+              >
+                {text[language].sortByVictims} ({sortDirection === 'asc' ? '▲' : '▼'})
               </button>
             </div>
           </form>
