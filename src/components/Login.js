@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode'; // Correct import
 import axios from './axiosconfig/Api';
 import { AuthContext } from '../authcontext/AuthContext';
-import styles from './css/Auth.module.css';
+import styles from './css/Login.module.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
