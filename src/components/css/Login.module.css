@@ -1,76 +1,95 @@
 /* Background setup */
 .loginScreen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: url('../../images/t3ai.png'), url('../../images/teknofest.png'); /* Correct path */
-    background-repeat: no-repeat, no-repeat; /* Prevent repeating images */
-    background-position: left top, right bottom; /* Positioning the images */
-    background-size: 200px, 200px; /* Adjust image sizes */
-    background-color: #f3f4f6; /* Light background color */
-    position: relative;
-  }
-  
-  /* Login Form Container */
-  .loginForm {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    z-index: 1; /* Bring the form above background */
-  }
-  
-  .loginForm h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .input {
-    width: 95%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .passwordWrapper {
-    position: relative;
-  }
-  
-  .passwordToggle {
-    position: absolute;
-    right: 2px;
-    top: 40%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #3b82f6;
-    font-size: 14px;
-    user-select: none;
-  }
-  
-  .button {
-    width: 100%;
-    padding: 12px;
-    background-color: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .button:hover {
-    background-color: #2563eb;
-  }
-  
-  .errorMessage {
-    color: red;
-    margin-top: 15px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f4f6; /* Light background color */
+  position: relative;
+  padding: 0 100px; /* Add padding to make space for the logos */
+}
+
+.leftLogo,
+.rightLogo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center logos */
+}
+
+.leftLogo {
+  left: 0;
+  padding-left: 300px;
+}
+
+.rightLogo {
+  right: 0;
+  padding-right: 300px;
+}
+
+.leftLogo img,
+.rightLogo img {
+  width: 150px; /* Adjust the size of the logos */
+  height: auto;
+}
+
+.loginForm {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Bring the form above background */
+}
+
+.loginForm h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.input {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 2px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #3b82f6;
+  font-size: 14px;
+  user-select: none;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #2563eb;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 15px;
+}

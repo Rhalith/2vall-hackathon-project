@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { jwtDecode } from 'jwt-decode'; // Correct import
+import {jwtDecode} from 'jwt-decode'; // Correct import
 import axios from './axiosconfig/Api';
 import { AuthContext } from '../authcontext/AuthContext';
 import styles from './css/Login.module.css';
+
+// Import PNG images from the src folder
+import t3aiLogo from '../images/t3ai.png';
+import teknofestLogo from '../images/teknofest.png';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -52,7 +56,14 @@ const Login = () => {
 
   return (
     <div className={styles.loginScreen}>
-      <div className={styles.imageBackground}></div> {/* Background Image */}
+      {/* Left and Right Logos */}
+      <div className={styles.leftLogo}>
+        <img src={t3aiLogo} alt="T3AI Logo" />
+      </div>
+      <div className={styles.rightLogo}>
+        <img src={teknofestLogo} alt="Teknofest Logo" />
+      </div>
+
       <form onSubmit={handleLogin} className={styles.loginForm}>
         <h1>Giriş Yap</h1>
         <input
