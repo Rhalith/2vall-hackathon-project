@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ReportCard from './ReportCard';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import ReportCard from './ReportCard'; // Import updated ReportCard component
 import styles from './css/Home.module.css';
 import api from './axiosconfig/Api';
 
@@ -17,21 +18,26 @@ export default function Home() {
   const [districtsByRegion, setDistrictsByRegion] = useState({}); // State for districts grouped by region
   const [neighborhoodsByDistrict, setNeighborhoodsByDistrict] = useState({}); // State for neighborhoods grouped by district
 
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
   // Fetch reports from the backend and group by region, district, and neighborhood
   const fetchReports = async () => {
     try {
       const response = await api.get('/api/reports');
       const reports = response.data;
-      console.log("Fetched Reports:", reports); // Log fetched data to see if data is being fetched correctly
 
-      // Ensure no reports with 'Adres Bulunamadı.' or empty region values are included
+      // Filter out reports with 'Adres Bulunamadı' or empty region values
       const validReports = reports.filter((report) => 
         report.locationHierarchy !== 'Adres Bulunamadı.' &&
-        report.region && // Ensure region is not null or undefined
-        report.region.trim() !== ''
+        report.region &&
+        report.region.trim() !== '' &&
+        report.coordinates && // Ensure coordinates exist
+        report.coordinates.latitude !== 'N/A' &&
+        report.coordinates.longitude !== 'N/A'
       );
 
-      console.log("Valid Reports:", validReports); // Log valid reports after filtering
+      setFilteredReports(validReports); // Set filtered reports
+      setAllReports(validReports); // Store all reports for reset
 
       // Extract regions, districts, and neighborhoods from the location_hierarchy
       const regions = [...new Set(validReports.map((report) => report.region))]; // Unique regions
@@ -42,7 +48,6 @@ export default function Home() {
       validReports.forEach((report) => {
         const { region, district, neighborhood } = report;
 
-        // Ensure the region, district, and neighborhood exist before adding them to the groups
         if (region && district && neighborhood) {
           if (!districtsByRegion[region]) {
             districtsByRegion[region] = [];
@@ -60,13 +65,10 @@ export default function Home() {
         }
       });
 
-      setFilteredReports(validReports); // Set filtered reports
-      setAllReports(validReports); // Store all reports for reset
       setRegions(regions); // Set regions for the dropdown
       setDistrictsByRegion(districtsByRegion); // Set districts grouped by region
       setNeighborhoodsByDistrict(neighborhoodsByDistrict); // Set neighborhoods grouped by district
 
-      console.log("Regions:", regions); // Log regions to check if they are set correctly
     } catch (error) {
       console.error('Error fetching reports:', error);
     }
@@ -93,7 +95,6 @@ export default function Home() {
       );
     });
 
-    console.log("Filtered Reports:", filtered); // Log filtered reports to check the results
     setFilteredReports(filtered);
   };
 
@@ -105,27 +106,6 @@ export default function Home() {
   const handleSearch = (e) => {
     e.preventDefault();
     handleFilterReports();
-  };
-
-  const handleStatusChange = async (id, newStatus) => {
-    try {
-      const response = await fetch(`/api/reports/updateStatus/${id}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newStatus),
-      });
-      const updatedReport = await response.json();
-
-      setFilteredReports((prevReports) =>
-        prevReports.map((report) =>
-          report.id === id ? { ...report, status: updatedReport.status } : report
-        )
-      );
-    } catch (error) {
-      console.error('Error updating report status:', error);
-    }
   };
 
   const toggleStatusFilter = (status) => {
@@ -140,8 +120,8 @@ export default function Home() {
 
   const handleRegionChange = (e) => {
     setRegion(e.target.value);
-    setDistrict(''); // Reset district when "İl" changes
-    setNeighborhood(''); // Reset neighborhood when "İl" changes
+    setDistrict(''); // Reset district when region changes
+    setNeighborhood(''); // Reset neighborhood when region changes
   };
 
   return (
@@ -149,6 +129,24 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.content}>
           <h1 className={styles.title}>Deprem Mağduru Raporları</h1>
+
+          {/* Button to navigate to all locations map */}
+          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+            <button 
+              onClick={() => navigate('/locations')} // Navigate to /locations
+              style={{
+                padding: '10px 20px',
+                fontSize: '16px',
+                cursor: 'pointer',
+                backgroundColor: '#3b82f6',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '5px',
+              }}
+            >
+              Tüm konumları gör
+            </button>
+          </div>
 
           {/* Combined Form with Search Bar, Dropdowns, and Filter Buttons */}
           <form onSubmit={handleSearch} className={styles.form}>
@@ -164,7 +162,7 @@ export default function Home() {
                 />
               </div>
 
-              {/* Region (İl) Dropdown */}
+              {/* Region Dropdown */}
               <div className={`${styles.formColumn} ${styles.formColumnSmall}`}>
                 <select
                   value={region}
@@ -180,7 +178,7 @@ export default function Home() {
                 </select>
               </div>
 
-              {/* District (İlçe) Dropdown */}
+              {/* District Dropdown */}
               <div className={`${styles.formColumn} ${styles.formColumnSmall}`}>
                 <select
                   value={district}
@@ -197,7 +195,7 @@ export default function Home() {
                 </select>
               </div>
 
-              {/* Neighborhood (Mahalle) Dropdown */}
+              {/* Neighborhood Dropdown */}
               <div className={`${styles.formColumn} ${styles.formColumnSmall}`}>
                 <select
                   value={neighborhood}
@@ -251,7 +249,7 @@ export default function Home() {
                   victimCount={report.victimCount}
                   status={report.status}
                   tweet={report.tweet}
-                  onStatusChange={(newStatus) => handleStatusChange(report.id, newStatus)}
+                  coordinates={[report.coordinates.latitude, report.coordinates.longitude]} // Pass coordinates here
                 />
               ))
             ) : (

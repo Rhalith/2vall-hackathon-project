@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import Register from './components/Register';
 import PrivateRoute from './components/PrivateRoute';
+import AllLocationsMap from './components/AllLocationsMap'; // Import AllLocationsMap
 import './App.module.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Routes>
             {/* Public Routes */}
             <Route path="/login" element={<Login />} />
+            <Route path="/locations" element={<AllLocationsMap />} /> {/* New Route for all locations map */}
 
             {/* Private Route for SUPERADMIN */}
             <Route

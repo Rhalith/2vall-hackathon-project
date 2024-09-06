@@ -3,7 +3,7 @@ import Popup from './Popup'; // Import the Popup component
 import styles from './css/ReportCard.module.css';
 import LeafletMap from './LeafletMap'; // Import the LeafletMap component
 
-export default function ReportCard({ address, victimCount, status, tweet }) {
+export default function ReportCard({ address, victimCount, status, tweet, coordinates }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
 
@@ -48,7 +48,7 @@ export default function ReportCard({ address, victimCount, status, tweet }) {
       {/* Popup for the Leaflet Map */}
       {isMapOpen && (
         <Popup
-          content={<LeafletMap address={address} />} // Show the map based on address
+          content={<LeafletMap coordinates={coordinates} address={address} />} // Pass coordinates and address to LeafletMap
           onClose={toggleMap}
         />
       )}
