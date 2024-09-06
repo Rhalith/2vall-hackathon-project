@@ -81,6 +81,16 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
     },
   };
 
+  // Turkish to English status mapping
+  const statusTranslation = {
+    'Yardım Bekliyor': text[language].helpNeeded,
+    'Gidildi': text[language].visited,
+    'Asılsız': text[language].falseReport,
+  };
+
+  // Convert status from Turkish to the preferred language
+  const translatedStatus = statusTranslation[status] || status;
+
   // This maps the dropdown labels to actual statuses
   const statusMapping = {
     [text[language].changeToVisited]: text[language].visited,
@@ -111,8 +121,8 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
     <div className={styles.card}>
       <div className={styles.address}>{address}</div>
       <div className={styles.victimCount}>{text[language].estimatedVictims}: {victimCount}</div>
-      <div className={`${styles.status} ${status === text[language].helpNeeded ? styles.statusWaiting : status === text[language].visited ? styles.statusVisited : styles.statusFalse}`}>
-        {status}
+      <div className={`${styles.status} ${translatedStatus === text[language].helpNeeded ? styles.statusWaiting : translatedStatus === text[language].visited ? styles.statusVisited : styles.statusFalse}`}>
+        {translatedStatus}
       </div>
 
       {/* Display Important Information */}
@@ -146,7 +156,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
           </button>
           {isDropdownVisible && (
             <div className={styles.dropdownContent}>
-              {statusOptions[status].map((option) => (
+              {statusOptions[translatedStatus].map((option) => (
                 <button
                   key={option.label}
                   onClick={() => handleStatusChange(statusMapping[option.label])} // Send actual status, not label
