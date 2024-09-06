@@ -9,6 +9,7 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false); // State to handle show/hide password
   const { setUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -44,24 +45,41 @@ const Login = () => {
     }
   };
 
+  // Toggle show/hide password
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className={styles.loginScreen}>
+      <div className={styles.imageBackground}></div> {/* Background Image */}
       <form onSubmit={handleLogin} className={styles.loginForm}>
+        <h1>Giriş Yap</h1>
         <input
           type="text"
           placeholder="Kullanıcı Adı"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className={styles.input}
           required
         />
-        <input
-          type="password"
-          placeholder="Şifre"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">GİRİŞ</button>
+        <div className={styles.passwordWrapper}>
+          <input
+            type={showPassword ? 'text' : 'password'} // Toggle between text and password
+            placeholder="Şifre"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className={styles.input}
+            required
+          />
+          <span
+            onClick={togglePasswordVisibility}
+            className={styles.passwordToggle}
+          >
+            {showPassword ? 'Gizle' : 'Göster'} {/* Show/Hide text */}
+          </span>
+        </div>
+        <button type="submit" className={styles.button}>GİRİŞ</button>
         {error && <p className={styles.errorMessage}>{error}</p>}
       </form>
     </div>
