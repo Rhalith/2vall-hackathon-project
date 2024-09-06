@@ -1,0 +1,84 @@
+/* Full-page map container */
+.mapContainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+  }
+  
+  /* Button positioned at the top center, floating on top of the map */
+  .backButton {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Full-page map */
+  .map {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Custom marker style */
+  .customMarker {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    line-height: 30px;
+  }
+  
+  .markerIcon {
+    background-color: #3b82f6;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+
+/* Marker popup */
+.popupContainer {
+    max-width: 300px; /* Adjust width */
+    max-height: 400px; /* Set maximum height */
+    overflow-y: auto;  /* Make content scrollable */
+    padding-right: 10px; /* Prevent content from being cut off */
+  }
+  
+  .popupReport {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .popupReport:last-child {
+    border-bottom: none;
+  }
+  
+  .popupAddress {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #374151;
+  }
+  
+  .popupDetails {
+    color: #4b5563;
+    font-size: 14px;
+  }
+  
+  .popupDetails span {
+    font-weight: bold;
+  }
