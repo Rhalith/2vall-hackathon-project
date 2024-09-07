@@ -1,70 +1,178 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SismoLink Projesi - Başlangıç Kılavuzu
 
-## Available Scripts
+## Türkçe
 
-In the project directory, you can run:
+### Gerekli Bağımlılıklar
 
-### `npm start`
+Bu projeyi çalıştırmadan önce aşağıdaki araçların sisteminizde kurulu olduğundan emin olun:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Node.js** (https://nodejs.org/)
+- **MongoDB** (https://www.mongodb.com/)
+- **Java 17+** (Spring Boot için)
+- **Maven** (https://maven.apache.org/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Projeyi Klonlama
 
-### `npm test`
+Projeyi GitHub'dan klonlayın:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/kullaniciAdi/SismoLink.git
+cd SismoLink
+```
 
-### `npm run build`
+### 2. Frontend (React) Kurulumu
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frontend klasörüne gidin ve bağımlılıkları yükleyin:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+cd frontend
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ardından frontend'i başlatın:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Tarayıcınızda frontend'i görmek için `http://localhost:3000` adresini ziyaret edin.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Backend (Spring Boot) Kurulumu
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Backend klasörüne gidin ve Spring Boot uygulamasını başlatın:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd backend/earthquake
+./mvnw spring-boot:run
+```
 
-## Learn More
+Backend varsayılan olarak `http://localhost:8080` adresinde çalışacaktır.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. MongoDB'yi Başlatma ve Yedekten Geri Yükleme
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Veritabanı klasöründe yer alan yedek dosyalarından MongoDB veritabanını geri yükleyin:
 
-### Code Splitting
+1. MongoDB'yi başlatın:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Ubuntu ve MacOS için:
+```bash
+sudo systemctl start mongodb
+```
 
-### Analyzing the Bundle Size
+#### Windows için:
+```bash
+net start MongoDB
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Veritabanını geri yüklemek için şu komutları kullanın:
 
-### Making a Progressive Web App
+```bash
+mongoimport --db earthquakeDB --collection reports --file database/earthquakedb.reports.json --jsonArray
+mongoimport --db earthquakeDB --collection users --file database/earthquakedb.users.json --jsonArray
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 5. Yapay Zeka API'sini Başlatma
 
-### Advanced Configuration
+AI API dosyalarını başlatmak için aşağıdaki adımları izleyin:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+cd ai-api
+pip install -r requirements.txt
+python api.py
+```
 
-### Deployment
+AI API, varsayılan olarak `http://localhost:5000` adresinde çalışacaktır.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 6. Proje Hazır!
 
-### `npm run build` fails to minify
+Frontend ve backend sunucuları çalışırken, tarayıcıda `http://localhost:3000` adresine giderek projeyi kullanabilirsiniz.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## English
+
+### Prerequisites
+
+Before running the project, ensure that the following tools are installed on your system:
+
+- **Node.js** (https://nodejs.org/)
+- **MongoDB** (https://www.mongodb.com/)
+- **Java 17+** (for Spring Boot)
+- **Maven** (https://maven.apache.org/)
+
+### 1. Cloning the Project
+
+Clone the project from GitHub:
+
+```bash
+git clone https://github.com/username/SismoLink.git
+cd SismoLink
+```
+
+### 2. Setting Up the Frontend (React)
+
+Navigate to the frontend directory and install the dependencies:
+
+```bash
+cd frontend
+npm install
+```
+
+Then, start the frontend:
+
+```bash
+npm start
+```
+
+Visit `http://localhost:3000` in your browser to view the frontend.
+
+### 3. Setting Up the Backend (Spring Boot)
+
+Navigate to the backend directory and start the Spring Boot application:
+
+```bash
+cd backend/earthquake
+./mvnw spring-boot:run
+```
+
+The backend will run on `http://localhost:8080` by default.
+
+### 4. Starting MongoDB and Restoring from Backup
+
+Restore the MongoDB database from the backup files located in the database folder:
+
+1. Start MongoDB:
+
+#### For Ubuntu and MacOS:
+```bash
+sudo systemctl start mongodb
+```
+
+#### For Windows:
+```bash
+net start MongoDB
+```
+
+2. Restore the database using the following commands:
+
+```bash
+mongoimport --db earthquakeDB --collection reports --file database/earthquakedb.reports.json --jsonArray
+mongoimport --db earthquakeDB --collection users --file database/earthquakedb.users.json --jsonArray
+```
+
+### 5. Starting the AI API
+
+To start the AI API, follow these steps:
+
+```bash
+cd ai-api
+pip install -r requirements.txt
+python api.py
+```
+
+The AI API will run on `http://localhost:5000` by default.
+
+### 6. Project is Ready!
+
+Once both the frontend and backend servers are running, visit `http://localhost:3000` in your browser to use the project.
