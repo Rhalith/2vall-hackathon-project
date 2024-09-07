@@ -176,3 +176,57 @@ The AI API will run on `http://localhost:5000` by default.
 ### 6. Project is Ready!
 
 Once both the frontend and backend servers are running, visit `http://localhost:3000` in your browser to use the project.
+
+---
+
+## Working Project
+
+Here are some visuals from the working SismoLink project:
+
+### 1. Homepage
+The homepage provides an overview of recent earthquake reports. Users can filter the reports based on location and status.
+
+![Homepage](https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/view?usp=sharing)
+
+### 2. Report Details
+This page shows the detailed information of an earthquake report, including its current status and location details.
+
+![Report Details](https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/view?usp=sharing)
+
+### 3. Login Page
+The login page allows officials to securely log in and access the earthquake report management system. Only authorized users can access the dashboard.
+
+![Login Page](https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/view?usp=sharing)
+
+### 4. Feedback Page
+Users can leave feedback on the accuracy of the reports and provide additional information.
+
+![Feedback Page](https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/view?usp=sharing)
+
+---
+
+## Çalışan Proje
+
+SismoLink projesinin bazı görselleri:
+
+### 1. Anasayfa
+Anasayfa, son deprem raporlarının genel bir görünümünü sağlar. Kullanıcılar raporları konum ve duruma göre filtreleyebilir.
+
+![Anasayfa](https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/view?usp=sharing)
+
+### 2. Rapor Detayları
+Bu sayfa, bir deprem raporunun ayrıntılı bilgilerini, mevcut durumu ve konum detaylarını gösterir.
+
+![Rapor Detayları](https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/view?usp=sharing)
+
+### 3. Giriş Sayfası
+Giriş sayfası, yetkililerin güvenli bir şekilde giriş yaparak deprem rapor yönetim sistemine erişmesini sağlar. Yalnızca yetkili kullanıcılar yönetim paneline erişebilir.
+
+![Giriş Sayfası](https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/view?usp=sharing)
+
+### 4. Geri Bildirim Sayfası
+Kullanıcılar, raporların doğruluğu hakkında geri bildirimde bulunabilir ve ek bilgi sağlayabilir.
+
+![Geri Bildirim Sayfası](https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/view?usp=sharing)
+
+Her iki sunucu da çalışırken projeyi `http://localhost:3000` adresinden ziyaret edebilirsiniz.
