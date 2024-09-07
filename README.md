@@ -113,6 +113,8 @@ python api.py
 
 AI API, varsayılan olarak `http://localhost:5000` adresinde çalışacaktır.
 
+NOT: AI API dosyalarına erişmek için main branch'ine geçmelisiniz.
+
 ### 6. Proje Hazır!
 
 Frontend ve backend sunucuları çalışırken, tarayıcıda `http://localhost:3000` adresine giderek projeyi kullanabilirsiniz.
