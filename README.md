@@ -212,12 +212,12 @@ SismoLink projesinin bazı görselleri:
 ### 1. Anasayfa
 Anasayfa, son deprem raporlarının genel bir görünümünü sağlar. Kullanıcılar raporları konum ve duruma göre filtreleyebilir.
 
-![Anasayfa](https://github.com/2vall-hackathon-project/media/anasayfa.mov)
+https://github.com/user-attachments/assets/00eb9fd7-265f-411c-9ae2-a9286561c43f
 
 ### 2. Rapor Detayları
 Bu sayfa, bir deprem raporunun ayrıntılı bilgilerini, mevcut durumu ve konum detaylarını gösterir.
 
-![Rapor Detayları](https://github.com/2vall-hackathon-project/media/rapor-goruntuleme.mov)
+
 
 ### 3. Giriş Sayfası
 Giriş sayfası, yetkililerin güvenli bir şekilde giriş yaparak deprem rapor yönetim sistemine erişmesini sağlar. Yalnızca yetkili kullanıcılar yönetim paneline erişebilir.
