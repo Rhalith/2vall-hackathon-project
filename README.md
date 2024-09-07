@@ -186,22 +186,22 @@ Here are some visuals from the working SismoLink project:
 ### 1. Homepage
 The homepage provides an overview of recent earthquake reports. Users can filter the reports based on location and status.
 
-<iframe src="https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/preview" width="640" height="480" allow="autoplay"></iframe>
+![Anasayfa](https://github.com/2vall-hackathon-project/media/giris-ekrani.png?raw=true)
 
 ### 2. Report Details
 This page shows the detailed information of an earthquake report, including its current status and location details.
 
-<iframe src="https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/preview" width="640" height="480" allow="autoplay"></iframe>
+![Rapor Görüntüleme](https://github.com/2vall-hackathon-project/media/rapor-goruntuleme.mov)
 
 ### 3. Login Page
 The login page allows officials to securely log in and access the earthquake report management system. Only authorized users can access the dashboard.
 
-<iframe src="https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/preview" width="640" height="480" allow="autoplay"></iframe>
+![Login Page](https://github.com/2vall-hackathon-project/media/giris-ekrani.png?raw=true)
 
 ### 4. Feedback Page
 Users can leave feedback on the accuracy of the reports and provide additional information.
 
-<iframe src="https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/preview" width="640" height="480" allow="autoplay"></iframe>
+![Feedback Page](https://github.com/2vall-hackathon-project/media/geri-bildirim.mov)
 
 ---
 
@@ -212,21 +212,21 @@ SismoLink projesinin bazı görselleri:
 ### 1. Anasayfa
 Anasayfa, son deprem raporlarının genel bir görünümünü sağlar. Kullanıcılar raporları konum ve duruma göre filtreleyebilir.
 
-<iframe src="https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/preview" width="640" height="480" allow="autoplay"></iframe>
+![Anasayfa](https://github.com/2vall-hackathon-project/media/anasayfa.mov)
 
 ### 2. Rapor Detayları
 Bu sayfa, bir deprem raporunun ayrıntılı bilgilerini, mevcut durumu ve konum detaylarını gösterir.
 
-<iframe src="https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/preview" width="640" height="480" allow="autoplay"></iframe>
+![Rapor Detayları](https://github.com/2vall-hackathon-project/media/rapor-goruntuleme.mov)
 
 ### 3. Giriş Sayfası
 Giriş sayfası, yetkililerin güvenli bir şekilde giriş yaparak deprem rapor yönetim sistemine erişmesini sağlar. Yalnızca yetkili kullanıcılar yönetim paneline erişebilir.
 
-<iframe src="https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/preview" width="640" height="480" allow="autoplay"></iframe>
+![Giriş Sayfası](https://github.com/2vall-hackathon-project/media/giris-ekrani.png?raw=true)
 
 ### 4. Geri Bildirim Sayfası
 Kullanıcılar, raporların doğruluğu hakkında geri bildirimde bulunabilir ve ek bilgi sağlayabilir.
 
-<iframe src="https://drive.google.com/file/d/1dgMQlcTzQMa6si37AzTKyYQINxwnOW3O/preview" width="640" height="480" allow="autoplay"></iframe>
+![Geri Bildirim Sayfası](https://github.com/2vall-hackathon-project/media/geri-bildirim.mov)
 
 Her iki sunucu da çalışırken projeyi `http://localhost:3000` adresinden ziyaret edebilirsiniz.
