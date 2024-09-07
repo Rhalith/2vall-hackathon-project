@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "66d9c80a0f8614c5c066a8c5"
+  },
+  "username": "superadmin",
+  "password": "$2y$10$MMouGMvz2DcYCN2u9bc0wOy9kCNPpE2nWwRRahU5LmQeFprl/J6uG",
+  "role": "SUPERADMIN"
+},
+{
+  "_id": {
+    "$oid": "66dabd1f62105c25ea2e3747"
+  },
+  "username": "muho123",
+  "password": "$2a$10$Wp2D/WSCnB7hdOmOENjjCeqcnnbNKuJCzm/4Ek1u3jJlBys9q8tAa",
+  "role": "OFFICIAL",
+  "firstName": "Muhittin",
+  "lastName": "Topalak",
+  "_class": "com.TWOvALL.earthquake.model.User"
+}]

@@ -1,0 +1,4465 @@
+[{
+  "_id": {
+    "$oid": "66db906a9d2bb83efd9100fa"
+  },
+  "address": "Kahramanmaraş Türkoğlu Şekeroba Köyü Çağrı Sokak No 4",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Şekeroba Köyü, Çağrı Sokak No 4",
+  "tweet": "Kahramanmaraş türkoğlu ilçesi şekeroba köyü çağrı sokak no 4 çadır yatak ısıtıcı ölen insanlae için de kefen ihtiyacı var  iletişim:05435379496",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Şekeroba Köyü",
+  "phoneNumber": "0543 537 9496",
+  "needs": "çadırlar, yataklar, ısıtıcılar, kefenler",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db906e9d2bb83efd9100fb"
+  },
+  "address": "Gaziantep Şehitkamil Ürgenpaşa Mahallesi Atatürk Cad. Gül Apt. 87/6",
+  "locationHierarchy": "Gaziantep, Şehitkamil, Ürgenpaşa Mahallesi, Atatürk Caddesi, Gül Apartmanı, 87/6",
+  "tweet": "Teyitli, ses var, köpekler tepki veriyor.  Her şey var, sadece iki adet #ekskavatör lazım…  Ürgen paşa mah Atatürk cad Gül Apt 87/6  Nasrettin -Müzehher Maruf Ayda - mehmet Altay   Gassan Cilli 05322271102",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Şehitkamil",
+  "neighborhood": "Ürgenpaşa Mahallesi",
+  "phoneNumber": "05322271102",
+  "needs": "Ekskavatör (2)",
+  "coordinates": {
+    "latitude": "37.0727587",
+    "longitude": "37.3949769"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90719d2bb83efd9100fc"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "0539 693 27 99 bu arkadaş Kahramanmaraş’ta çadır yokmuş 20 aylık bebeği var yakın olan konumla bilgisi olan varmı yakında çadırken olur çadır getirecek olur arabasının yakıtı bitmiş askerlik arkadaşımdır kendisi",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0539 693 27 99",
+  "needs": "çadır",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90759d2bb83efd9100fd"
+  },
+  "address": "Gaziantep'in Islahiye ilçesindeki Kalaycıoğlu Mahallesi'nde bulunan Kalaycıoğlu Sokak'taki No:33.",
+  "locationHierarchy": "Gaziantep, Islahiye, Kalaycıoğlu Mahallesi, Kalaycıoğlu Sokak No 33.",
+  "tweet": "Babamın yaşadığı yere henüz yardım ulaşmamış şarjlari çok az güvenligi olmayan bir alandalar kar yağıyor hipotermi gecirebilirler iletişim kurduk ateş yakamıyolar.Erzakları da yok  Kalaycik mahallesi Kalaycik sokak no:33 Islahiye/Gaziantep Elif koyuncuoglu  0539 248 9403",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Islahiye",
+  "neighborhood": "Kalaycıoğlu Mahallesi",
+  "phoneNumber": "05392489403",
+  "needs": "Yiyecek, Su, Battaniyeler, Isıtıcılar, İlk Yardım Malzemeleri",
+  "coordinates": {
+    "latitude": "37.025109",
+    "longitude": "36.6331302"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90799d2bb83efd9100fe"
+  },
+  "address": "Adıyaman Merkez Bahçecik Mahallesi Yeni Mezarlık Yolu 1845. Sokak No:6",
+  "locationHierarchy": "Adıyaman, Merkez, Bahçecik Mahallesi, Yeni Mezarlık Yolu 1845. Sokak No6",
+  "tweet": "Adıyaman merkez Bahçecik mahallesi yeni mezarlık yolu 1845 sokak no 6. Dışarıda yardım bekliyorlar 4 gündür sokaktalar. Arkadaşım ve 15 kişi ailesiyle beraber çok zor durumdalar çadıra oduna kömüre ihtiyaçları var ne olur yayalım",
+  "victimCount": 16,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Bahçecik Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "çadır, odun, kömür",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db907d9d2bb83efd9100ff"
+  },
+  "address": "Hatay Samandağ Koyunoğlu Mahallesi Çamlık Sokak No 19",
+  "locationHierarchy": "Hatay, Samandağ, Koyunoğlu Mahallesi, Çamlık Sokak No 19",
+  "tweet": "YETERSİZMİŞ ACİL YARDIM GİTMESİ LAZIM ( TEYİTLİ )  HATAY / Samandağ yolu üzeri Koyunoğlu mahallesi Çamlık sokak No 19  Arkadaşımın ailesine ve bir çok insana yardım gerekiyor  battaniye, çadır, erzak, bebek bezi, hijyenik ped lazım  NAZLICAN AKSOY / 0539 478 54 45",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Samandağ",
+  "neighborhood": "Koyunoğlu Mahallesi",
+  "phoneNumber": "05394785445",
+  "needs": "Battaniyeler, çadırlar, gıda malzemeleri, bebek bezleri, hijyen ürünleri",
+  "coordinates": {
+    "latitude": "36.0851597",
+    "longitude": "35.9799375"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90819d2bb83efd910100"
+  },
+  "address": "Antakya Sümerler Mahallesi Asel Apt. Şükrü Güçlü Bulvarı Yeşil Beyaz Apt.",
+  "locationHierarchy": "Hatay, Antakya, Sümerler Mahallesi, Şükrü Güçlü Bulvarı, Yeşil Beyaz Apartmanı",
+  "tweet": "ACİL VİNÇ VE KEPÇE LAZIM SES VAR ‼️  SÜMERLER MAH ASEL APT ŞÜKRÜ GÜÇLÜ BULVARI YEŞİL BEYAZ APT ANTAKYA   enkazda kalan: enes çulhacıoğlu   enkazın başında bekleyenler: ahmet Çulhacıoğlu 05379290473 hazar çulhacıoğlu 0 538 584 81 44",
+  "victimCount": 3,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Sümerler Mahallesi",
+  "phoneNumber": "053279029473,  05385848144",
+  "needs": "Vinç, Kepçe",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90859d2bb83efd910101"
+  },
+  "address": "Ekinci Mahallesi İnönü Bulvarı No: 124 Elit Apartmanı Kat 5 Daire 25 Antakya",
+  "locationHierarchy": "Hatay, Antakya, Ekinci Mahallesi, İnönü Caddesi, Elit Apartmanı, Kat 5, Daire 25",
+  "tweet": "TEYİTLİ  6 AYLIK HAMİLE CANSU KAVLAK. VİNÇ LAZIM. DESTEK EKİP LAZIM. HASSAS CİHAZLA SES ALINDI LÜTFEN YARDIM EDİN 📍Ekinci Mh. İnönü Bulvarı No: 124 Elit Apartmanı Kat 5 daire 25 Antakya",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Ekinci Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "vinç, destek ekibi, hassas cihaz",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90899d2bb83efd910102"
+  },
+  "address": "Kahramanmaraş Onikişubat Hayrullah Mahallesi Malik Ejder Caddesi Altın Köşk Apartmanı B Blok Kat 3 Daire 5",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Hayrullah Mahallesi, Malik Ejder Caddesi, Altın Köşk Apartmanı B Blok, Kat 3, Daire 5",
+  "tweet": "‼️ARKADAŞLAR YAYAR MISINIZ ‼️  SES VAR AMA SİSMİK DINLEME ARACINA IHTIYAC VARMIS Kahramanmaras Onikisubat Hayrullah mahallesi malik ejder caddesi   altın kösk apartmani no 36 a blok kat 3 daire  5 şevval Gültekin 17 yasinda ",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Hayrullah Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "sismik dinleme cihazı",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db908d9d2bb83efd910103"
+  },
+  "address": "Kahramanmaraş Türkoğlu Beyoğlu Mahallesi Yeni Adana Yolu Lise Yanı No:55",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Beyoğlu Mahallesi, Yeni Adana Yolu, Lise Yanı, 55 Numaralı Bina",
+  "tweet": "K.maraş Türkoğlu Beyoğlu mahallesi yeni Adana yolu lise civarı no55 erzak çadır yardımı acil +905510103613",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Beyoğlu Mahallesi",
+  "phoneNumber": "+905510103613",
+  "needs": "Erzak, çadır",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90909d2bb83efd910104"
+  },
+  "address": "Hatay Narlıca",
+  "locationHierarchy": "Hatay, Defne, Narlıca Mahallesi",
+  "tweet": "Hatay Narlıca'ya yeterince gıda,battaniye vs yardımı gitmiyormuş,hava çok soğukmuş bu adreste birçok kişi yardım bekliyormuş oradan biri ile iletişim için: 05523797644  *Bölge(ekte)burası,TüvTürk ve GEK ilaç fabrikası arasında gıda ve battaniye lütfen",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Narlıca Mahallesi",
+  "phoneNumber": "05523797644",
+  "needs": "Gıda, Battaniye",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90949d2bb83efd910105"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "AFET BÖLGESİNE MALZEME YOLLAYCAĞIZ AMA TIR BULAMIYORUZ ÇEVRENİZDE ÜCRETİ KARŞILIĞINDA ANTEP NURDAĞINA GİDECEK TIR VARSA YÖNLENDİRİR MİSİNİZ İSTANBULDAN KALKIP GAZİANTEP NURDAĞINA GİDİCEK 0545 572 89 27 BÜNYAMİN BALLI",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0545 572 89 27",
+  "needs": "Malzeme (ücret karşılığında)",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90989d2bb83efd910106"
+  },
+  "address": "Odabaşı Mahallesi Uğur Mumcu Bulvarı Defne Sitesi 17. Blok Antakya/Hatay",
+  "locationHierarchy": "Hatay, Antakya, Odabaşı Mahallesi, Uğur Mumcu Bulvarı, Defne Sitesi, 17. Blok.",
+  "tweet": "OKAN VE AİLESİ 70 SAATTİR ENKAZDA ÇABALARIMIZ SONUCU EKİPLERİ ORAYA YOLLATTIK AMA MÜDAHELE İÇİN VİNÇ LAZIMMIŞ LÜTFEN ÇOK ACİL  adres:odabaşı mah. uğur mumcu blv. defne sitesi 17. blok antakya/hatay ekipler kontrolü bırakmış. ekip ve vinç  +90 0543 965 70 68 irtibat no",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Odabaşı Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db909c9d2bb83efd910107"
+  },
+  "address": "Kahramanmaraş Döngel Köyü, Kayseri Ana Yolu Kenarı",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Döngel Köyü, Kayseri Caddesi Yanı",
+  "tweet": "-KAHRAMANMARAS  !!!! ÇOK ÖNEMLİ !!!! Kahramanmaraş Döngel köyü (döngel mağaraları) kümeevler kayseri ana yolunun kenarı 100 kişilik çadır lazımTemel gıda en çok çadir çocuk bezi mamalar yok,o civardaki köylerde çok mağdur",
+  "victimCount": 100,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Döngel Köyü",
+  "phoneNumber": "N/A",
+  "needs": "çadırlar, temel gıda maddeleri, bebek bezleri, bebek maması",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90a09d2bb83efd910108"
+  },
+  "address": "HATAY ANTAKYA ODABAŞI MAHALLESİ BEKTAŞ SOKAK FARKLI YAŞAM RENDE SİTESİ A BLOK",
+  "locationHierarchy": "Hatay, Antakya, Odabaşı Mahallesi, Bektaş Sokak, Farklı Yaşam Rende Sitesi A Blok.",
+  "tweet": "ACİL HALA YAŞAM VAR‼️‼️ Odabaşı Mahallesi. Bektaş Sokak. Farklı Yaşam Rende Sitesi A Blok. HATAY/ANTAKYA İkra Nur Memilli, Songül Memilli, Hasan Memilli, Yavuz Memilli. 3 Gündür enkaz altındalar. Vinç gelmiş fakat ekiplerin gece çalışabilmesi için Flaşör gece lambası lazımmış",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Odabaşı Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "El fenerleri",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90a49d2bb83efd910109"
+  },
+  "address": "Osmaniye'nin Kadirli ilçesi 7 Mart Mahallesi",
+  "locationHierarchy": "Osmaniye, Kadirli, 7 Mart Mahallesi",
+  "tweet": "⚠️⚠️⚠️⚠️Çok Acil‼‼‼‼ Osmaniye kadirli 7 mart mahallesine erzak su ısıtıcı yardımları daha ulaşmamış sınırlı sayida olan markette ki ürünlerde tükenmiş insanlar aç ve susuz orada. Küçük bebek çok mama ve yemek gerekli  Iletişim +90 543 533 01 54",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Osmaniye",
+  "district": "Kadirli",
+  "neighborhood": "7 Mart Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.462024299999996",
+    "longitude": "36.17201485369948"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90a89d2bb83efd91010a"
+  },
+  "address": "Adıyaman Merkez, Adıyaman Üniversitesi",
+  "locationHierarchy": "Adıyaman, Merkez, Adıyaman Üniversitesi",
+  "tweet": "Çocuk için acil; Öksürük şurubu, pişik kremi ve 5 numara çocuk bezi ihtiyacı. Adres: Adıyaman/merkez Adıyaman Üniversitesi İletişim: Gökhan sonuç 05442040876",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Adıyaman Üniversitesi",
+  "phoneNumber": "0544 204 0876",
+  "needs": "Öksürük Şurubu, Pişik Kremi, 5 Beden Çocuk Bezi",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90ac9d2bb83efd91010b"
+  },
+  "address": "Adıyaman Merkez Yeşilyurt Mahallesi 21188 Sokak",
+  "locationHierarchy": "Adıyaman, Merkez, Yeşilyurt Mahallesi, 21188 Sokak",
+  "tweet": "ADIYAMAN ÇADIR GEREKİYOR🚨 Bebek var arabalarda kalamıyorlar  Yeşilyurt taziye evi aşağısı ceylan düğün salonuna doğru Adıyaman Merkez Yeşilyurt mahallesi 21188 sokak  0543 682 12 80 Ararlarsa tarif ederiz",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Yeşilyurt Mahallesi",
+  "phoneNumber": "0543 682 12 80",
+  "needs": "çadır",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90b09d2bb83efd91010c"
+  },
+  "address": "Kahramanmaraş Onikişubat Şazibey Mahallesi Haydar Aliyev Bulvarı Yunus Apartmanı",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Şazibey Mahallesi, Haydar Aliyev Bulvarı, Yunus Apartmanı",
+  "tweet": "🚨🚨🚨ACİL🚨🚨🚨ACİL🚨🚨Kahramanmaraş/Onikişubat Şazibey mahallesi Haydar Aliyev bulvarı yunus apartmanına acil termal kamera lazım.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Şazibey Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90b59d2bb83efd91010d"
+  },
+  "address": "Kahramanmaraş Beyoğlu Mahallesi İstiklal Caddesi Selvi Sokak No:9",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Beyoğlu Mahallesi, İstiklal Caddesi, Selvi Sokak No 9",
+  "tweet": "CADIR ERZAK TEMEL GIDA ACIL Beyoğlu mahallesi istiklal caddesi Selvi sokak no :9 sağlık ocagı dönüşü köşe başı KAHRAMANMARAŞ Remzi Ercan 05330555658  Çocuk var yanlarında 10 aylık ve 4 yaşında şuanda 15 kişiler tek bir çadıra sığarız biz diyorlar  ACİL‼️‼️‼️‼️‼️‼️",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Beyoğlu Mahallesi",
+  "phoneNumber": "05330555658",
+  "needs": "Çadır, Erzak, Temel Gıda",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90b99d2bb83efd91010e"
+  },
+  "address": "Toygarlı Köyü, Defne, Hatay",
+  "locationHierarchy": "Hatay, Defne, Toygarlı Köyü",
+  "tweet": "Hatay defne toygarlı köyü şehirden gelenler buraya yerleşmiş ancak hiç battaniye gıda su yardımı ulaşmamış. 2000 kişi kadar. Acil ve Teyitli. 0531 372 58 10",
+  "victimCount": 2000,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Toygarlı Köyü",
+  "phoneNumber": "0531 372 58 10",
+  "needs": "Battaniyeler, Yiyecek, Su",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90bc9d2bb83efd91010f"
+  },
+  "address": "Hatay/Kırıkhanda Bahçelievler mahallesi 514 sok. No:26",
+  "locationHierarchy": "Hatay, Kırıkhan, Bahçelievler Mahallesi, 514. Sokak, No26",
+  "tweet": "20 kişilik bir aile Hatay/Kırıkhanda mahsur. Yemek,su,çadır hicbirseyleri yok. Adresleri: Bahçelievler mahallesi 514 sok. No:26  İrtibat: 0538 310 86 32",
+  "victimCount": 20,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Bahçelievler Mahallesi",
+  "phoneNumber": "05383108632",
+  "needs": "yemek, su, çadır",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90c09d2bb83efd910110"
+  },
+  "address": "Hatay Kırıkhan Ilıkpınar Mahallesi Ilıkpınar Sokak",
+  "locationHierarchy": "Hatay, Kırıkhan, Ilıkpınar Mahallesi, Ilıkpınar Sokak",
+  "tweet": "Hatay kırıkhan, ılıkpınar mahallesi, ılıkpınar sokak. Mahmut bey köy muhtarı  05305601936 Köye girdikleri an beni görürler diyor Enkaz altımda kimse yok ama hepsi dışarda yatıyor acil çadır lazım #hatay #hataydeprem #hatayyardimbekliyor #HatayKırıkhanaYardım #deprem #acil",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Ilıkpınar Mahallesi",
+  "phoneNumber": "0530 560 19 36",
+  "needs": "çadırlar",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90c49d2bb83efd910111"
+  },
+  "address": "Kahramanmaraş'ın Afşin ilçesindeki Çobanbeyli Köyü'nde bulunan Mehmet Akif Ersoy Caddesi No:44",
+  "locationHierarchy": "Kahramanmaraş, Afşin, Çobanbeyli Köyü, Mehmet Akif Ersoy Caddesi No 44",
+  "tweet": "‼️‼️TEYİTLİDİR‼️‼️ YAYALIM‼️‼️  Çobanbeyli mah Mehmet Akif Ersoy cad. No 44 çobanbeyli köyü Afşin/Kahramanmaraş  ACİL ÇADIR VE POWERBANK İHTİYAÇLARI VAR LÜTFEN YAYALIM",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Afşin",
+  "neighborhood": "Çobanbeyli Köyü",
+  "phoneNumber": "N/A",
+  "needs": "çadır, powerbank",
+  "coordinates": {
+    "latitude": "38.2438548",
+    "longitude": "36.9152873"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90c89d2bb83efd910112"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Gaziantep Merkez, İslahiye ve Nurdağı'nda insanların su, battaniye ve yiyeceğe ihtiyacı var.   YARDIM ULAŞMIYORMUŞ. LÜTFEN YARDIM EDİN.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "su, battaniye, yiyecek",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90cc9d2bb83efd910113"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Hatay'da yaşayan arkadaşım paylaşmış bu videoyu. İskenderun/Expo alanında yardım tırı var. Her türlü yardım malzemesi var. İhtiyacı olan araçla gidip alabilir.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "Yardım malzemeleri (gıda, su, battaniyeler, ilaçlar vb.)",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90d09d2bb83efd910114"
+  },
+  "address": "Karaköse mahallesi Cumhuriyet caddesi no 21, Yayladağı, Hatay",
+  "locationHierarchy": "Hatay, Yayladağı, Karaköse Mahallesi, Cumhuriyet Caddesi No21",
+  "tweet": "Karaköse mahallesi Cumhuriyet caddesi no 21.  (Recep Tayyip Erdoğan parkının üst tarafında)  Yayladağı HATAY.  bir evde 22 kişi kalıyorlar yiyecekleri yok. yardımlar ulaşmıyor.erzak, benzin, bebek bezi, ped ne olursa ihtiyaçları var. 0536 498 32 81- veysel keçeli",
+  "victimCount": 22,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Yayladağı",
+  "neighborhood": "Karaköse Mahallesi",
+  "phoneNumber": "05364983281",
+  "needs": "erzak, benzin, bebek bezi, ped",
+  "coordinates": {
+    "latitude": "35.9029545",
+    "longitude": "36.0625987"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90d49d2bb83efd910115"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Malatya Doğanşehir ve köylerine acil ısıtıcı çadır ve erzak gitmesi lazım!!! TEYİTLİ #Malatya #AFAD",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90d89d2bb83efd910116"
+  },
+  "address": "Hatay Antakya Harbiye Caddesi Defne Sokak Mozaikler Sitesi No:22",
+  "locationHierarchy": "Hatay, Antakya, Harbiye Caddesi, Defne Sokak, Mozaik Sitesi, 22 Numara",
+  "tweet": "ÇOK ACİL Rümeysa Çağdar hatay antakya harbiye caddesi defne sokak mozaikler sitesi no22 05342029675 TIBBI YARDIM LAZIM",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Harbiye Caddesi",
+  "phoneNumber": "0534 2029 675",
+  "needs": "tıbbi yardım",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90dc9d2bb83efd910117"
+  },
+  "address": "Defne İlçesi Sağlık Mahallesi Sağlık Sokak Sağlık Ocağı Yanı",
+  "locationHierarchy": "Hatay, Defne, Sağlık Mahallesi, Sağlık Sokağı, Sağlık Kliniği Karşısı",
+  "tweet": "ACİL YİYECEK VE GİYECEK DESTEĞİ ŞU ANA KADAR HİÇ YARDIM GİTMEMİŞ!! TAVLA MAHALLESİ SAĞLIK SOKAK SAĞLIK OCAĞI YANI DEFNE/HATAY RECEP RENDE 0536 510 96 03",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Sağlık Mahallesi",
+  "phoneNumber": "05365109603",
+  "needs": "Yiyecek, Giysi",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90df9d2bb83efd910118"
+  },
+  "address": "Malatya'nın Hekimhan ilçesi",
+  "locationHierarchy": "Malatya, Hekimhan, *",
+  "tweet": "Girmana mahalle muhtarlığı Hekimhan/Malatya lütfen yayalım. Acilen çadır, ısıtıcı, kıyafet ve Gıda ihtiyaçları var. Dün gece -13dereceydi soğuktan donarak öleceğiz dediler. lütfen yardım edin.Mahalle muhtarı Cafer Kınık: 536 589 04 87 Adem Kınık: 535 931 26 50",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Hekimhan",
+  "neighborhood": "*",
+  "phoneNumber": "536 589 04 87,  535 931 26 50",
+  "needs": "çadırlar, ısıtıcılar, giysi, yiyecek",
+  "coordinates": {
+    "latitude": "38.8165078",
+    "longitude": "37.930697"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90e39d2bb83efd910119"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "05070455426 teyitli numara -Adıyaman merkez eğriçay parkı yakınlarındayız- hamile kadınlar var ISITICI LAZIM ACİL !! Isınamıyorlar !!!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05070455426",
+  "needs": "Isıtıcı",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90e79d2bb83efd91011a"
+  },
+  "address": "Antakya Merkez Altınçay Mah. Mehmet Kafadar Cd. Toki Camii",
+  "locationHierarchy": "Hatay, Antakya, Altınçay Mah., Mehmet Kafadar Cad., Toki Camii",
+  "tweet": "ACİL YARDIM!!! 20 AYLIK MİNİK BEBEĞİ VAR LÜTFEN YARDIM EDİN OĞLU EPİLEPSİ HASTASI ACİL ŞU İLAÇLARA İHTİYACI VAR (Sabril, Keppra Topamax, Xamate) AYRICA GIDA VE GİYİM MALZEMELERİ HİÇ YOK ADRES ANTAKYA MERKEZ ALTINÇAY MAH MEHMET KAFADAR CD TOKİ CAMİ 05057337380 MEHMET FATİH TUNÇ",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Altınçay Mah.",
+  "phoneNumber": "05057337380",
+  "needs": "Sabril, Keppra, Topamax, Xamate, Yiyecek, Giyim Malzemeleri",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90eb9d2bb83efd91011b"
+  },
+  "address": "Kahramanmaraş Türkoğlu Ciceli Mah. Küme Evler",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Ciceli Mah., Küme Evleri",
+  "tweet": "gıda yardımına ihtiyaç, çocuk bezi, kuru gıdaya ihtiyaç kahramanmaraş türkoğlu ciceli mah. küme evleri 05382439040 Hatay Antakya ",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Ciceli Mah.",
+  "phoneNumber": "0538 243 90 40",
+  "needs": "Gıda Yardımı, Çocuk Bezi, Kuru Gıda",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90ef9d2bb83efd91011c"
+  },
+  "address": "Kahramanmaraş Afşin Arıpınar Caddesi No:6",
+  "locationHierarchy": "Kahramanmaraş, Afşin, Arıpınar Caddesi, No 6",
+  "tweet": "🚨🚨🚨 ACİL AFŞİN 🚨🚨🚨 Aritas mahallesi arıpınarı caddesi no 6 Afşin Kahramanmaraş Hava çok soğuk, ÇADIR YOK. Küçük kızlar donmak üzere. ACİLEN ÇADIR GEREKİYOR!  @ahbap   @DepremDairesi   @AFADBaskanlik   0 531 627 24 48 Selda Gevher 19:30 itibariyle teyitli",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Afşin",
+  "neighborhood": "Arıpınar Caddesi",
+  "phoneNumber": "05316272448",
+  "needs": "çadır",
+  "coordinates": {
+    "latitude": "38.2438548",
+    "longitude": "36.9152873"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90f39d2bb83efd91011d"
+  },
+  "address": "Gaziantep'in Nizip ilçesinde Yunus Emre mahallesinde Egemen Sk. No:8",
+  "locationHierarchy": "Gaziantep, Nizip, Yunus Emre Mahallesi, Egemen Sk. No8",
+  "tweet": "GAZİANTEP   Yunus Emre mahallesi egemen sk no:8 Nizip/Gaziantep  05366638187 Ali Gürçaylı  Yaklaşık 30 kişilermiş. İçlerinde bebek ve çocuklar da var. Acil soba, battaniye, kuru gıdaya ihtiyaçları var.",
+  "victimCount": 30,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Nizip",
+  "neighborhood": "Yunus Emre Mahallesi",
+  "phoneNumber": "05366638187",
+  "needs": "Soba, Battaniye, Kuru Gıda",
+  "coordinates": {
+    "latitude": "37.0101095",
+    "longitude": "37.7971978"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90f79d2bb83efd91011e"
+  },
+  "address": "Malatya'nın Akçadağ köyünde",
+  "locationHierarchy": "Malatya, Akçadağ, *",
+  "tweet": "Ailem Malatya’nın Akçadağ köyündeler. 100 kişilik bir köyde sadece 2 tane çadır var. Acil olarak çadıra ve gıda ihtiyacımız var. Lütfen yardım edin!!!!! İletişim:  Şabettin Cengiz 05379868467",
+  "victimCount": 100,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Akçadağ",
+  "neighborhood": "*",
+  "phoneNumber": "05379868467",
+  "needs": "çadır, yiyecek",
+  "coordinates": {
+    "latitude": "38.3443581",
+    "longitude": "37.9711325"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db90ff9d2bb83efd91011f"
+  },
+  "address": "Kahramanmaraş Göksun Tombak Mahallesi",
+  "locationHierarchy": "Kahramanmaraş, Göksun, Tombak Mahallesi",
+  "tweet": "ACİL! kahramanmaraş göksun tombak mahallesi çadır ve kuru gıda yardımına ihtiyaçları var. yardım geliyor fakat tam olarak ihtiyaca yönelik değil Göksün üzerinden yol yıkılan köprülerden ve kardan dolayi kapali ulasım elbistan üzerinden oluyor. çağrı koca 05307021040",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Göksun",
+  "neighborhood": "Tombak Mahallesi",
+  "phoneNumber": "0530 702 10 40",
+  "needs": "çadırlar, kuru gıda",
+  "coordinates": {
+    "latitude": "38.0214898",
+    "longitude": "36.494634"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91039d2bb83efd910120"
+  },
+  "address": "Hatay Antakya Cumhuriyet Mahallesi Bostan Sokak Yeşilyurt Apartmanı No:1",
+  "locationHierarchy": "Hatay, Antakya, Cumhuriyet Mahallesi, Bostan Sokak, Yeşilyurt Apartmanı No 1",
+  "tweet": "Hatay Kadın Voleybol Takımı'nın bulunduğu bina için çok acil termal ısı kamerası gerekmekte.  Lütfen hala vakit varken kızlarımızı kurtaralım   Adres: Cumhuriyet mahallesi, Bostan sokak, Yeşilyurt apartmanı, No:1 Antakya Spor Salonu karşısı.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Cumhuriyet Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91079d2bb83efd910121"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Kahramanmaraş Göksun Taşoluk köyü barınma ve erzak ihtiyaçları var lütfen paylasırmısınız teyitli numarasını atabilirim",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "Barınma, Erzak",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db910b9d2bb83efd910122"
+  },
+  "address": "Orduzu Leylekpınar Mahallesi Çıkmaz Sokak Veysel Karani Camii Yanı / Malatya",
+  "locationHierarchy": "Malatya, Yeşilyurt, Orduzu Leylekpınar Mahallesi, Çıkmaz Sokak, Veysel Karani Cami'nin yanındaki adres.",
+  "tweet": "Yemek barınma ihtiyacı vardır lütfen RT yapalım  Orduzu leylekpinari mahallesi çıkmaz sokak veysel Karani camisi yanı / Malatya",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Yeşilyurt",
+  "neighborhood": "Orduzu Leylekpınar Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "38.2954882",
+    "longitude": "38.2474518"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db910f9d2bb83efd910123"
+  },
+  "address": "Hatay Kırıkhan Mimar Sinan mh. Kızılay cd. Kumeevler no11",
+  "locationHierarchy": "Hatay, Kırıkhan, Mimar Sinan mahallesi, Kızılay caddesi, Kumeevler no 11",
+  "tweet": "1. AĞIZDAN TEYİT ETTİRDİM ACİL GIDA YARDIMI Fatma Çamkerten  Mimar Sinan mh. Kızılay cd. Kumeevler no11 Üç gündür gıda ulaşmıyor. Kanser son evrede, yatalak dede Kadın çok zor durumda. Kırıkhan/ Hatay 4 kişilik aile 05541274913 Fatma Hnm.",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Mimar Sinan mahallesi",
+  "phoneNumber": "05541274913",
+  "needs": "Acil gıda yardımı (üç gün boyunca)",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91179d2bb83efd910124"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "*ACİL YARDIM..!!!*  Arkadaşlar hataydan arkadaşımla konuştum depremden dolayi köylerdeler ve yardim gitmemis suya kiyafete ve yiyeceklere ihtiyaclari var Hatay Altınözü karbeyaz köyü iletişim: 5054172392 merve bayraktar  *TEYİTLİDİR..!!!!*  #deprem #hatay",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "5054172392",
+  "needs": "Su, kıyafet, yiyecek",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db911b9d2bb83efd910125"
+  },
+  "address": "Altınözü Tepehan Köyü",
+  "locationHierarchy": "İl Hatayİlçe AltınözüMahalle/Köy Tepehan",
+  "tweet": "TEYİTLİ!! ACİL YARDIM Altınözü Tepehan Köyü kendi imkanlarıyla hayatta kalmaya çalışıyor. Hiçbir yardım ulaşmamış.  Lütfen destek olalım",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "Yiyecek, Su, Battaniyeler, İlk Yardım Malzemeleri, Jeneratörler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db911f9d2bb83efd910126"
+  },
+  "address": "Çukurtaş Köyü, Derebaşı Mezrası, Kahta, Adıyaman",
+  "locationHierarchy": "Adıyaman, Kahta, Çukurtaş Köyü, Derebaşı Mezrası",
+  "tweet": "Acill retweet!!!  Adıyaman donuyor Çadır ihtiyaçları varmış .        Çukurtaş köyü Derebaşı mezrası Kahta/Adıyaman Teyitli bilgi 20.25",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Kahta",
+  "neighborhood": "Çukurtaş Köyü",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.7860716",
+    "longitude": "38.6217178"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91239d2bb83efd910127"
+  },
+  "address": "Antakya Narlıca Mahallesi Cumhuriyet Caddesi 227.Sokak No:12",
+  "locationHierarchy": "Hatay, Antakya, Narlıca Mahallesi, Cumhuriyet Caddesi, 227. Sokak, No12",
+  "tweet": "Narlıca mahallesi cumhuriyet caddesi 227.sokak no 12 aksan düğün salonu arkasındaki apartman tır garajı yanı bina no 12 Antakya  +90 (552) 404 66 88 türkan  Acil gıda ihtiyacı va",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Narlıca Mahallesi",
+  "phoneNumber": "+9055240406688",
+  "needs": "Gıda",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91279d2bb83efd910128"
+  },
+  "address": "Adıyaman'ın Çelikhan ilçesinde Mestan Köyü'nde",
+  "locationHierarchy": "Adıyaman, Çelikhan, Mestan Köyü",
+  "tweet": "ADIYAMAN   Adıyaman Çelikhan mestan köyünde gıda ve çadır ihtiyaçlari var hala erzak ulaşamamış kendilerine  +90 545 422 26 44 kemal abi",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Çelikhan",
+  "neighborhood": "Mestan Köyü",
+  "phoneNumber": "+905454222644",
+  "needs": "Gıda, Çadır",
+  "coordinates": {
+    "latitude": "40.9674235",
+    "longitude": "29.2750883"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db912a9d2bb83efd910129"
+  },
+  "address": "Hatay Antakya Tanışma Köyü",
+  "locationHierarchy": "Hatay, Antakya, Tanışma Köyü",
+  "tweet": "Hatay Antakya Tanışma köyü acil çadır ve erzak yardımı lazım çocuklar bebekler var iletişim numaraları 05326906575 05379976011",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Tanışma Köyü",
+  "phoneNumber": "0532 690 6575,  0537 997 6011",
+  "needs": "çadırlar, erzak",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db912f9d2bb83efd91012a"
+  },
+  "address": "Adıyaman'ın Çelikhan ilçesindeki Kurudere mahallesinde.",
+  "locationHierarchy": "Adıyaman, Çelikhan, Kurudere Mahallesi",
+  "tweet": "Teyitli Bilgidir ❗  Adıyaman / Çelikhan ilçesi Kurudere mahallesi. Kıyafet,ayakkabı,mont öncelikli ihtiyaç günlerdir yardım ulaşmamış. Köydeki çocuklar 7-15 yaş arası çocuklar yetişkin Lütfen paylaşalım.",
+  "victimCount": 3,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Çelikhan",
+  "neighborhood": "Kurudere Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "kıyafetler, ayakkabılar, montlar (öncelikle)",
+  "coordinates": {
+    "latitude": "40.9674235",
+    "longitude": "29.2750883"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91329d2bb83efd91012b"
+  },
+  "address": "Kahramanmaraş Onikişubat Şekerdere Caddesi Go Petrol Karşısı Seda Apartmanı",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Şekerdere Caddesi, Go Petrol Karşısı, Seda Apartmanı",
+  "tweet": "TEYİTLİ-MEHMET BALBABA-TELEFON SİNYALİ VAR OTOPARK BOŞLUĞUNDA OLDUĞU DÜŞÜNÜLÜYOR-ŞEKERDERE CADDESİ GO PETROL KARŞISI SEDA APARTMANI KMARAŞ ONİKİŞUBAT  ACİL TERMAL KAMERA",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Şekerdere Caddesi",
+  "phoneNumber": "0555 555 55 55",
+  "needs": "Yok",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91369d2bb83efd91012c"
+  },
+  "address": "Kahramanmaraş Kanlıkavak Mahallesi Bahçepınar Caddesi No:20",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Kanlıkavak Mahallesi, Bahçepınar Caddesi No20",
+  "tweet": "KAHRAMANMARAŞ/Kanlıkavak mahallesi bahçepınar caddesi no:20 kanlıkavak yolçatından sol yukarı çıksınlar babam yolda bekliycek ararlarsa bulurum onları dedi. ACİLEN ÇADIR İHTİYACI VARDIR!! FAKAT İSİM YAZDIRILMASI GEREK!!! İletişim No:0507 469 1946 TEYİTLİ BİLGİDİR!!  YAYALIMMM!!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Kanlıkavak Mahallesi",
+  "phoneNumber": "05074691946",
+  "needs": "çadır",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db913a9d2bb83efd91012d"
+  },
+  "address": "Adıyaman Merkez Altınşehir Mahallesi Bahçeşehir Sitesi 1 Blok B Katı 1",
+  "locationHierarchy": "Adıyaman, Merkez, Altınşehir Mahallesi, Bahçeşehir Sitesi 1 Blok B Katı 1",
+  "tweet": "Ekipmanları arttırın lütfen‼️ Jeneratör Vinç Hilti ihtiyacı var nolur yardım edin. Altınşehir mah. Bahçeşehir sitesi1 B blok Kat:1 Adıyaman/Merkez Serkan İnal ve ailesi enkaz altında 4 gün oldu",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Altınşehir Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "jeneratör, vinç, hilti",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db913e9d2bb83efd91012e"
+  },
+  "address": "Hatay İskenderun Gürsel Mahallesi",
+  "locationHierarchy": "Hatay, İskenderun, Gürsel Mahallesi",
+  "tweet": "Hatay/iskenderun Gürsel mahallesi Teknik üniversitesi arka giriş kapısı karşısında Alina cafe var önlerinde afad çaldırı var Battaniye ve ısıtıcı lazım elektrikli soba kuru gıda ihtiyacı İletişim: 0 (507) 792 78 09",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "İskenderun",
+  "neighborhood": "Gürsel Mahallesi",
+  "phoneNumber": "0 (507) 792 78 09",
+  "needs": "Battaniye, Isıtıcı, Kuru Gıda",
+  "coordinates": {
+    "latitude": "36.5902266",
+    "longitude": "36.1710354"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91429d2bb83efd91012f"
+  },
+  "address": "Malatya Battalgazi Mahallesi Düzen Sokak No:33",
+  "locationHierarchy": "Malatya, Battalgazi, Düzen Sokak No 33",
+  "tweet": "MALATYA  Battalgazi mahallesi düzen sok no 33  Ali Süngü Telefon 0538 834 95 78  *Kalabalık bir aile, çadır haricinde gıda ve yakacak eksikleri var*",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Battalgazi",
+  "neighborhood": "Düzen Sokak No 33",
+  "phoneNumber": "0538 834 95 78",
+  "needs": "Gıda, Yakıt",
+  "coordinates": {
+    "latitude": "38.3487153",
+    "longitude": "38.3190674"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91469d2bb83efd910130"
+  },
+  "address": "Merkez / Dereköy, Kahramanmaraş",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Dereköy Mahallesi",
+  "tweet": "Merkez / Derekoyu Kahramanmaraş  Adı: Ali İletişim no: 0536 715 29 24                                         Köydeler yardım ulaşmamış soğuktan donmak üzereler. Kıyafet gıda odun kömür ihtiyaçları var lütfen yardım ulaştıralım. Teyitli bilgidir yayalım.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Dereköy Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91499d2bb83efd910131"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Maraş Elbistan bölgesinde gıda yiyecek içecek vs vardır. Acil en temel ihtiyaçlar soba kömür piknik tüpü iç çamaşırı çadır tencere katalik benzin ve mazot ulaşmamıştır. Bunlara şu an çok ihtiyaç vardır. Teyitlidir avukat Tarık Şahin  İletişim: 0 505 070 16 46",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0505 070 16 46",
+  "needs": "Soba, Kömür, Piknik Tüpü, İç Çamaşırı, Çadır, Tencere, Katalitik Sobalar, Benzin, Mazot",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db914d9d2bb83efd910132"
+  },
+  "address": "Malatya Kuluncak Kızılhisar Fatoş Boyraz",
+  "locationHierarchy": "Malatya, Kuluncak, Kızılhisar, Fatoş Boyraz Sokağı",
+  "tweet": "TEYİTLİ arkadaşlar annemin akrabası lütfen yardımcı olun  8 aylık bebek için bez,mama ve kıyafet ihtiyacı var.   Malatya Kuluncuk Kızılhisar Fatoş Boyraz 05397987977",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Kuluncak",
+  "neighborhood": "Kızılhisar",
+  "phoneNumber": "05397987977",
+  "needs": "Bebek bezi, bebek maması, bebek kıyafetleri",
+  "coordinates": {
+    "latitude": "38.8848581",
+    "longitude": "37.6707415"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91519d2bb83efd910133"
+  },
+  "address": "Kahramanmaraş Çağlayan Mahallesi Cumhuriyet Cad.",
+  "locationHierarchy": "Kahramanmaraş, Çağlayan Mahallesi, Cumhuriyet Caddesi",
+  "tweet": "Hızlıca yayar mısınız?  Kahramanmaraş acil çadır ısıtıcı gıda yardımı lazım🙏🏻🙏🏻🙏🏻🙏🏻 İstiklal mah. Cumhuriyet CAD. Kahramanmaraş Çağlayancerit +90 541 728 08 27  Sevim Yiğit Dışarıda bekliyolar acil yardım gerekiyor",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Çağlayan Mahallesi",
+  "neighborhood": "Cumhuriyet Caddesi",
+  "phoneNumber": "+905417280827",
+  "needs": "çadırlar, ısıtıcılar, yiyecekler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91559d2bb83efd910134"
+  },
+  "address": "Hatay Antakya Odabaşı Mahallesi Kanguru Sokak Özgür Apartmanı No:5",
+  "locationHierarchy": "Hatay, Antakya, Odabaşı Mahallesi, Kanguru Sokak, Özgür Apartmanı No 5",
+  "tweet": "ÇOK ACİL 🚨 EKSKAVATÖR- BÜYÜK BOMLU KEPÇE KISKACI LAZIM  Lütfen yayalim cok acil lütfen  HATAY-ANTAKYA, Odabaşı, Kanguru sokak, Özgür apartmanı 5 kişilik KARACA ailesi hala enkaz altında çok acil destek lütfen ",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Odabaşı Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "Ekskavatör-Büyük Bomlu Kepçe Kıskacı",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91599d2bb83efd910135"
+  },
+  "address": "Kahramanmaraş Türkoğlu Beyoğlu Mahallesi",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Beyoğlu Mahallesi",
+  "tweet": "KAHRAMANMARAŞ, TÜRKOĞLU İLÇESİ BEYOĞLU MAHALLESİNDE ARKADAŞLARIMIZIN ÇADIRA İHTİYACI VAR. ÇOCUKLAR SOĞUKTA BEKLİYOR😞 BU CİVARDA BİR YARDIM HABERİ GÖRÜRSENİZ İLETİN LÜTFEN.   CEP TELEFONU 0537 209 3590",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Beyoğlu Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db915d9d2bb83efd910136"
+  },
+  "address": "Hatay Yayladağı Leylekli Köyü",
+  "locationHierarchy": "Hatay, Yayladağı, Leylekli Köyü",
+  "tweet": "Hatay yayladağı leylekli köyü  kuru gıda bebek malzemeleri bez vs battaniye ihtiyaçları var Antakya da evleri yıkılanlar da köye gelmişler yardım tırı ulaşmamış (enkazlar ulaşımı zorlaştırdığı için) zor durumdala",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Yayladağı",
+  "neighborhood": "Leylekli Köyü",
+  "phoneNumber": "N/A",
+  "needs": "Kuru Gıda, Bebek Malzemeleri, Bez, Battaniye",
+  "coordinates": {
+    "latitude": "35.9029545",
+    "longitude": "36.0625987"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91609d2bb83efd910137"
+  },
+  "address": "Malatya Battalgazi Hidayet Mahallesi Çalıkuşu Sokak No:4",
+  "locationHierarchy": "Malatya, Battalgazi, Hidayet Mahallesi, Çalıkuşu Sokak No 4",
+  "tweet": "Malatya Battalgazi hidayet mah. Çalıkuşu sokak no 4 neşe Sarıkaya  0538 342 13 31  Gıda su battaniye ev hasarlı lütfen elden ele yayalim belki bir yardım getiren olur lütfen yayalım",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Battalgazi",
+  "neighborhood": "Hidayet Mahallesi",
+  "phoneNumber": "0538 342 13 31",
+  "needs": "Yiyecek, Su, Battaniye, Ev Hasarı",
+  "coordinates": {
+    "latitude": "38.3487153",
+    "longitude": "38.3190674"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91649d2bb83efd910138"
+  },
+  "address": "Kahramanmaraş Dulkadiroğlu Yenişehir Mahallesi Cumhuriyet Bulvarı Köker Sitesi No:4 B Blok",
+  "locationHierarchy": "Kahramanmaraş, Dulkadiroğlu, Yenişehir Mahallesi, Cumhuriyet Bulvarı, Köker Sitesi, B Blok No4",
+  "tweet": "KAHRAMANMARAŞ  ACİL VİNÇ LAZIM  Yenişehir mah/cumhuriyet bulvarı/köker sitesi No:4 B blok dulkadiroğlu/ iş bankasının olduğu site/   Gizem toprak 05545530467   vinç lazım",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Dulkadiroğlu",
+  "neighborhood": "Yenişehir Mahallesi",
+  "phoneNumber": "05545530467",
+  "needs": "Vinç",
+  "coordinates": {
+    "latitude": "37.5812744",
+    "longitude": "36.927509"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91689d2bb83efd910139"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Nurdağı sakçagözü köyü bisküvi yemekten halsiz olmuş insanlar çadırlar kurulmuş Kuru gıda gelirse kendi yemeklerini yapabilme imkanları var  0536 739 7027",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05367397027",
+  "needs": "Kuru Gıda",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db916c9d2bb83efd91013a"
+  },
+  "address": "Kahramanmaraş Onikişubat Mollagürani Mahallesi 1. Sokak No:20",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Mollagürani Mahallesi, 1. Sokak No20",
+  "tweet": "KAHRAMANMARAŞ‼️ Molla gürani mah. 61001/ 1.sok no: 20 Sümbüllü Karacaoğlan Parkı üstü ONİKİŞUBAT/KAHRAMANMARAŞ İsim soyisim: volkan musa aksakal  No: 538 878 9180 İhtiyaçlar:  Gıda  Su",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Mollagürani Mahallesi",
+  "phoneNumber": "538 878 9180",
+  "needs": "Yiyecek, Su",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91709d2bb83efd91013b"
+  },
+  "address": "Antakya, Defne, Harbiye BP benzin istasyonu",
+  "locationHierarchy": "Antakya, Defne, Harbiye BP benzin istasyonu",
+  "tweet": "Antakya DEFNE \"Harbiye BP\" (benzin istasyonu) ye çadır lazım\" 15 20 kişi açıkta. Çadır lazım olan kişilerin telefonu: Semir MANSUR +90 535 584 16 00 Edip Mansur +90 532 365 18 96 9.02.2023 saat 20,30 da  tel.ile konustum dışarıdalar ateş yakarak korunuyorlar ACİL ÇADIR duyuralım",
+  "victimCount": 15,
+  "status": "Yardım Bekliyor",
+  "region": "Antakya",
+  "district": "Defne",
+  "neighborhood": "Harbiye BP benzin istasyonu",
+  "phoneNumber": "+90535 584 1600,  +90532 365 1896",
+  "needs": "Çadır",
+  "coordinates": {
+    "latitude": "36.2502855",
+    "longitude": "36.0559336"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91749d2bb83efd91013c"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Karaali mahallesi Antakya/Hatay ihtiyaçları gıda su ve çadır. Hiçbir yardım ulaşmamış . Gelen yardımlar yolda yağmalanmış.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "Yiyecek, Su, Çadır",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91789d2bb83efd91013d"
+  },
+  "address": "Kahramanmaraş Dulkadiroğlu Ballıca Mahallesi Şeref Eroğlu Caddesi",
+  "locationHierarchy": "Kahramanmaraş, Dulkadiroğlu, Ballıca Mahallesi, Şeref Eroğlu Caddesi",
+  "tweet": "Allah rızası için şunu da yayın ne olur ya   KAHRAMANMARAŞ ACİL ÇADIR İHTİYACI ‼️  Dulkadiroğlu/ Kahramanmaraş  Ballıca Mahallesi Şeref Eroğlu Caddesi   0530 083 21 68",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Dulkadiroğlu",
+  "neighborhood": "Ballıca Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.5812744",
+    "longitude": "36.927509"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db917c9d2bb83efd91013e"
+  },
+  "address": "Adıyaman Merkez Ali Taş Mahallesi 1248 Sokak Umut Apartmanı B Blok No:1 Kat:3 Daire:15",
+  "locationHierarchy": "Adıyaman, Merkez, Ali Taş Mahallesi, 1248 Sokak, Umut Apartmanı B Blok, No1, Kat3, Daire15",
+  "tweet": "ALİTAŞI MAHALLESİ 1248 SOKAK UMUT APARTMANI B BLOK NO 1 KAT 3 NO 15 ADIYAMAN/MERKEZ  TERMAL KAMERA LAZIM LÜTFEN ACİLLL!!!!!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Ali Taş Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "Termal kamera",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db917f9d2bb83efd91013f"
+  },
+  "address": "Kahramanmaraş Merkez Ebrar Sitesi Hürriyet 17. Sk No:14 46050",
+  "locationHierarchy": "Kahramanmaraş, Merkez, Ebrar Sitesi, Hürriyet Caddesi, Bina Numarası 14",
+  "tweet": "TEYİTLİDİR SES VAR VİNC LAZIM    HÜRRİYET 17. SK NO:14 46050 KAHRAMANMARAŞ MERKEZ EBRAR SİTESİ   POYRAZ AVCI (12 YAŞ) AKIN AVCI  DİLEK AVCI  İrtibat No:0552 547 3864",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Merkez",
+  "neighborhood": "Ebrar Sitesi",
+  "phoneNumber": "05525473864",
+  "needs": "vinç",
+  "coordinates": {
+    "latitude": "37.6135295",
+    "longitude": "37.290957"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91849d2bb83efd910140"
+  },
+  "address": "Hatay Samandağ İlk Gün Yardımı için Tekebaşı, Sutaşı, Kuşalanı, Yeşilada, Favvar Bölgesi ve Caddeleri",
+  "locationHierarchy": "Hatay, Samandağ, Tekebaşı, Sutaşı, Kuşalanı, Yeşilada, Favvar",
+  "tweet": "HATAY SAMANDAĞ İLK GÜNDEN BERİ YARDIM GİTMEMİŞ lütfen  Tekebaşı mahallesi Sutaşı Mahallesi Kuşalanı mahallesi Yeşilada mahallesi Favvar Mevki ve caddesi  ÇOK ACİL SU ERZAK BATTANİYE VE ÇADIR LAZIM LÜTFEN YAYIN ÇOK ACİL!!!!! 05358572832 0533 039 39 31 0530 065 03 44 0532 401 55 74",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Samandağ",
+  "neighborhood": "Tekebaşı",
+  "phoneNumber": "0535 8572832,  0533 0393931,  0530 0650344,  0532 4015574",
+  "needs": "Su, Erzak, Battaniye, Çadır",
+  "coordinates": {
+    "latitude": "36.0851597",
+    "longitude": "35.9799375"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91879d2bb83efd910141"
+  },
+  "address": "Hatay Antakya Cebrail Mahallesi Fatih Caddesi Katipoğlu Apartmanı No:13",
+  "locationHierarchy": "Hatay, Antakya, Cebrail Mahallesi, Fatih Caddesi, Katipoğlu Apartmanı, 13 Numara.",
+  "tweet": "‼️TEYİTLİDİR‼️ VİNÇ VAR IŞIK VAR  ACİL EKİP VE TERMAL KAMERA GEREK  Begüm Ciritci 88 saattir enkaz altında.  Hava boşluğu var ⚠SESLERİ GELİYOR EKİP LAZIM⚠  Antakya/HATAY Cebrail Mahallesi, Fatih Caddesi, No:13, Katipoğlu Apartmanı  Özkan Uçar: 5323638123 Ümit Ciritçi:5346577770",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Cebrail Mahallesi",
+  "phoneNumber": "5323638123,  5346577770",
+  "needs": "vinç, ışık, ekipman (ekip), termal kamera",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db918b9d2bb83efd910142"
+  },
+  "address": "Hatay Samandağ Yenimahalle Abdülkerim Yorgun Caddesi No:76",
+  "locationHierarchy": "Hatay, Samandağ, Yenimahalle, Abdülkerim Yorgun Caddesi No 76",
+  "tweet": "Abdülkerimyorgun caddesi yenimahalle şok ev no 76 hatay samandağ  0537 783 5198 bu adreste ciddi sayıda evsizler var ve hala vinç yardımı enkaz yardımı gelmemiş gıda yardımı var fakat çadır yok ısınamıyorlar bu numarada şebeke sorunu var arada bir tekrar deneyin",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Samandağ",
+  "neighborhood": "Yenimahalle",
+  "phoneNumber": "0537 783 5198",
+  "needs": "Vinç Yardımı, Enkaz Kaldırma, Yiyecek Yardımı, Çadır, Isıtıcı",
+  "coordinates": {
+    "latitude": "36.0851597",
+    "longitude": "35.9799375"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db918f9d2bb83efd910143"
+  },
+  "address": "Malatya Doğanşehir Karaterzi Köyü ve Çevre Köyleri",
+  "locationHierarchy": "Malatya, Doğanşehir, Karaterzi Köyü ve Çevre Köyler",
+  "tweet": "TEYİTLİ ÖLÜM TEH. ACİLİYETLİ  Malatya Doğanşehir Karaterzi köyü ve çevre köylerinde evler yıkılmış insanlar kar altında dışarda derme çatma yaşamaya çalışıyor. Öncelikli ihtiyaç jeneratör , temel gıda ve barınma ekipmanları  05373889473 Mahmut Çakır  0 (537) 890 39 38 Hasan Basri",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Doğanşehir",
+  "neighborhood": "Karaterzi Köyü ve Çevre Köyler",
+  "phoneNumber": "0537 388 9473,  0537 890 3938",
+  "needs": "Jeneratör, Temel Gıda Maddeleri, Barınma Ekipmanı",
+  "coordinates": {
+    "latitude": "38.0934102",
+    "longitude": "37.8784394"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91939d2bb83efd910144"
+  },
+  "address": "Gaziantep Şahinbey Karataş Mahallesi 103410. Cadde No:1-3",
+  "locationHierarchy": "Gaziantep, Şahinbey, Karataş Mahallesi, 103410. Cadde No1-3",
+  "tweet": "Erkan kocaoğlu 05334776882 Karataş, 103410. Cd. 1-3, 27470 Şahinbey/Gaziantep Battaniye, Gıda, Su",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Şahinbey",
+  "neighborhood": "Karataş Mahallesi",
+  "phoneNumber": "05334776882",
+  "needs": "Battaniye, Yiyecek, Su",
+  "coordinates": {
+    "latitude": "37.0628317",
+    "longitude": "37.3792617"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91989d2bb83efd910145"
+  },
+  "address": "Kahramanmaraş Türkoğlu Gaziler Caddesi 3013/31",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Gaziler Caddesi, Bina Numarası 3013/31",
+  "tweet": "“Acil yardım!!!!! yemek, bez, çocuk kıyafeti lazım!!!!!   Türkoğlu kaymakamlığına yakın, Gaziler 3013 sokak no 31 TÜRKOĞLU/MARAŞ”  Ümmühan sarı 0553 387 9773 @AFADBaskanlik @DepremDairesi @BabalaTv #depremsondakika #Kahramanmaras",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Gaziler Caddesi",
+  "phoneNumber": "0553 387 9773",
+  "needs": "Yemek, Bebek bezi, Çocuk kıyafetleri",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db919c9d2bb83efd910146"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "‼️ACİLL TEYİTLİ‼️ ‼️KAHRAMANMARAŞ EKİNÖZÜ  ‼️+90 544 572 66 90 said  ⚠️yüyeceği içeceği geçtim millet soğuktan ölücek nerde bu millet  Nolur yardımedin çadırlarda millet dondu acilen battaniye ısıtıcı gitmeli",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "+90545 7272669",
+  "needs": "Battaniye, Isıtıcı",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db919f9d2bb83efd910147"
+  },
+  "address": "Kahramanmaraş Afşin Altaş Mahallesi",
+  "locationHierarchy": "Kahramanmaraş, Afşin, Altaş Mahallesi",
+  "tweet": "İletişime geçildi.  6 aile var toplam 20 kişi var. Gıda ihtiyacı varmış. Köy merkezine gıda desteği gelmiş ama yetişememişler.  Battaniye ve ısıtıcı ihtiyacı  Kıyafet ulaşmış, ama çadır yok çatı alında kalıyoruz dendi.  Maraş Afşin Altaş mahallesi",
+  "victimCount": 6,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Afşin",
+  "neighborhood": "Altaş Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "Yiyecek, Battaniye, Isıtıcı, Giysi, Çadır",
+  "coordinates": {
+    "latitude": "38.2438548",
+    "longitude": "36.9152873"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91a39d2bb83efd910148"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "MALATYA- ARKADAŞLAR ÇOK ACİL. 2 gündür  YEMEK YEMEMİŞLER ÇOK KOTÜ durumdalar.  Köye ulaşılması gerek Bebek mama, kuru gıda vs iletilmesi gerek. MALATYA AKÇADAĞU GÜZYURDU KOYÜ İBRAHİM DİLGİN 05378274986",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05378274986",
+  "needs": "bebek maması, kuru gıda",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91a79d2bb83efd910149"
+  },
+  "address": "Malatya Akçadağ İkinciler Köyü",
+  "locationHierarchy": "Malatya, Akçadağ, İkinciler Köyü",
+  "tweet": "YARDIM : Malatya Akçadağ İkinciler Köyü  yardım yetersiz koca köye 2 koli gitmiş gıda bot mont kıyafet atkı bere çorap battaniye yorgan ÖZELLİKLE ÇADIR lazım bir an önce yardımın ulaşması gerekiyor İKİNCİLER KÖYÜ DAĞINIK VE ÇOK BÜYÜK   Malatya Akçadağ İkinciler Köyü  05539064244",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Akçadağ",
+  "neighborhood": "İkinciler Köyü",
+  "phoneNumber": "05539064244",
+  "needs": "Gıda, Bot, Mont, Giysi, Atkı, Bere, Çorap, Battaniye, Yorgan, Çadır",
+  "coordinates": {
+    "latitude": "38.3443581",
+    "longitude": "37.9711325"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91ab9d2bb83efd91014a"
+  },
+  "address": "Hatay Hassa Ardıçlı Mahallesi",
+  "locationHierarchy": "Hatay, Hassa, Ardıçlı Mahallesi",
+  "tweet": "Hatay Hassa ardıçlı Bu adrese lütfen gıda , elbise , temek ihtiyaç ne varsa yardım gönderebilirmisiniz ?????? Lütfen yardım ulaşmıyormuş.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Hassa",
+  "neighborhood": "Ardıçlı Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "36.8001098",
+    "longitude": "36.5172243"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91ae9d2bb83efd91014b"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Adıyaman merkezde evleri enkaz olan aile gidecek yer bulamıyor. Barınma, gıda desteği çok acil lazım  İletişim Numarası: 0(543) 619 40 53",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91b29d2bb83efd91014c"
+  },
+  "address": "Adıyaman Gölbaşı Tavuk Çiftliği Lojman Evleri",
+  "locationHierarchy": "Adıyaman, Gölbaşı, Tavuk Çiftliği Lojmanları",
+  "tweet": "ADIYAMAN ‼️  gölbaşı civkur tavuk çiftliği lojman evleri  Cumali Tokgöz 0 (539) 322 54 30  Acil olarak elektrikli ısıtıcı, ufo, gıda  Ve büyük beden kıyafet yetiskin için mont vs. Isıtıcı ufo en acil olanıymış",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Gölbaşı",
+  "neighborhood": "Tavuk Çiftliği Lojmanları",
+  "phoneNumber": "0539 322 5430",
+  "needs": "Elektrikli ısıtıcı, UFO, yiyecek, büyük beden giysi",
+  "coordinates": {
+    "latitude": "37.7844045",
+    "longitude": "37.6395601"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91b69d2bb83efd91014d"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "O RH (+) Kana acil ihtiyaç var trombosit  500 yataklı devlet hastanesi ŞANLIURFA  İrtibat numarası 0552 074 69 11‼‼‼ Acil kan ihtiyacı var!!!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0552 074 69 11",
+  "needs": "O RH (+) Kan (Trombosit 500 ünite)",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91ba9d2bb83efd91014e"
+  },
+  "address": "Antakya, Ekinci Mahallesi, İnönü Bulvarı, Alya Uçar Apartmanı No:128",
+  "locationHierarchy": "Hatay, Antakya, Ekinci Mahallesi, İnönü Caddesi, Alya Uçar Apartmanı No128",
+  "tweet": "ANTAKYA TEYİTLİ  2 yetişkin 1 BEBEK SESLERİ GELİYOR KEPÇE lazım Lütfen sesimizi DUYUN! Ekinci Mahallesi İnönü Bulvarı Alya Uçar Apt. No:128 TUTKU PASTANESİ İrtibat;Yusuf Yonca: 0532 744 96 46 Zafer Demirdöven: 0536 244 73 09",
+  "victimCount": 3,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Ekinci Mahallesi",
+  "phoneNumber": "05327449646,  05362447309",
+  "needs": "kepçe",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91be9d2bb83efd91014f"
+  },
+  "address": "Kahramanmaraş Köseli Mahallesi Müdürler Sokak Küme Evleri No: 60/1",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Köseli Mahallesi, Müdürler Sokak Küme Evleri No 60/1",
+  "tweet": "Teyitli:  Kahramanmaraş, Köseli Mah. Müdürler Sok. Küme Evleri No: 60/1  Acil çadır ihtiyacı var. Aynı zamanda battaniye, gıda ihtiyacı var, elektrik olmadığı için de powerbank ihtiyaçları olduğunu belirtiyorlar.  İletişim bilgisi: 0546 578 39 44",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Köseli Mahallesi",
+  "phoneNumber": "0546 578 39 44",
+  "needs": "çadırlar, battaniyeler, yiyecek, güç bankaları",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91c29d2bb83efd910150"
+  },
+  "address": "Adıyaman Merkez Büyük Hasancık Köyü İlkokulu",
+  "locationHierarchy": "Adıyaman, Merkez, Büyük Hasancık Köyü",
+  "tweet": "‼️bu adreste 3 4 tane bebek varmıs ‼️ bebeklere gıda yardımı gelmiş köy halkına gıda ve çocuklar için giysi gerekiyormuş yardım edelim Büyük Hasancık köyü ilkokulu merkez Adıyaman iletisim: +90552 814 5232",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Büyük Hasancık Köyü",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91c69d2bb83efd910151"
+  },
+  "address": "Hatay Hassa",
+  "locationHierarchy": "Hatay, Hassa, *",
+  "tweet": "Arkadaşlar Hatay hassa mevkinde bebek maması,bebek bezi, bebek maması,su,gıda,biberon,battaniye gibi ihtiyaçları olan tanıdığınız varsa 05073499301 telefon numarası üzerinden iletişime geçebilirsiniz. İletip yayalım lütfen.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Hassa",
+  "neighborhood": "*",
+  "phoneNumber": "05073499301",
+  "needs": "Bebek Maması, Bebek Bezi, Bebek Kıyafetleri, Su, Gıda, Biberon, Battaniye",
+  "coordinates": {
+    "latitude": "36.8001098",
+    "longitude": "36.5172243"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91ca9d2bb83efd910152"
+  },
+  "address": "Hatay İskenderun Numune mah. 186 sok. No: 14",
+  "locationHierarchy": "Hatay, İskenderun, Numune Mahallesi, 186. Sokak, No 14",
+  "tweet": "Hatay/İskenderun Numune mah. 186 sokak No: 14  05349164014 = Görkem Duman Erzak özellikle kuru gıda su giysi bebek bezi 5 numara bebek maması 3 numara fener",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "İskenderun",
+  "neighborhood": "Numune Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "36.5902266",
+    "longitude": "36.1710354"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91ce9d2bb83efd910153"
+  },
+  "address": "Kahramanmaraş Onikişubat Yeşilyurt Mahallesi Fatih Sultan Mehmet Caddesi No:35",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Yeşilyurt Mahallesi, Fatih Sultan Mehmet Caddesi No35",
+  "tweet": "Yeşilyurt mah. Fatihsultan mehmet cad. No=35 a onikisubat k.maraş  Gıda, kıyafet ve ısınmak için odun kömür sıkıntısı yaşanıyor. Acil destek bekliyorlar. Köye çadır bile ulaşamamış arabada yaşamaya çalışıyorlar. Bebekler var. İletişim: +90 (538) 337 36 56 / Sultan Parlak  acil!",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Yeşilyurt Mahallesi",
+  "phoneNumber": "+90538337656",
+  "needs": "Yiyecek, giysi, yakıt, çadır, bebek bezi",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91d29d2bb83efd910154"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "RT❗ TEYITLI, güncel 9 şub 21:50  ‼️Kahramanmaraş'ın Nurhak ilçesi ve köyleri  Yakacak, Gıda, Yakıt, Mazot, Isınma, Barınma ihtiyaçları var. YOLLAR YIKILMIŞ, ulaşım zormuş ama oraya ACİL YARDIM istiyorlar  terk etmek isteyenler var ama benzin bulamıyorlar",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91d69d2bb83efd910155"
+  },
+  "address": "Göksun Yağmurlu Köyü, Abdurrahman Kolukısa",
+  "locationHierarchy": "Göksun, Göksun, Yağmurlu Köyü, Abdurrahman Kolukısa Caddesi",
+  "tweet": "Göksun yağmurlu köyü Abdurrahman Kolukısa 05427173346 gıda ve  çadır ihtiyaçi vardır şimdiden teşekkürler",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Göksun",
+  "district": "Göksun",
+  "neighborhood": "Yağmurlu Köyü",
+  "phoneNumber": "05427173346",
+  "needs": "Gıda, Çadır",
+  "coordinates": {
+    "latitude": "38.0214898",
+    "longitude": "36.494634"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91da9d2bb83efd910156"
+  },
+  "address": "Kahramanmaraş Köseli Mah. Müdürler Sok. Küme Evleri No: 60/1",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Köseli Mah., Müdürler Sk. Küme Evleri No 60/1",
+  "tweet": "Kahramanmaraş, Köseli Mah. Müdürler Sok. Küme Evleri No: 60/1  Acil çadır ihtiyacı var. Aynı zamanda battaniye, gıda ihtiyacı var, elektrik olmadığı için de powerbank ihtiyaçları olduğunu belirtiyorlar.  İletişim bilgisi: 0546 578 39 44 ACİL",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Köseli Mah.",
+  "phoneNumber": "0546 578 39 44",
+  "needs": "çadırlar, battaniyeler, yiyecek, güç bankaları",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91dd9d2bb83efd910157"
+  },
+  "address": "Mersin Tarsus Armutlu Mahallesi Hacı Durmuş Sokak Öfkeli Apartmanı",
+  "locationHierarchy": "Mersin, Tarsus, Armutlu Mahallesi, Hacı Durmuş Sokak, Öfkeli Apartmanı",
+  "tweet": "Kuzenim Aliye Ayfer Geçmen -Öfkeli, kizi :Rabia Öfkeli ve esi Metin Öfkeli göcük altinda! Bölgeye vinç gerekli Armutlu mahallesi Haci durmus sokak Öfkeli apartmani Taksi duraginin, pazartesi pazarin karsisi. AFAD: 03261120000 Iletisim/duyan/gören: +90 537 780 54 17",
+  "victimCount": 3,
+  "status": "Yardım Bekliyor",
+  "region": "Mersin",
+  "district": "Tarsus",
+  "neighborhood": "Armutlu Mahallesi",
+  "phoneNumber": "+905377805417",
+  "needs": "Vinç",
+  "coordinates": {
+    "latitude": "36.9164834",
+    "longitude": "34.895149"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91e19d2bb83efd910158"
+  },
+  "address": "Kahramanmaraş Dulkadiroğlu Kayabaşı Mahallesi Gazidemircioğlu Caddesi Atabey Apartmanı Kat:4 No:10",
+  "locationHierarchy": "Kahramanmaraş, Dulkadiroğlu, Kayabaşı Mahallesi, Gazidemircioğlu Caddesi, Atabey Apartmanı, 4. Kat, 10 Numara.",
+  "tweet": "Gazidemircioğlu caddesi kayabaşı mahallesi atabey apartmanı kat:4 no:10 dulkadiroğlukahramanmaraşta enkaz altında. Bulunduğu konuma acil termal kamera gerekiyor.#depremsondakika #Turkey #earthquakeinturkey",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Dulkadiroğlu",
+  "neighborhood": "Kayabaşı Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "Termal Kamera",
+  "coordinates": {
+    "latitude": "37.5812744",
+    "longitude": "36.927509"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91e99d2bb83efd910159"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "ACİL YARDIM (TEYİTLİ‼️‼️)  Taşoluk köyü Göksun/Kahramanmaraş acil yardım gerekiyor. Kendi imkanlarıyla çadır kurmuşlar ama hava çok soğuk çadırlar yeterli değil. Gıda ve su ihtiyaçları var. Çok kötü durumdalar lütfen. Bebekler, küçük çocuklar varmış. Lütfen acil yardım!!!!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91ed9d2bb83efd91015a"
+  },
+  "address": "Kırıkhan, Hatay, Türkiye",
+  "locationHierarchy": "Hatay, Kırıkhan, Türkiye",
+  "tweet": "Hatay kırıkhan kamberli köyü oda arkadaşım +90 533 091 12 94 ismail lütfen o tarafta olan ulaşsın kendi aracı var kırıkhana gelip alabilirim diyor  11 aile var  kuru gıda elbise ihtiyaçları var yardımcı olur musunuz ",
+  "victimCount": 11,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Türkiye",
+  "phoneNumber": "+905330911294",
+  "needs": "Kuru Gıda, Elbise",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91f09d2bb83efd91015b"
+  },
+  "address": "Değirmenyolu mahallesi 6823. Sokak 4/2/3 Defne/Hatay",
+  "locationHierarchy": "Hatay, Defne, Değirmenyolu Mahallesi, 6823. Sokak No 4/2/3",
+  "tweet": "Değirmenyolu mahallesi 6823. Sokak 4/2/3  Defne/Hatay  Hayattalar ama gıda, bataniye, ısıtıcı vs yardıma ihtiyaçları var",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Değirmenyolu Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91f49d2bb83efd91015c"
+  },
+  "address": "Malatya'nın Akçadağ ilçesine bağlı Kürecik köyünün Daraca Mahallesi'nde bulunuyor.",
+  "locationHierarchy": "Malatya, Akçadağ, Kürecik Köyü, Daraca Mahallesi",
+  "tweet": "🔴TEYİT🔴 Bu adrese acil kadın kıyafeti, iç çamaşırı, ped, su, gıda ve çadır ihtiyacı var.  Adres: Kürecik köyü, Daraca Mahallesi, Akçadağ/MALATYA İletişim: 0545 530 24 21 (Hivda) 0546 225 17 59 (Beritan)",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Akçadağ",
+  "neighborhood": "Kürecik Köyü",
+  "phoneNumber": "0545 530 24 21,  0546 225 17 59",
+  "needs": "Kadın kıyafetleri, iç çamaşırları, pedler, su, yiyecek, çadırlar",
+  "coordinates": {
+    "latitude": "38.3443581",
+    "longitude": "37.9711325"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91f89d2bb83efd91015d"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Diyarbakır'da bebek bezi, mama ve gıda ihtiyacı olan aileler şu numaralar ile iletişime geçsin: 05327275717 05326801242 📌Bizim market şubeleri tarafından adreslere en kısa sürede teslim edilecektir.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05327275717,  05326801242",
+  "needs": "Bebek bezi, mama, yiyecek",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db91fd9d2bb83efd91015e"
+  },
+  "address": "Defne Belediyesi Koçören Mahallesi Yukarı Koçören Sk. Gül Villaları",
+  "locationHierarchy": "Hatay, Defne, Koçören Mahallesi, Yukarı Koçören Sokak, Gül Villaları",
+  "tweet": "Defne belediyesi Koçören mahallesi yukarı Koçören sk. Gül villaları  Çok fazla sayıda çadır lazım çoğu insan dışarda kalıyor   Islak mendil, ped, su, bebek bezi, temel gıda, iç çamaşırı, çorap, mont ya da kalın ceket vb   +90 (536) 594 53 94",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Koçören Mahallesi",
+  "phoneNumber": "+905365945394",
+  "needs": "ıslak mendiller, pedler, su, bebek bezleri, temel gıda maddeleri, iç çamaşırları, çoraplar, mont veya kalın ceketler",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92009d2bb83efd91015f"
+  },
+  "address": "Hatay Defne Dursunlu Mahallesi",
+  "locationHierarchy": "Hatay, Defne, Dursunlu Mahallesi",
+  "tweet": "*TEYİTLİ BİLGİ* Az önce arkadışımla konuştum. Hatay Defne ilçesi , Dursunlu mahallesi acil çadır ve battaniye ihtiyaçları var özellikle çadır hava çok soğuk çocuklar soğuktan üstlerine poşet vb. ne bulsalar serecek duruma gelmişler.  İletişim Ahmet Uygun +905355488676",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Dursunlu Mahallesi",
+  "phoneNumber": "05355488676",
+  "needs": "çadırlar, battaniyeler",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92049d2bb83efd910160"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Elbistan cumhuriyet mahallesinde yakacak odun kömür ihtiyacı varmış. Acil bi şekilde ısıtıcı malzeme ihtiyacı var.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "Yakacak odun, Kömür, Isıtıcı Malzemeleri",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92089d2bb83efd910161"
+  },
+  "address": "Antakya/Antakya/Hatay 4.Akevler Sokak Iraz Apartmanı",
+  "locationHierarchy": "Hatay, Antakya, Akevler Mahallesi, 4. Akevler Sokak, Iraz Apartmanı",
+  "tweet": "AKEVLER MAHALLESİ 4.AKEVLER SOKAK IRAZ APARTMANI ANTAKYA/ HATAY  AYAKLI IŞIK EL FENERLERİ KOVALAR TERMAL İÇLİK  ÇORAP  HAYDAR&MERVE&ADA MURSALOĞLU YARDIM BEKLİYOR!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Akevler Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "El fenerleri, termal içlikler, çoraplar",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92109d2bb83efd910162"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Kahramanmaraş / Afşine ACİL gıda,ilaç,ısıtıcı,battaniye ve yatak ihtiyaçları var. Özellikle ısıtıcı ihtiyaçları var çünkü afşinde hava şuan çok soğuk. Bölgede afad çalışıyor fakat koordinasyon sorunu var ve yardımlar ulaşamıyor. LÜTFEN ACİL DESTEK 0539 204 4682 Eren Erkan",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05392044682",
+  "needs": "Gıda, ilaç, ısıtıcılar, battaniyeler, yataklar",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92149d2bb83efd910163"
+  },
+  "address": "Malatya Hekimhan İlçesi Girmana Mahallesi Akpınar Küme Evleri, Yahyalı Küme Evleri, Gökçeler Küme Evleri",
+  "locationHierarchy": "Malatya, Hekimhan, Girmana Mahallesi, Akpınar Küme Evleri, Yahyalı Küme Evleri, Gökçeler Küme Evleri",
+  "tweet": "Malatya hekimhan ilçesi girmana mahallesi akpinar küme evler, Yahyali küme evleri gokceler küme evleri / hiç yardım ulaşmadı. Yiyecek kuru gıda yakacak kömür  ve giyecek & battaniye tel: +90 530 200 04 89 Yücel bey",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Hekimhan",
+  "neighborhood": "Girmana Mahallesi",
+  "phoneNumber": "+905302000489",
+  "needs": "yiyecek, kurutulmuş gıda, yakıt, kömür, giysi, battaniye",
+  "coordinates": {
+    "latitude": "38.8165078",
+    "longitude": "37.930697"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92189d2bb83efd910164"
+  },
+  "address": "Malatya Yeşilyurt Bindal Köyü",
+  "locationHierarchy": "Malatya, Yeşilyurt, Bindal Köyü",
+  "tweet": "ACİL!  Asker arkadaşım kardeşim Emin Güngör ve ailesi depremde evlerini kaybetti.. Bulundukları köye acilen ÇADIR desteği verilmesi gerekiyor! Temel ihtiyaçları ne durumda bilmiyorum.. LÜTFEN DESTEK OLALIM ARKADAŞLAR ACİL!!!  Malatya Yeşilyurt bindal köyü Cep; +90 (544) 964 52 03",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Yeşilyurt",
+  "neighborhood": "Bindal Köyü",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "38.2954882",
+    "longitude": "38.2474518"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db921c9d2bb83efd910165"
+  },
+  "address": "Malatya'nın Akçadağ ilçesine bağlı Bölüklü Köyü",
+  "locationHierarchy": "Malatya, Akçadağ, Bölüklü Köyü",
+  "tweet": "Malatya Akçadağ bölüklü köyünde insanlara soğukta ölecekler bütün köy halkı yaşlı ilaçları yok aç susuz ısınacak bişey yok yardım edin köyün bütün yolları kapalı kar ve fırtınadan dolayı lütfen yardımcı olun tel :053-504-92043 Hasan kiraz",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Akçadağ",
+  "neighborhood": "Bölüklü Köyü",
+  "phoneNumber": "0535 049 2043",
+  "needs": "Yiyecek, Su, Isıtıcılar, Battaniyeler, Tıbbi Malzemeler",
+  "coordinates": {
+    "latitude": "38.3443581",
+    "longitude": "37.9711325"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92209d2bb83efd910166"
+  },
+  "address": "Beyoğlu mahallesi, Şehit İsmail Orçan Bulvarı No:32, Türkoğlu/Kahramanmaraş",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Beyoğlu Mahallesi, Şehit İsmail Orçan Bulvarı No32",
+  "tweet": "Beyoğlu mahallesi, şehit İsmail Orçan bulvarı no:32 Türkoğlu / Kahramanmaraş +905388623929  Tanju Ulu  Acil çadır desteğine ihtiyaç vardır. Yardımcı olun lütfen. Belirtilen adrese yardım gitmemiş. Güncel bilgidir. İletişim halindeyiz.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Beyoğlu Mahallesi",
+  "phoneNumber": "+90 538-862-3929",
+  "needs": "çadırlar",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92239d2bb83efd910167"
+  },
+  "address": "Güneysöğüt mahallesi Defne ilçesi / Hatay",
+  "locationHierarchy": "Hatay, Defne, Güneysöğüt Mahallesi",
+  "tweet": "4 GÜNDÜR SU YOK Güneysöğüt mahallesi Defne ilçesi / Hatay adresine 500 kişilik çadır ve gıda yardımı gerekiyor. 4 gündür su dahi ulaşmamış.   Emre Kaplan Telefon: 0537 431 28 06",
+  "victimCount": 500,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Güneysöğüt Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92289d2bb83efd910168"
+  },
+  "address": "Kahramanmaraş Türkoğlu Uzunsöğüt Mahallesi Yeşilyöre Yolu Kayapınar Mevki Küme Evler",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Uzunsöğüt Mahallesi, Yeşilyöre Yolu, Kayapınar Mevkii, Küme Evler",
+  "tweet": "KAHRAMANMARAŞ ‼️  30 kişi, bebekler var, komple hiçbir yardım gitmemiş her türlü gıda, kıyafet ihtyiacları mevcut   Türkoğlu uzunsöğüt mahallesi yeşilyöre yolu kayapınar mevki küme evleri  türkoğlu  Mehmet kelepir 0553 416 35 46",
+  "victimCount": 30,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Uzunsöğüt Mahallesi",
+  "phoneNumber": "05534163546",
+  "needs": "Gıda, Giysi",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db922c9d2bb83efd910169"
+  },
+  "address": "Kahramanmaraş Onikişubat Dadağlı Mahallesi Merkez Sokak No:415",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Dadağlı Mahallesi, Merkez Sokak No 415",
+  "tweet": "ÇOK ACİLLLL ÇOCUKLAR DONARAK ÖLMEK ÜZERE ÇADIR ERZAK GİYİSİ İHTİYACI VAR Kahramanmaraş merkez/Onikişubat dadağlı mah. merkez sok. No:415",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Dadağlı Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92309d2bb83efd91016a"
+  },
+  "address": "Kahramanmaraş Onikişubat Döngel Mahallesi Döngel Küme Evler",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Döngel Mahallesi, Döngel Küme Evleri",
+  "tweet": "Kahramanmaraş /onikişubat /Döngel mahallesi/Döngel küme evler  05530136428 Abdullah Gök Çadır, yetişkin bezi, gıda ihtiyacı çok acil aynı zamanda battaniye ve ısıtıcı ihtiyacı var teyitli hiç yardım ulaşmamış insanlar açlık ve soğuktan neredeyse ölmek üzereler. Yardım acil",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Döngel Mahallesi",
+  "phoneNumber": "05530136428",
+  "needs": "çadır, yetişkin bezleri, yiyecek, battaniye, ısıtıcılar",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92349d2bb83efd91016b"
+  },
+  "address": "Hatay Altınözü Oymaklı Köyü",
+  "locationHierarchy": "Hatay, Altınözü, Oymaklı Köyü",
+  "tweet": "MUHTAR NUMARASI TEYİTLİ YAYALİM YENİ  Battaniye yetiskin bezi cadir Çocuk kiyafeti  Gida maddesi Su Çocuk bezi Ayakkabı Engelli birey(yürüme engelli) İlaç gerekiyor   Hatay/Altınözü/Oymaklı köyü Muhtar  Fadıl Balsever 05365093743 En doğru şekilde muhtarla iletişime geçebilirsiniz",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Altınözü",
+  "neighborhood": "Oymaklı Köyü",
+  "phoneNumber": "05365093743",
+  "needs": "Battaniye, yetişkin bezi, çadır, çocuk kıyafetleri, gıda malzemeleri, su, çocuk bezi, ayakkabı, yürüme engelli birey için tekerlekli sandalye, ilaçlar.",
+  "coordinates": {
+    "latitude": "36.1143379",
+    "longitude": "36.2495604"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92379d2bb83efd91016c"
+  },
+  "address": "Hatay Kirikhan Resatli Köyü",
+  "locationHierarchy": "Hatay, Kırıkhan, Reşatlı Köyü",
+  "tweet": "#Hatay /Kirikhan Resatli Koyu   Hiç yardım gitmemiş   O bölgede olan lütfen arkadaşlarımız gıda su battaniye yardımı götürsün   Teyitli beni aradılar   +90 530 503 65 31",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Reşatlı Köyü",
+  "phoneNumber": "+905305036531",
+  "needs": "Gıda, Su, Battaniye",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db923b9d2bb83efd91016d"
+  },
+  "address": "Hatay Kırıkhan Mimar Sinan Mahallesi Kızılay Caddesi Kumeevler No: 11",
+  "locationHierarchy": "Hatay, Kırıkhan, Mimar Sinan Mahallesi, Kızılay Caddesi, Kumeevler No 11",
+  "tweet": "KIRIKHAN/HATAY ‼️  4 kişilik aile, üç gündür gıda ulaşmamış. kanserin son evresinde yatağa bağımlı bir yaşlıları var.  Fatma Çamkerten: 0 554 127 49 13 (ulaşılmazsa abisinin numarası: 05533050121) Mimar Sinan Mh. Kızılay cd. Kumeevler No: 11",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Mimar Sinan Mahallesi",
+  "phoneNumber": "0 554 127 49 13",
+  "needs": "Gıda, tıbbi yardım",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db923f9d2bb83efd91016e"
+  },
+  "address": "Kahramanmaraş Onikişubat Hayrullah mah. 27.sok. Hisar Apt. Kat:5 No:14",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Hayrullah Mahallesi, 27. Sokak, Hisar Apartmanı, Kat5, Daire14",
+  "tweet": "Hayrullah mah. 27.sok. hisar apt. Kat:5 no:14 Onikişubat/Kahramanmaraş İnce bir çocuk sesi geldi. Bölgeye TERMAL KAMERA VE SES DEDEKTÖRÜ LAZIM. İletişim +90 551 061 89 36 +90 507 499 94 36  ALLAH RIZASI İÇİN YARDIM EDİN ÖLÜME TERK ETMEYİN NOLUR çocuk sesi geliyor",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Hayrullah Mahallesi",
+  "phoneNumber": "+905510618936,  +905074999436",
+  "needs": "Termal kamera, ses dedektörü",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92439d2bb83efd91016f"
+  },
+  "address": "Antakya, Hatay, Türkiye",
+  "locationHierarchy": "Hatay, Antakya, Türkiye",
+  "tweet": "Güncel teyitli:  7 kişi ısı alınmış Cebrail mah. 3203 sk. Kent apartmanı Antakya HATAY  İhtiyaçlar ekskavatör jenaratör kablo",
+  "victimCount": 7,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Türkiye",
+  "phoneNumber": "N/A",
+  "needs": "Ekskavatör, Jeneratör, Kablo",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92479d2bb83efd910170"
+  },
+  "address": "Kahramanmaraş'ın Türkoğlu ilçesi Şekeroba Mahallesi",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Şekeroba Mahallesi",
+  "tweet": "❗️❗️❗️ ACİL YARDIM ❗️❗️❗️ 📍 Türkoğlu/Kahramanmaraş  Şekeroba Mahallesi soğuk ve açlıkla mücadele ediyor. Yiyecek, kıyafet, çadır, battaniye, powerbank ihtiyaç.  Türkoğlu/Maraş  İletişim Ahmet Süt: 0538 620 69 69",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Şekeroba Mahallesi",
+  "phoneNumber": "05386206969",
+  "needs": "yiyecek, giysi, çadır, battaniye, powerbank",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db924a9d2bb83efd910171"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Hatay Toprakhisar köyü ACİL Çocuk kıyafetleri  Battaniye Çadır Su  Yemek Hiçbir şeyleri yokmuş  Acil yardım gerekiyor  @BabalaTv   @PincTivi   @FratAlbayram",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "çocuk kıyafeti, battaniye, çadır, su, yemek",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db924e9d2bb83efd910172"
+  },
+  "address": "Şanlıurfa Eyyübiye Buhara Mahallesi",
+  "locationHierarchy": "Şanlıurfa, Eyyübiye, Buhara Mahallesi",
+  "tweet": "Teyitli Şanlıurfa eyyübiye ilçesi buhara mahallesinde bulunan camiye sıgınan arkadaslar ve aileler cocukları için ve kendileri için yiyecek ve ısınma yardımı istiyorlar teyitli bilgidir. İrtibat no 0543 414 88 34 Muhittin Akdemir  @ProfDemirtas    @ahbap    @AFADBaskanlik",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Şanlıurfa",
+  "district": "Eyyübiye",
+  "neighborhood": "Buhara Mahallesi",
+  "phoneNumber": "05434148834",
+  "needs": "Yiyecek, Isıtıcı",
+  "coordinates": {
+    "latitude": "37.1483185",
+    "longitude": "38.7829952"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92529d2bb83efd910173"
+  },
+  "address": "Hatay Kırıkhan Cumhuriyet Mahallesi 302 Sokak Gökkuşağı Sitesi B Blok",
+  "locationHierarchy": "Hatay, Kırıkhan, Cumhuriyet Mahallesi, 302. Sokak, Gökkuşağı Sitesi B Bloğu",
+  "tweet": "❗️AMBULANS❗️ Cumhuriyet Mahallesi 302 Sokak Gökkuşağı Sitesi B Blok Hatay/Kırıkhan.  ❗️AMBULANS❗️ Yine Hatay/kırıkhanda lütfen paylaşalım",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Cumhuriyet Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "Ambulans",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92569d2bb83efd910174"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Kırıkhan için acil çadır lütfen yardım edin çadır yardımına çok ihtiyaçları var lütfen  @AFADBaskanlik   @OguzhanUgur   @haluklevent   @BabalaTv",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "çadırlar",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92599d2bb83efd910175"
+  },
+  "address": "Kahramanmaraş'ın Çağlayancerit ilçesindeki Helete (Düzdağ) Köyü",
+  "locationHierarchy": "Kahramanmaraş, Çağlayancerit, Helete (Düzdağ) Köyü",
+  "tweet": "-KAHRAMANMARAŞ- 0 543 368 86 96 Kahramanmaraş Çağlayancerit ilçesi helete (Düzdağ) köyü köy sağlam çok sayıda insan var insanların sığındığı bi köy hiç gıda yok su bitmek üzere acil yardım destek gerekli",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Çağlayancerit",
+  "neighborhood": "Helete (Düzdağ) Köyü",
+  "phoneNumber": "0543 368 8696",
+  "needs": "Gıda, Su",
+  "coordinates": {
+    "latitude": "37.7499656",
+    "longitude": "37.2927846"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db925d9d2bb83efd910176"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "HATAY KIRIKHAN  az önce gönderdi yardım gönderilmemiş bebek maması, bezi, ısıtıcı gıda gerekiyormus",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "Bebek Maması, Bebek Bezi, Isıtıcı, Gıda Maddeleri",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92619d2bb83efd910177"
+  },
+  "address": "Kahramanmaraş Orman Bölge Kavşağı İmam Hatip Ortaokulu Bahçesi",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Pınarbaşı Mahallesi",
+  "tweet": "KAHRAMANMARAŞ orman bölge kavşağı imam hatip ortaokulu bahçesinde 9 aile derme çatma çadırlar içinde hayat mücadesi veriyoruz4 TANE BEBEĞİMİZ VAR 8 tane çocuğumuz var.  Lütfen çok acil çadır ısıtıcı battaniye kıyafet gıda gerekli!!!! Durdu Babur 0541 630 6872",
+  "victimCount": 17,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Pınarbaşı Mahallesi",
+  "phoneNumber": "05416306872",
+  "needs": "çadır, ısıtıcı, battaniye, giysi, yiyecek",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92659d2bb83efd910178"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "ANKARA AHMET TANER KIŞLALI SPOR SALONU  öncelikli olarak gıda ihtiyacı varmış yardım götürebilecekler için sabaha kadar açık",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "Gıda",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92699d2bb83efd910179"
+  },
+  "address": "Çökek Köyü, Defne Belediyesi, Hatay/Antakya",
+  "locationHierarchy": "Hatay, Antakya, Defne Belediyesi, Çökek Köyü",
+  "tweet": "TEYİTLİ BİLGİ ÇOK ACİL ‼️🚨‼️🚨  Defne belediyesi ÇÖKEK KÖYÜ Hatay/Antakya Dört gündür yardım gitmiyor. Çadır battaniye su bebek bezi gıda her türlü yardıma ihtiyaçları var  İletişim: 05339788608➡️Ertuğrul @AFADHatay   @AFADBaskanlik   @DepremDairesi   @Haydi_Ahbap  #deprem #ACİLYARDIM",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Defne Belediyesi",
+  "phoneNumber": "0533 9788 608",
+  "needs": "çadırlar, battaniyeler, su, bebek bezleri, yiyecekler",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db926d9d2bb83efd91017a"
+  },
+  "address": "Hatay Güzelburç Mahallesi İstiklal Caddesi No:25",
+  "locationHierarchy": "Hatay, Antakya, Güzelburç Mahallesi, İstiklal Caddesi No 25",
+  "tweet": "-HATAY  Çadir battaniye mont 12 ve 9 yasinda Çocuklarim var ayakkabi Çorap powerbang  jenarator kuru gida su Çocuklar iÇin süt islak mendil kadin pedi. yag kahvaltilik 37,36, 39, 40 numara botlar giyecek beden L. Adres, güzelburÇ Mahallesi,Istiklal cad. 14 no.25 .tel. 05058534697",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Güzelburç Mahallesi",
+  "phoneNumber": "05058534697",
+  "needs": "çadır, battaniye, mont, çocuk ayakkabısı, çorap, jeneratör, kuru gıda, su, bebek maması, ıslak mendiller, kadın hijyen ürünleri, yağ, kahvaltılık, erkek botu (37-38-39-40), giysi bedeni L",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92719d2bb83efd91017b"
+  },
+  "address": "Adıyaman Cumhuriyet Mahallesi 25107. Sokak",
+  "locationHierarchy": "Adıyaman, Merkez, Cumhuriyet Mahallesi, 25107. Sokak",
+  "tweet": "Mesaj   HALA ÇADIR GİTMEDİ   Adıyaman cumhurıyet mahallesi 25107.sokak  Sığınacak yerimiz yok sokakta kalıyoruz çadırlar için millet savaş veriyor burada. #adıyaman   Lütfen duyuralım",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Cumhuriyet Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92759d2bb83efd91017c"
+  },
+  "address": "Kahramanmaraş Esenköy Mahallesi Küme Evleri No 108",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Esenköy Mahallesi, Küme Evler No 108",
+  "tweet": "🚨🚨TEYİTLİ🚨🚨  GÖKSUN ESENKÖY MAHALLESİ KÜME EVLERİ NO 108 KAHRAMANMARAŞ  SEZER SÖYLER: 0535 043 5912  🚨🚨 MAHALLENİN TAMAMI ERZAK SIKINTISI ÇEKİYOR ÇOK ACİL YARDIM GİTMESİ LAZIM 🚨🚨 @DepremDairesi @AFADBaskanlik @ahbap @haluklevent @ProfDemirtas @gutitoli @JrokezFTW #MARAS",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Esenköy Mahallesi",
+  "phoneNumber": "0535 043 5912",
+  "needs": "Erzak",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92799d2bb83efd91017d"
+  },
+  "address": "Hatay Defne Güneysöğüt Mahallesi",
+  "locationHierarchy": "Hatay, Defne, Güneysöğüt Mahallesi",
+  "tweet": "🚨 ÇOK ACİL‼️ YARDIM‼️ HATAY📍  500 kişilik çadır ve gıda yardımı gerekiyor. 4 gündür su dahi ulaşmamış.   Güneysöğüt Mahallesi, Defne/Hatay  İletişim: Emre Kaplan: 0537 431 28 06",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Güneysöğüt Mahallesi",
+  "phoneNumber": "0537 431 28 06",
+  "needs": "500 kişilik çadır ve yiyecek, 4 gün boyunca su yok.",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db927d9d2bb83efd91017e"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Antakya Hatay Hüseyli köyü gıda su ihtiyacı var merkezden buraya yardım çok az geliyor burda 3 köy var acil destek gerekli  iletişim: 05312882789",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0531 288 2789",
+  "needs": "Gıda, Su",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92819d2bb83efd91017f"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Teyitli:  Kahramanmaraş/Kırıkkilise Köyü'ne acil olarak çadır ve temel gıda, giyecek ihtiyacı var. Dağ köyü olması nedeniyle yardımlar çok kısıtlı kalmış, insanların acil olarak yardıma ihtiyacı var.  İletişim numarası: Eren Boyer - 05354623676",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0535 4623676",
+  "needs": "çadırlar, temel gıda maddeleri, kıyafetler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92859d2bb83efd910180"
+  },
+  "address": "Hatay Kırıkhan Ceylanlı Köyü",
+  "locationHierarchy": "Hatay, Kırıkhan, Ceylanlı Köyü",
+  "tweet": "Hatay-Kırıkhan/Ceylanlı Köyüne destek bekliyorlar. Acil olan ihtiyaç listesi; -Battaniye, ısıtıcı, jeneratör,su,çadır,bebek maması,bebek bezi,bakliyat,kuru gıda,ekmek,kışlık kıyafetler, konserve gıdaları Yayalım lütfen!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Ceylanlı Köyü",
+  "phoneNumber": "N/A",
+  "needs": "Battaniyeler, Isıtıcılar, Jeneratörler, Su, Çadırlar, Bebek Maması, Bebek Bezleri, Baklagiller, Kuru Gıda, Ekmekler, Kışlık Giysiler, Konserve Yiyecekler",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92899d2bb83efd910181"
+  },
+  "address": "Diyarbakır Kayapınar Mezopotamya Mahallesi",
+  "locationHierarchy": "Diyarbakır, Kayapınar, Mezopotamya Mahallesi",
+  "tweet": "Diyarbakır/Kayapinar KENT MEYDANI  Çadır başına yalnızca 1 battaniye düşüyor. Çok acil gıda ve battaniye yardımına ihtiyaçları var lütfen duyurun!! tam adres: Mezopotamya mahallesi Kayapinar/Diyarbakır",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Diyarbakır",
+  "district": "Kayapınar",
+  "neighborhood": "Mezopotamya Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.9437832",
+    "longitude": "40.1845788"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db928c9d2bb83efd910182"
+  },
+  "address": "Hatay Kırıkhan Alsancak Mahallesi 216. Sokak Ayasofya Market No:26",
+  "locationHierarchy": "Hatay, Kırıkhan, Alsancak Mahallesi, 216. Sokak, Ayasofya Market No26",
+  "tweet": "YAYALIM! HİÇBİR AYNİ YARDIM ULAŞMAMIŞ.   acilen gıda ve ayni yardımlar buraya da yönlendirilebilir mi? Ve acil çadır ihtiyacı var.   Alsancak mahallesi.216 sokak ayasofya market no 26 Kırıkhan hatay. Hülya Kurt 0542 4070972",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Alsancak Mahallesi",
+  "phoneNumber": "0542 4070972",
+  "needs": "Gıda, Ayni Yardım, Çadır",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92909d2bb83efd910183"
+  },
+  "address": "Hatay Kırıkhan Delibekirli mah. Tepe sok. No: 295",
+  "locationHierarchy": "Hatay, Kırıkhan, Delibekirli Mahallesi, Tepe Sokak No 295",
+  "tweet": "TEYİTLİ *Hatay:Kırıkhan* *Delibekirli mah. Tepe sokak 295 taksim 1* *15 kişiler kuru gıda,hijyen malzemesi,hijyenik ped 5 kadın için iç çamaşırı,çorap,battaniye, el feneri,pil,powerbank*  *Aşşağı yukarı 5 aile var* *Sadullah Kal +90 505 486 77 15* *Oğlu Ali Bura+90 543 498 50 65*",
+  "victimCount": 15,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Delibekirli Mahallesi",
+  "phoneNumber": "9050548617510",
+  "needs": "Kuru Gıda, Hijyen Malzemeleri, Kadınlar İçin Hijyenik Pedler, İç Çamaşırları, Çoraplar, Battaniyeler, El Fenerleri, Pil, Powerbank",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92949d2bb83efd910184"
+  },
+  "address": "Gaziantep Vatan Mahallesi Doğu Eczanesinin Yanı",
+  "locationHierarchy": "Gaziantep, Şehitkamil, Vatan Mahallesi",
+  "tweet": "Gaziantep Vatan mahallesi bölgesine hiç bir yardım gelmiyor. Aileler araç içinde perişan. Aracı olmayanlar sabaha kadar dışarılarda soğukla savaşıyor. Acill çadır , battaniye, gıda, bebek bezi ve bebek maması lazım.  Yer : Gaziantep Vatan Mahallesi Doğu Eczanesi Yanı.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Şehitkamil",
+  "neighborhood": "Vatan Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "çadırlar, battaniyeler, yiyecek, bebek bezleri, bebek mamaları",
+  "coordinates": {
+    "latitude": "37.0727587",
+    "longitude": "37.3949769"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92989d2bb83efd910185"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "HASSA/AKBEZ bölgesine yardım gitmiyormuş arkadaşımdan haberini alıyorum. Gelen yardımlar da yağmalanmış. Çok az çadır olduğu için birçok insan dışarda kalmış, çocuklar sokakta kalıyormuş. Başta çadır olmak üzere gıda, çadır ve kıyafet yardımı gerekiyor. Lütfen destek olalım.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db929c9d2bb83efd910186"
+  },
+  "address": "Kahramanmaraş Selçuklu Mahallesi 58016 Sokak Ali Rıza ve Seher Zeybek Taziye Evi ve Çevresi",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Selçuklu Mahallesi, 58016 Sokak, Ali Rıza ve Seher Zeybek Taziye Evi ve Çevresi",
+  "tweet": "🔴TEYİT🔴 200 kişilik depremzede grubu, bebek maması, bebek bezi, hasta bezi, ped, temizlik malzemeleri, ısıtıcı ve gıda yardımı bekliyor. Adres: Maraş Selçuklu mah. 58016 Sk. ali riza ve seher zeybek taziye evi ve civarı İletişim: Özlem Hanım: 0 (505) 544 80 89",
+  "victimCount": 200,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Selçuklu Mahallesi",
+  "phoneNumber": "0(505)5448089",
+  "needs": "Bebek Maması, Bebek Bezi, Hasta Bezi, Pedler, Temizlik Malzemeleri, Isıtıcılar, Yiyecek Yardımı",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92a09d2bb83efd910187"
+  },
+  "address": "Kırıkhan Ceylanlı Köyü",
+  "locationHierarchy": "Hatay, Kırıkhan, Ceylanlı Köyü",
+  "tweet": "Arkadaşlar az önce Ayşe Duygu Sabır'la görüştüm Kırıkhan Ceylanli köyündelermis gıda yardımi gitmiş ama çadirlari hiç yokmuş dışarda kalıyorlarmiş arablara da evden kurtardiklari eşyaları koyuyorlarmis lütfen yayabildigimiz kadar yayalım Çadir , taşınabilir tuvalet, ısınmak için+",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Ceylanlı Köyü",
+  "phoneNumber": "N/A",
+  "needs": "Çadır, Taşınabilir Tuvalet, Isıtıcı",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92a49d2bb83efd910188"
+  },
+  "address": "Kahramanmaraş Türkoğlu Hopurlu Mahallesi",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Hopurlu Mahallesi",
+  "tweet": "Kahramanmaraş/Türkoğlu  Hopurlu Mahallesi Işık Markete Isıtıcı Çadır ve gıda ihtiyacımız var. SEMANUR AKYOL : 05356937319 LÜTFEN BİLGİSİ OLANLAR YAZABİLİR Mİ YA DA YUKARDA Kİ NUMARAYA ULAŞSIN  ACİLLLL 🚨❗⚠️ #Kahramanmaraş #Türkoğlu",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Hopurlu Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92a89d2bb83efd910189"
+  },
+  "address": "Kahramanmaraş Maraş 12 Şubat Piri Reis Mahallesi 17. Sokak No:11",
+  "locationHierarchy": "Kahramanmaraş, Dulkadiroğlu, Piri Reis Mahallesi, 17. Sokak No11",
+  "tweet": "KAHRAMANMARAS   MARAŞ 12şubat Piri Reis Mah. 17. sok.  11 çocuk 25 kişi su,gıda ve çadır yardımı bekliyor.  Güler Ak: 05067803764",
+  "victimCount": 25,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Dulkadiroğlu",
+  "neighborhood": "Piri Reis Mahallesi",
+  "phoneNumber": "05067803764",
+  "needs": "Su, Gıda, Çadır",
+  "coordinates": {
+    "latitude": "37.5812744",
+    "longitude": "36.927509"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92ac9d2bb83efd91018a"
+  },
+  "address": "Kahramanmaraş Elbistan Hacı Hasanlı Mahallesi Aşılık Sokak No:20",
+  "locationHierarchy": "Kahramanmaraş, Elbistan, Hacı Hasanlı Mahallesi, Aşılık Sokak No20",
+  "tweet": "Kahramanmaraş/Elbistan hacı Hasanlı mahhalesi aşılık sokak no 20  0541 606 37 53 hasan boran  Bu adrestekiler hepsi yaşlı temel gıda ve battaniye lazım, çok zor durumdalar  +90 344 445 11 53 bulundukları yerin sabit telefonu",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Elbistan",
+  "neighborhood": "Hacı Hasanlı Mahallesi",
+  "phoneNumber": "05416063753,  03444451153",
+  "needs": "Temel Gıda Maddeleri, Battaniyeler",
+  "coordinates": {
+    "latitude": "38.2022294",
+    "longitude": "37.1903006"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92b09d2bb83efd91018b"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "LÜTFEN ACİL 🚨🚨🚨  Gaziantep Şahinbey'de BEBEKLİ bir aile için gıda, bebek maması ve bebek bezine ihtiyaç var. DIŞARIDALAR..  İLETİŞİM SEFA: 0552 613 80 78",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92b39d2bb83efd91018c"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Gelen Mesaj:  Adıyaman merkez Doğanlı köyü ve mezralarına çadır gıda yaşamsal malzeme ısınma soba bekliyoruz köy muhtarı Hasan Nergiz 05336316923",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05336316923",
+  "needs": "çadırlar, yiyecekler, yaşam malzemeleri, ısıtıcılar, sobalar",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92b79d2bb83efd91018d"
+  },
+  "address": "Gaziantep Şahinbey Sırasöğüt Mahallesi",
+  "locationHierarchy": "Gaziantep, Şahinbey, Sırasöğüt Mahallesi",
+  "tweet": "RTDEN EL AŞINMAZ DESTEK VERELİM  Gaziantep Şahinbey sirasogut mahallesi En çok gerekenler çocuk bezi ıslak mendil temel gıda malzemeleri çorap iç çamaşır battaniye çadır acilen lütfen Sinan Özdemir 0530 468 68 62",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Şahinbey",
+  "neighborhood": "Sırasöğüt Mahallesi",
+  "phoneNumber": "0530 468 6862",
+  "needs": "bebek bezi, ıslak mendiller, temel gıda maddeleri, çoraplar, iç çamaşırları, battaniyeler, çadırlar",
+  "coordinates": {
+    "latitude": "37.0628317",
+    "longitude": "37.3792617"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92bb9d2bb83efd91018e"
+  },
+  "address": "Adıyaman Yeşilyurt Mahallesi 2165. Sokak No:63",
+  "locationHierarchy": "Adıyaman, Merkez, Yeşilyurt Mahallesi, 2165. Sokak No63",
+  "tweet": "⚠️Adıyaman için Yeşilyurt mahallesi 2165.sokak No :63 kadın hijyen malzemesi  Yemek öncelik battaniye Hazır yemek tarzı gıda  el feneri aquamentin1000 ilaç  Bir de kefen istiyorlar Ölüler var diye  +90 (551) 212 40 09",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Yeşilyurt Mahallesi",
+  "phoneNumber": "+905511214009",
+  "needs": "Kadın hijyen malzemeleri, Battaniyeler, Hazır yemekler, El fenerleri, Aquamint, İlaçlar, Kefenler",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92bf9d2bb83efd91018f"
+  },
+  "address": "Hatay Altınözü Akdari Köyü",
+  "locationHierarchy": "Hatay, Altınözü, Akdari Köyü",
+  "tweet": "ACİL YARDIM ÇAĞRISI🚨  Hatay Altınözü AKDARI KÖYÜ  Saadettin Zan ile görüştüm az önce Gıda yardım tırları yollamak için çabalayın sadece burada insanlar perişan. Bunu yaymaya çalışın dedi +90 535 373 52 46",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Altınözü",
+  "neighborhood": "Akdari Köyü",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "36.1143379",
+    "longitude": "36.2495604"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92c29d2bb83efd910190"
+  },
+  "address": "Kahramanmaraş Dulkadiroğlu Güneş Evler Mahallesi",
+  "locationHierarchy": "Kahramanmaraş, Dulkadiroğlu, Güneş Evleri Mahallesi",
+  "tweet": "ERZAK LAZIM🚨  Temel Gıda, Bebek Bezi lazımmış.   Güneş evler mahallesi,Dulkadiroğlu ilçesi, kahramanmara. Muhtarlık binasındaymış. Sait Alcı-0541 141 16 96   Arkadaşlar lütfen.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Dulkadiroğlu",
+  "neighborhood": "Güneş Evleri Mahallesi",
+  "phoneNumber": "0541 141 16 96",
+  "needs": "Temel Yiyecek, Bebek Bezi",
+  "coordinates": {
+    "latitude": "37.5812744",
+    "longitude": "36.927509"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92c69d2bb83efd910191"
+  },
+  "address": "Hatay Antakya'nın Hüseyli Köyü",
+  "locationHierarchy": "Hatay, Antakya, Hüseyli Köyü",
+  "tweet": "Antakya Hatay Hüseyli köyü gıda su ihtiyacı var merkezden buraya yardım çok az geliyor burda üst üstte 3 köy var ben burdayım 05312882789 benim numaram irtibat kurabilirsiniz arkadaşlar dostlar Allah rızası için   @AFADBaskanlik   @DepremDairesi",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Hüseyli Köyü",
+  "phoneNumber": "0531 288 2789",
+  "needs": "Gıda, Su",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92ca9d2bb83efd910192"
+  },
+  "address": "Kahramanmaraş Göksun Esen Köyü",
+  "locationHierarchy": "Kahramanmaraş, Göksun, Esen Köyü",
+  "tweet": "Maraş göksün esen köy acil çadır ve gıda ihtiyaçları var teyitli dün kayseriye gelen bir depremzede bugün yardım için tekrar geri döndü hiç bir yardım ulaşmamış 0533 508 5259 benim numaram bana ulaşılırsa ben yardımcı olurum iletilmesi için iletişim için bütün köy aynı durumda",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Göksun",
+  "neighborhood": "Esen Köyü",
+  "phoneNumber": "05335085259",
+  "needs": "çadırlar, yiyecekler",
+  "coordinates": {
+    "latitude": "38.0214898",
+    "longitude": "36.494634"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92ce9d2bb83efd910193"
+  },
+  "address": "Malatya Göztepe mah. Tutoğlu sok no 29/1",
+  "locationHierarchy": "Malatya, Yeşilyurt, Göztepe Mahallesi, Tutoğlu Sokak No29/1",
+  "tweet": "Teyitli bilgi Malatya Göztepe mah. Tutoğlu sok no 29 /1.  Epilepsi hastası çocuk var. İlacı bitmiş. İlacın adı frisum. Gıda ve giyim konusunda kötü durumdalar. Arkadaşlar yardım edebileceklere elden ele. Tanıyorum bu yardım istediğim kişileri gerçekten zor durumdalar. RT leyelim.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Yeşilyurt",
+  "neighborhood": "Göztepe Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "ilaç, yiyecek, giysi",
+  "coordinates": {
+    "latitude": "38.2954882",
+    "longitude": "38.2474518"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92d29d2bb83efd910194"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Teyitli:  Kahramanmaraş/Kırıkkilise Köyü'ne acil olarak çadır ve temel gıda, giyecek ihtiyacı var. Dağ köyü olması nedeniyle yardımlar çok kısıtlı kalmış, insanların acil olarak yardıma ihtiyacı var.  İletişim numarası: Eren Boyer - 05354623676",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0535 4623676",
+  "needs": "çadırlar, temel gıda maddeleri, kıyafetler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92d59d2bb83efd910195"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Gelen Mesaj:  Adıyaman merkez Doğanlı köyü ve mezralarına çadır gıda yaşamsal malzeme ısınma soba bekliyoruz köy muhtarı Hasan Nergiz 05336316923",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05336316923",
+  "needs": "çadırlar, yiyecekler, yaşam malzemeleri, ısıtıcılar, sobalar",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92e29d2bb83efd910196"
+  },
+  "address": "Gaziantep'in Şehitkamil ilçesinde Eydibaba Mahallesi Bademci Sokak No/90",
+  "locationHierarchy": "Gaziantep, Şehitkamil, Eydibaba Mahallesi, Bademci Sokak No/90",
+  "tweet": "🔴TEYİT🔴 50 kişilik bir depremzede grubunun, gıda, yakacak ve su ihtiyacı var. Adres: karşıyaka eydibaba mahallesi  bademci sokak no/90 Şehitkamil/Gaziantep İletişim: GAMZE KARAYILAN : 05305444514 DİDEM KARAYILAN 05333117457",
+  "victimCount": 50,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Şehitkamil",
+  "neighborhood": "Eydibaba Mahallesi",
+  "phoneNumber": "0530 5444514,  0533 3117457",
+  "needs": "Gıda, Yakıt, Su",
+  "coordinates": {
+    "latitude": "37.0727587",
+    "longitude": "37.3949769"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92e59d2bb83efd910197"
+  },
+  "address": "Kahramanmaraş Onikişubat Demrek Köyü ve çevresi",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Demrek Köyü",
+  "tweet": "Kahramanmaraş Onikişubat demrek köyü ve etrafındaki bütün köyler için çadır ve gıda yardımı hala ulaşmamış zor durumdalar çadır olan bir yer bilen ulaşsın ! RT yapıp yayalım lütfen 🤲😥 @AFADBaskanlik   @DepremDairesi",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Demrek Köyü",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92ed9d2bb83efd910198"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Gıda, kıyafet ve çocuklar için soğuk algınlığı ilacına ihtiyaç varmış.  Adıyaman/Besni/Atmalı Köyü Züleyha Bozkurt 0545 357 9862",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0545 357 9862",
+  "needs": "Gıda, Kıyafet, Soğuk Algınlığı İlacı (Çocuklar İçin)",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92f09d2bb83efd910199"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "#hatay #deprem Çölyak hastaları glütensiz gıda - Şule Hanım 0539 953 53 41 - Kudret Özbakış 0532 337 01 63",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92f49d2bb83efd91019a"
+  },
+  "address": "Kahramanmaraş Dulkadiroğlu",
+  "locationHierarchy": "Kahramanmaraş, Dulkadiroğlu, *",
+  "tweet": "Ferdane Tombul 05426970606 toplanma yerindelermiş şu an evde olmadıklarından telefon bırakıldı Dulkadiroglu/Kahramanmaras, gıda - battaniye - powerbank yardımı lazım 10 kişilik aile",
+  "victimCount": 10,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Dulkadiroğlu",
+  "neighborhood": "*",
+  "phoneNumber": "05426970606",
+  "needs": "Gıda, Battaniye, Powerbank",
+  "coordinates": {
+    "latitude": "37.5812744",
+    "longitude": "36.927509"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92f89d2bb83efd91019b"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "ACİL YARDIM (TEYİTLİ‼️‼️)  Taşoluk köyü Göksun/Kahramanmaraş acil yardım gerekiyor. Kendi imkanlarıyla çadır kurmuşlar ama hava çok soğuk çadırlar yeterli değil. Gıda ve su ihtiyaçları var. Çok kötü durumdalar lütfen. Bebekler, küçük çocuklar varmış. Lütfen acil yardım!!!!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db92fc9d2bb83efd91019c"
+  },
+  "address": "Kahramanmaraş Selçuklu Mahallesi 58016 Sokak Ali Rıza ve Seher Zeybek Taziye Evi ve çevresi",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Selçuklu Mahallesi, 58016 Sokak, Ali Rıza ve Seher Zeybek Taziye Evi ve çevresi.",
+  "tweet": "200 kişilik depremzede grubu, bebek maması, bebek bezi, hasta bezi, ped, temizlik malzemeleri, ısıtıcı ve gıda yardımı bekliyor. Adres: Maraş Selçuklu mah. 58016 Sk. ali riza ve seher zeybek taziye evi ve civarı İletişim: Özlem Hanım: 0 (505) 544 80 89",
+  "victimCount": 200,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Selçuklu Mahallesi",
+  "phoneNumber": "0(505)5448089",
+  "needs": "Bebek Maması, Bebek Bezi, Hasta Bezi, Pedler, Temizlik Malzemeleri, Isıtıcılar, Yiyecek Yardımı",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93009d2bb83efd91019d"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Hızlıca yayar mısınız lütfen   “Teyitli. Hatay Madenboyu köyü acil yardım malzemesi lazım. Su, gıda, kadın ve çocuk hijyen malzemeleri, battaniye.  HÜSEYİN OKUTAN 0538 773 99 79”",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93079d2bb83efd91019e"
+  },
+  "address": "Kahramanmaraş Elmalar Köyü Gökdaşlar Mahallesi Merkezi",
+  "locationHierarchy": "Kahramanmaraş, Afşin, Elmalar Köyü, Gökdaşlar Mahallesi Merkez",
+  "tweet": "TEYİTLİ  0 (542) 745 05 79   elektrik gıda su ped  ELMALAR KÖYÜ GÖKDAŞLAR MAHALLESİ MERKEZ KAHRAMANMARAŞ",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Afşin",
+  "neighborhood": "Elmalar Köyü",
+  "phoneNumber": "05427450579",
+  "needs": "Elektrik, Yiyecek, Su, Pedler",
+  "coordinates": {
+    "latitude": "38.2438548",
+    "longitude": "36.9152873"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db930b9d2bb83efd91019f"
+  },
+  "address": "Tavla Mahallesi, Sağlık Sokak, Defne Beldesi Sağlık Ocağı yanı, Defne/Hatay",
+  "locationHierarchy": "Hatay, Defne, Tavla Mahallesi, Sağlık Sokak, Defne Belde Sağlık Ocağı Yanı",
+  "tweet": "Teyitli:  Tavla Mahallesi, Sağlık Sokak, Defne Beldesi Sağlık Ocağı yanı, Defne/Hatay  Deprem sonrası araçta kalıyorlar. Gıda ve su ihtiyaçları var.  İletişim: 05365109603 (Necip Rende)",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Defne",
+  "neighborhood": "Tavla Mahallesi",
+  "phoneNumber": "0536 510 9603",
+  "needs": "Yiyecek, Su",
+  "coordinates": {
+    "latitude": "36.1953338",
+    "longitude": "36.1477152"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93109d2bb83efd9101a0"
+  },
+  "address": "Kahramanmaraş'taki Tır Parkı'nın 200 metre ilerisi",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Pınarbaşı Mahallesi, Tır Parkı Caddesi, 200 Metre İlerideki Adres",
+  "tweet": "Kahramanmaraş’ta terminalin 200 m ilerisinde tır parkında, 6 aylık bebeği ve 4 yaşındaki oğullarıyla beraber bir ailemiz var. Çocuklar üşüyorlar ve öksürüyorlarmış. Öncelikli ilaç ve 4 numara bebek bezi, mum/fener, gıda ihtiyaçları var. 0 (531) 687 23 02 Mehmet ali çetin kaya",
+  "victimCount": 3,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Pınarbaşı Mahallesi",
+  "phoneNumber": "0531 687 2302",
+  "needs": "İlaç, 4 beden bebek bezi, mum/fener, yiyecekler",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93139d2bb83efd9101a1"
+  },
+  "address": "Gaziantep Nurdağı",
+  "locationHierarchy": "Gaziantep, Nurdağı, *",
+  "tweet": "DM'DEN GELEN  Dilek Yakar +90 544 955 69 69 Gaziantep Nurdağı acil yardım gerekiyor 30 kişiye yakın bekliyorlar ilaç, kıyafet, çadır, battaniye gıda yardımı gerekli çok acil küçük çocuklar yaşlılar var soğukta dışarıdalar.",
+  "victimCount": 30,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Nurdağı",
+  "neighborhood": "*",
+  "phoneNumber": "+905449556969",
+  "needs": "ilaç, giysi, çadır, battaniye, yiyecek",
+  "coordinates": {
+    "latitude": "37.1779131",
+    "longitude": "36.7409447"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93179d2bb83efd9101a2"
+  },
+  "address": "Malatya Doğanşehir Söğüt Mahallesi Şehit Er Hasan Kubat Caddesi",
+  "locationHierarchy": "Malatya, Doğanşehir, Söğüt Mahallesi, Şehit Er Hasan Kubat Caddesi",
+  "tweet": "Doğanşehir söğüt 5 çadır ve gıda 0 545 273 15 27 Baki güneş Malatya  05384651641 Söğüt mah şehit er Hasan Kubat caddesi Doğanşehir Malatya 3 çadır ve gıda",
+  "victimCount": 6,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Doğanşehir",
+  "neighborhood": "Söğüt Mahallesi",
+  "phoneNumber": "0545 273 15 27",
+  "needs": "çadırlar, yiyecekler",
+  "coordinates": {
+    "latitude": "38.0934102",
+    "longitude": "37.8784394"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db931b9d2bb83efd9101a3"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Teyitli!  #Samandağı ihtiyaç.   Yaşar Bey, 05057587714.   Malzemeler gelirse dağıtım yapabilirlermiş.   İhtiyaçlar : iç çamaşırı, kuru gıda, mum, geceleri çok karanlık diyor.   Varsa takviye çadır da lazım",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05057587714",
+  "needs": "İç çamaşırı, kuru gıda, mum, gece için ışık, ekstra çadırlar (varsa)",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db931e9d2bb83efd9101a4"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Arkadaşlar Adıyaman Merkezde 3.5 yaşında Çölyak hastalığı olan bir çocuk için gıda lazım.  Bölgeye ulaştırabilecek olanlar lütfen benimle iletişime geçin.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93229d2bb83efd9101a5"
+  },
+  "address": "Kahramanmaraş Dulkadiroğlu Doğukent Aslanbey Mahallesi 7077. Sokak No:26",
+  "locationHierarchy": "Kahramanmaraş, Dulkadiroğlu, Doğukent, Aslanbey Mahallesi, 7077. Sokak No26",
+  "tweet": "ÇOK ACİL ÇADIR LAZIM!!   25-30 kişi çoğunluk yaşlı ayrica engelli çocuk var soğuktan hasarlı eve girmek zorunda kalmışlar. Ayrıca temel gıda, powerbank ve odun ihtiyaçları var. Dulkadiroğlu doğukent Aslan bey mahallesi 7077 sok no 26 Maraş  Tel 05305720168 Osman alıç  RT LÜTFEN🙏🏻",
+  "victimCount": 25,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Dulkadiroğlu",
+  "neighborhood": "Doğukent",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.5812744",
+    "longitude": "36.927509"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93269d2bb83efd9101a6"
+  },
+  "address": "Kahramanmaraş Türkoğlu İlçesi Hacıbeyli Köyü",
+  "locationHierarchy": "Kahramanmaraş, Türkoğlu, Hacıbeyli Köyü",
+  "tweet": "Kahramanmaraş Türkoğlu İlçesi HACIBEBEK KÖYÜ  Ölülerini kendileri enkazdan çıkarmış.  Henüz hiçbir yardım gitmemiş!  500'e yakın insan var, çocuk ve bebekler dahil.  Gıda ihtiyaçları var.  ACİL  @AFADBaskanlik   @ahbap",
+  "victimCount": 500,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Türkoğlu",
+  "neighborhood": "Hacıbeyli Köyü",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.3847896",
+    "longitude": "36.8459691"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db932a9d2bb83efd9101a7"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Çölyak hastaları glutensiz gıda : Şule Hanım 0539 953 53 41  Kudret Özbakış 0532 337 01 63  iletişime geçebilir  ‼️ HATAY ‼️ #hatayantakya #hatayacil  @melinastro   @kelbratz   @TarotLinera   @kalbimviran",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0539 953 53 41,  0532 337 01 63",
+  "needs": "Glutensiz yiyecekler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db932e9d2bb83efd9101a8"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "🚨⚠️ Arkadaşlar, MALATYA / POLATLI ilçesinde 1000 kişiye yakın vatandaşımızın gıda ve giysi ihtiyacı varmış.   🙏 Yakın olan dostlar ilgilenirseniz sevinirim.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93319d2bb83efd9101a9"
+  },
+  "address": "Siteler Mahallesi Kavi Caddesi Merve Apartmanı No 18 Merkez Adıyaman",
+  "locationHierarchy": "Adıyaman, Merkez, Siteler Mahallesi, Kavi Caddesi, Merve Apartmanı, No 18",
+  "tweet": "Murat arkadaşımın ailesi bu adresteler,gıda ve battaniye ihtiyaçları varmış arkadaşına iletebilir misin onlara ulaşırsa çok iyi olur  ❗️Siteler mahallesi kavi caddesi merve apartmanı no 18 merkez adıyaman❗️ İLETİŞİM 05302620246 HARUN DEMİR",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Siteler Mahallesi",
+  "phoneNumber": "0530 262 0246",
+  "needs": "Gıda, Battaniye",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93359d2bb83efd9101aa"
+  },
+  "address": "Karadurmuşlu Mahallesi, Karadurmuşlu Sokak, No: 112, Kırıkhan, Hatay",
+  "locationHierarchy": "Hatay, Kırıkhan, Karadurmuşlu Mahallesi, Karadurmuşlu Sokak, No 112",
+  "tweet": "Bebekli bir aile var. Su dahi yokmuş. Acil gıda, su, kıyafet ihtiyacı varmış.  Karadurmuşlu Mah, Karadurmuşlu Sok, No: 112, Kırıkhan/Hatay   İletişim: 05052316747",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Karadurmuşlu Mahallesi",
+  "phoneNumber": "05052316747",
+  "needs": "Gıda, su, giysi",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93399d2bb83efd9101ab"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Kahramanmaraş / Pazarcık Çocuk bezi - Mama - Gıda - Çocuk montu ihtiyacı var. İletişim ve detaylı konum bilgisi için  ; 0 542 211 93 65",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0542 211 9365",
+  "needs": "Bebek bezi, bebek maması, gıda, çocuk montu",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db933d9d2bb83efd9101ac"
+  },
+  "address": "Hatay/Kırıkhan, Camuzkışlası Köyü/Mecco Mahallesi",
+  "locationHierarchy": "Hatay, Kırıkhan, Camuzkışlası Köyü, Mecco Mahallesi",
+  "tweet": "Teyitli:  Hatay/Kırıkhan, Camuzkışlası Köyü / Mecco Mah.  ACİL OLARAK çadır, gıda, battaniye, kıyafet, çamaşır ve bunun yanında bebek mamasıyla bebek bezi ihtiyacı var. İnsanlar soğuk sebebiyle çok zor durumda.  İletişim bilgisi:  Şükrü Kahraman - 0541 676 02 56",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Camuzkışlası Köyü",
+  "phoneNumber": "05416760256",
+  "needs": "çadır, yiyecek, battaniye, giysi, çamaşır, bebek maması, bebek bezi",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93409d2bb83efd9101ad"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "HATAYDAN ARKADAŞIM YAZDI. TEYİTLİ  \"Hatay/Hassa ilçesinde köylerde çadır, gıda gibi sorunlar var. Geceleri burayı -'lerde gösteriyor. Özellikle dağ köyleri kötü durumdaymış.\"  YÜKLENELİM",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "çadırlar, yiyecekler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93489d2bb83efd9101ae"
+  },
+  "address": "Adıyaman Erdemoğlu Mahallesi Fen Lisesi",
+  "locationHierarchy": "Adıyaman, Merkez, Erdemoğlu Mahallesi, Fen Lisesi Caddesi",
+  "tweet": "-ADIYAMAN   iç çamaşırı, ped, kıyafet ihtiyacı var. Adıyaman Erdemoğlu mahallesi fen lisesi   İLETİŞİM: HÜLYA ÇULCU 05374405286",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Erdemoğlu Mahallesi",
+  "phoneNumber": "05374405286",
+  "needs": "İç çamaşırı, ped, kıyafet",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db934c9d2bb83efd9101af"
+  },
+  "address": "Malatya'nın Doğanşehir ilçesindeki Gözene Köyü ve Yeşilyurt ilçesi",
+  "locationHierarchy": "Malatya, Doğanşehir, Gözene Köyü, Yeşilyurt",
+  "tweet": "Adrese çadır, battaniye, bebek bezi ve ped yardımı lazım. Adres: Gözene Köyü, Doğanşehir/Malatya ve Yeşilyurt/Malatya İletişim: 0535 564 68 55(Levent Günay)",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Doğanşehir",
+  "neighborhood": "Gözene Köyü",
+  "phoneNumber": "0535 564 68 55",
+  "needs": "çadırlar, battaniyeler, bebek bezleri, pedler",
+  "coordinates": {
+    "latitude": "38.0934102",
+    "longitude": "37.8784394"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db935a9d2bb83efd9101b0"
+  },
+  "address": "Adıyaman Yusuf'un Köyü Hacıhalil Köyü",
+  "locationHierarchy": "Adıyaman, Merkez, Hacıhalil Köyü",
+  "tweet": "Adıyaman Yusuf'a Köyü Tokat köyu Hacıhalil köyü  Çadır, Biberon, Ped , Battaniye ,  Termal Battaniye gibi ihtiyaçları var lütfen yardım edin 0555 046 49 66 Şükrü Alıcı",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Hacıhalil Köyü",
+  "phoneNumber": "05550464966",
+  "needs": "Çadır, Bebek Maması, Bebek Bezi, Battaniye, Termal Battaniye",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db935e9d2bb83efd9101b1"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "bu adreste erzaklar bitmiş ❗️❗️❗️❗️❗️❗️  osmaniye merkez karaçay mah. 6032. sk. no:1 mehmet güneş   biberon, bebek bezi, bebek maması, hijyenik ped kıyafet (özellikle bebekler icin)  odun-kömür *özellikle",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "Biberon, Bebek Bezi, Bebek Maması, Hijyenik Pedler, Kıyafetler, Odun/Kömür",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93629d2bb83efd9101b2"
+  },
+  "address": "Samandağ Küçük Karaçay Huzurlu Mahallesi-Hatay",
+  "locationHierarchy": "Hatay, Samandağ, Küçük Karaçay Mahallesi",
+  "tweet": "NILGUN DONER SAMANDAG KÜÇÜK KARAÇAY HUZURLU MAHALLESI-HATAY ARKADASIM HAMILE, KUCUK ÇOCUGU VAR, 30 KISI BIR SERADA KALIYOR, YARDIM GITMEMIS YERLERINDEN AYRILAMIYORLAR, YARDIM EDIN NE OLUR. Bez, ped, biberon, mama, eldiven, battaniye, ısıtıcı vs. NİLGÜN - 0538 383 37 05",
+  "victimCount": 30,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Samandağ",
+  "neighborhood": "Küçük Karaçay Mahallesi",
+  "phoneNumber": "0538 383 37 05",
+  "needs": "bez, ped, biberon, mama, eldiven, battaniye, ısıtıcı",
+  "coordinates": {
+    "latitude": "36.0851597",
+    "longitude": "35.9799375"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93669d2bb83efd9101b3"
+  },
+  "address": "Adıyaman Merkez Fatih Mahallesi Sakarya Caddesi 2295 Sokak No 10",
+  "locationHierarchy": "Adıyaman, Merkez, Fatih Mahallesi, Sakarya Caddesi, 2295 Sokak, No 10",
+  "tweet": "ADIYAMAN MERKEZ  Adı: Pınar İslamoğlu  Fatih mahallesi Sakarya Caddesi 2295 Sokak No 10  05434756552  Açlar, çocuk bezi, erzak, kadın kıyafeti, ped lazım  YARDIMCI OLABİLECEK KİMSE VAR MI?",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Fatih Mahallesi",
+  "phoneNumber": "0543 475 6552",
+  "needs": "açlar, bebek bezi, erzak, kadın kıyafetleri, hijyenik pedler",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db936a9d2bb83efd9101b4"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Güncel!! ‼️Diyarbakır Kent Düğün Salonu Battaniye, ilaç, ıslak mendil, peçete, kolonya, ped gibi malzemelere ihtiyaç var. çocuklar ve gençler hasta ve özellikle battaniye ve ilaç desteği lazım. LÜTFEN ACİL YARDIM GİTMESİ GEREKİYOR!! 📌İletişim numarası: 0552 938 4372 - Hülya Unsu",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05529384372",
+  "needs": "Battaniyeler, ilaçlar, ıslak mendiller, peçeteler, kolonyalar, pedler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db936e9d2bb83efd9101b5"
+  },
+  "address": "Kayseri Bucak İlçesi Çağlayan Köyü",
+  "locationHierarchy": "Kayseri, Bucak, Çağlayan Köyü",
+  "tweet": "Kayseri istikametinde bucak ilçesinde çağlayan köyü Kahramanmaraş Kıyafet,iç çamaşırı,ped,gıda lazım acil ÇADIRDA KALIYORLAR hiçbir şeyleri yok arkadaşlar 6 aile toplam 40 kişi kadınlar ve çocuklar var iletişim reyyan taşır:05376799713 #AhbapDernegi #AHBAP #OguzhanUgur #deprem",
+  "victimCount": 40,
+  "status": "Yardım Bekliyor",
+  "region": "Kayseri",
+  "district": "Bucak",
+  "neighborhood": "Çağlayan Köyü",
+  "phoneNumber": "05376799713",
+  "needs": "kıyafet, iç çamaşırı, ped, gıda",
+  "coordinates": {
+    "latitude": "38.414715",
+    "longitude": "36.00987"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93729d2bb83efd9101b6"
+  },
+  "address": "Ekinci mahallesi Cengiz caddesi Antakya/Hatay",
+  "locationHierarchy": "Hatay, Antakya, Ekinci Mahallesi, Cengiz Caddesi",
+  "tweet": "Ekinci mahallesi cengiz caddesi Antakya/Hatay   Yakıt  Çakmak  Ağrı kesici Hijyenik ped    Arkadaşımın yardım malzelerine ihtiyaçları var lütfen yardım edin 🙏🏻  İletişim numaraları :   Esin Bilgin    +90 552 995 69 90 +90 505 043 81 07  #deprem  #antakyadeprem",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Ekinci Mahallesi",
+  "phoneNumber": "+9055295569090,  +905050438107",
+  "needs": "Yakıt, Çakmak, Ağrı Kesici, Hijyenik Ped",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93769d2bb83efd9101b7"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Deprem bölgesinde kadınların hijyenik ped ihtiyacı sürüyor. İhtiyacı olanların rahatça dile getirmesi kolay olmayabilir çünkü toplumumuzda regl olmaktan bahsetmek maalesef ayıp sayılabiliyor.  @orkid   @KotexTurkiye   @turkiyemolped",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db937a9d2bb83efd9101b8"
+  },
+  "address": "Malatya Yakınca Mahallesi Kenan Işık Caddesi Yakınca Spor Salonu yakınında",
+  "locationHierarchy": "Malatya, Yeşilyurt, Yakınca Mahallesi, Kenan Işık Caddesi, Yakınca Spor Salonu yakınındaki adres.",
+  "tweet": "Bilge Yücel Aytaç   +90 542 179 36 00   Yakınca mahallesi Kenan ışık caddesi yakınca spor salonu MALATYA   Kadın kıyafet- Kadın İç Çamaşırı   Çocuk kıyafet 7-8-9 yaş   Çocuk İç Çamaşırı   Kadın ped",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Yeşilyurt",
+  "neighborhood": "Yakınca Mahallesi",
+  "phoneNumber": "+905421793600",
+  "needs": "Kadın kıyafetleri, kadın iç çamaşırları, çocuk kıyafetleri (7-8-9 yaş), çocuk iç çamaşırları, kadın hijyen ürünleri.",
+  "coordinates": {
+    "latitude": "38.2954882",
+    "longitude": "38.2474518"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93819d2bb83efd9101b9"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Güncel!! ‼️Diyarbakır Kent Düğün Salonu Battaniye, ilaç, ıslak mendil, peçete, kolonya, ped gibi malzemelere ihtiyaç var. çocuklar ve gençler hasta ve özellikle battaniye ve ilaç desteği lazım. LÜTFEN ACİL YARDIM GİTMESİ GEREKİYOR!! 📌İletişim numarası: 0552 938 4372 - Hülya Unsu",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05529384372",
+  "needs": "Battaniyeler, ilaçlar, ıslak mendiller, peçeteler, kolonyalar, pedler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93859d2bb83efd9101ba"
+  },
+  "address": "Adana Alpaslan Türkeş Bilim ve Teknoloji Üniversitesi",
+  "locationHierarchy": "Adana, Çukurova, Beyazevler Mahallesi",
+  "tweet": "ADANA ALPASLAN TÜRKEŞ BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ -kuru bakliyat -su, kek, meyve suyu -paketli gida -ped İHTİYACI VAR iletişim 05070923541 05436167163 instagram: atuogrencikonseyi",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Adana",
+  "district": "Çukurova",
+  "neighborhood": "Beyazevler Mahallesi",
+  "phoneNumber": "05070923541,  05436167163",
+  "needs": "Kuru baklagiller, kek, meyve suyu, paketlenmiş yiyecekler, ped",
+  "coordinates": {
+    "latitude": "37.0468862",
+    "longitude": "35.2823275"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93899d2bb83efd9101bb"
+  },
+  "address": "Kahramanmaraş Merkez Elmalar Köyü Gökdaşlar Mahallesi",
+  "locationHierarchy": "Kahramanmaraş, Merkez, Elmalar Köyü, Göktaşlı Mahallesi",
+  "tweet": "Kahramanmaraş merkez elmalar köyü gökdaşlar mahallesi  elektrik, yemekleri, suları, ped vs temel ihtiyaçları yok. Enkaz yerinde mağdur bekliyorlar yardım götürebilirler mi yaşlılar ve çocuklar var acil Melike Gökdaş 05427450579",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Merkez",
+  "neighborhood": "Elmalar Köyü",
+  "phoneNumber": "05427450579",
+  "needs": "Elektrik, Yemek, Su, Ped",
+  "coordinates": {
+    "latitude": "37.6135295",
+    "longitude": "37.290957"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93999d2bb83efd9101bc"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Yardım Göndermek İsteyenler Ulaşabilir  Ped, iç çamaşır, alt kıyafet, peçete, çocuk bezi ihtiyaçları Urfa da çadırda kalanlar için acil ihtiyaçlar   iletişim  Talha Yavuz 0 533 507 12 23",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0533 507 1223",
+  "needs": "ped, iç çamaşırı, alt giyim, peçete, bebek bezi",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93a29d2bb83efd9101bd"
+  },
+  "address": "Osmaniye Merkez Karaçay Mahallesi 6032. Sokak No:1",
+  "locationHierarchy": "Osmaniye, Merkez, Karaçay Mahallesi, 6032. Sokak No1",
+  "tweet": "İhtiyaç listesi:  - Biberon  - Bebek bezi - Bebek maması - Hijyenik ped  - Kıyafet özellikle bebekler için  - Odun ve kömür   Adres: Karaçay Mah. 6032. Sokak NO:1 / Osmaniye MERKEZ  İletişim: +90 542 294 06 11 Doğukan Ede",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Osmaniye",
+  "district": "Merkez",
+  "neighborhood": "Karaçay Mahallesi",
+  "phoneNumber": "+905422940611",
+  "needs": "Biberon, Bebek bezi, Bebek maması, Hijyenik pedler, Giysi (özellikle bebeklere yönelik), Odun ve Kömür",
+  "coordinates": {
+    "latitude": "37.0924619",
+    "longitude": "36.290346929808265"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93a69d2bb83efd9101be"
+  },
+  "address": "Reşaybet mahallesi muhtarlık önü",
+  "locationHierarchy": "İl *İlçe *Mahalle Reşaybet",
+  "tweet": "Reşaybet mahallesi muhtarlığı önünde bekleyen vatandaşlar var.  Hijyenik ped, bebek bezi, bebek maması, kuru ve konserve gıda ihtiyaçları varmış. Teyitli bilgi Oradaki arkadaşın iletişim numarası: 0 (533) 162 70 72 Sude  #SONUMUT120SAAT #AHBAP #adana",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05331627072",
+  "needs": "hijyenik pedler, bebek bezleri, bebek maması, kuru ve konserve yiyecekler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93ae9d2bb83efd9101bf"
+  },
+  "address": "Maraş Elbistan",
+  "locationHierarchy": "İl Kahramanmaraşİlçe ElbistanMahalle Merkez",
+  "tweet": "MARAŞ ELBİSTAN halkı için: Erkek kadın kalın çorap Bere eldiven Kışlık iç çamaşırı Hasta kadınlar için özellikle ped istiyorlar Yakacak odun kömür !! Erzak olarak bakliyat sıkıntısı yok!! Makarna felan fazla fazla var merkezlerde. Afad Görevlisi İsmail Bey:0551 268 14 66",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0551 268 14 66",
+  "needs": "Kalın çorap, bere, eldiven, kışlık iç çamaşırı, hasta kadınlar için pedler, yakacak odun/kömür.",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93b69d2bb83efd9101c0"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Kırıkhana’a gelen yardımlar yağmalanmış. Kırıkhan’a acil battaniye, yemek ve su yardımı lazımmış.  İletişim: Umut - 0 531 361 31 15",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0531 361 315",
+  "needs": "Battaniyeler, Yiyecekler, Su",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93b99d2bb83efd9101c1"
+  },
+  "address": "Antakya Emek Mahallesi Ümit Sokak",
+  "locationHierarchy": "Hatay, Antakya, Emek Mahallesi, Ümit Sokak",
+  "tweet": "Çadır battaniye lazım  Emek mahallesi ümit sokak Antakya İletişim: 0539 226 2043",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Emek Mahallesi",
+  "phoneNumber": "0539 226 2043",
+  "needs": "çadır, battaniye",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93bd9d2bb83efd9101c2"
+  },
+  "address": "Kahramanmaraş Onikişubat Hacıbudak Köyü",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Hacıbudak Köyü",
+  "tweet": "KAHRAMANMARAŞTA ACİL ÇADIR ‼️  onikişubat ilçesi hacıbudak köyü  10 kişiler yaşlı ve çocuk var. acil çadıra, ısıtıcıya, battaniye, erzak ihtiyaçları var BURHAN KÖSE: 0551 164 42 25",
+  "victimCount": 10,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Hacıbudak Köyü",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93c19d2bb83efd9101c3"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Hızlıca yayar mısınız lütfen   “Teyitli. Hatay Madenboyu köyü acil yardım malzemesi lazım. Su, gıda, kadın ve çocuk hijyen malzemeleri, battaniye.  HÜSEYİN OKUTAN 0538 773 99 79”",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93c59d2bb83efd9101c4"
+  },
+  "address": "Osmaniye Mimar Sinan Mahallesi 8543 Sokak 9A",
+  "locationHierarchy": "Osmaniye, Yüreğir, Mimar Sinan Mahallesi, 8543 Sokak No 9A",
+  "tweet": "Süt şeker 5 numara çocuk bezi battaniye Mimar Sinan mahallesi 8543 sokak 9A OSMANİYE Evde de abi çadır isteyeceğim inşallah Karocu kemal tarafında Elektrikli soba da lazım Aracım yok 5 kişiyiz   0543 740 32 51",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Osmaniye",
+  "district": "Yüreğir",
+  "neighborhood": "Mimar Sinan Mahallesi",
+  "phoneNumber": "05437403251",
+  "needs": "süt, şeker, 5 numara çocuk bezi, battaniye, elektrikli soba (Mimar Sinan Mahallesi 8543 Sokak No: 9A Osmaniye)",
+  "coordinates": {
+    "latitude": "36.9833518",
+    "longitude": "35.3876624"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93c99d2bb83efd9101c5"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Güncel!! ‼️Diyarbakır Kent Düğün Salonu Battaniye, ilaç, ıslak mendil, peçete, kolonya, ped gibi malzemelere ihtiyaç var. çocuklar ve gençler hasta ve özellikle battaniye ve ilaç desteği lazım. LÜTFEN ACİL YARDIM GİTMESİ GEREKİYOR!! 📌İletişim numarası: 0552 938 4372 - Hülya Unsu",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05529384372",
+  "needs": "Battaniyeler, ilaçlar, ıslak mendiller, peçeteler, kolonyalar, pedler",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93cd9d2bb83efd9101c6"
+  },
+  "address": "Adana Ceyhan Modern Evler 706 Sk. No:25",
+  "locationHierarchy": "Ceyhan, Adana, Modern Evler Mahallesi, 706. Sokak No25",
+  "tweet": "Adana Ceyhan Modern Evler 706 sk no 25  Bu bölgeye asla yardım ulaşmıyor ve insanlar hasarlı binalarda kalıyor çok zor durumdalar. 05464671598  Numaranin sahibinin psikolojisi uykusuzluktan ve zor şartlardan dolayı bozulmuş durumda.⚠️ Çok acil battaniye, gıda ve özellikle çadır",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Ceyhan",
+  "district": "Adana",
+  "neighborhood": "Modern Evler Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.0288825",
+    "longitude": "35.8124428"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93d49d2bb83efd9101c7"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Çukurova belediyesi tesisler müdürlüğü cok fazla yaşlı ve çocuk var kışlık kıyafet ve battaniye ihtiyacımız var 544 926 74 46",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93d79d2bb83efd9101c8"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Kahramanmaraş pazarcık mülk köyleri aşağı mülk köyü, çadır su battaniye lazım  0538 596 25 27 Eren Dudak",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0538 596 25 27",
+  "needs": "çadır, su, battaniye",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93db9d2bb83efd9101c9"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Yardım tırları köye gelmeden yağmalanıyormuş. Köydeki insanlara battaniye çadır ve odun talep ediyor Pazarcık ördek dede köyü ne acil yardım istedi 0506 505 28 35 ismail Bey",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0506 505 28 35",
+  "needs": "Battaniye, çadır, odun",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93e39d2bb83efd9101ca"
+  },
+  "address": "Hatay Kırıkhan Yalangöz Köyü",
+  "locationHierarchy": "Hatay, Kırıkhan, Yalangöz Köyü",
+  "tweet": "-HATAY   !!! BEBEKLER AÇ ACİL !!!   YALANGÖZ KÖYÜ/KIRIKHAN/HATAY Berivan Durkal +905392409764 battaniye çadır ilaç ısıtıcı battaniye bebek maması hijyen kitleri kıyafet",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Kırıkhan",
+  "neighborhood": "Yalangöz Köyü",
+  "phoneNumber": "0532409764",
+  "needs": "battaniye, çadır, ilaç, ısıtıcı, bebek maması, hijyen kiti, kıyafet",
+  "coordinates": {
+    "latitude": "36.4882825",
+    "longitude": "36.3360816"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93e79d2bb83efd9101cb"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Arkadaşlar çok acil Adıyaman aile tipi çadır, mat, uyku tulumu, battaniye ihtiyaçları var. Şehir tamamen enkaz, ara sokaklar dümdüz ve insanlar dışarda kendilerine branda germişler. Çok acil lütfen bunu yayalım etiketleyelim önemli insanları. Buranın talebi bu arkadaşlar",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93eb9d2bb83efd9101cc"
+  },
+  "address": "Tahtakale Mahallesi Antakya Hatay",
+  "locationHierarchy": "Hatay, Antakya, Tahtakale Mahallesi",
+  "tweet": "Tahtaköprü mahallesi antakya hatay Hala yardım gitmemiş kalabalık bir aile var battaniye, çadır, kıyafet, yiyecek, ısıtıcı, çorap lazım çok acil 0531 435 29 95 Aysegul vurucu",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Tahtakale Mahallesi",
+  "phoneNumber": "0531 435 29 95",
+  "needs": "Battaniye, çadır, giysi, yiyecek, ısıtıcı, çorap",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93ef9d2bb83efd9101cd"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Kahramanmaraş pazarcık mülk köyleri aşağı mülk köyü, çadır su battaniye lazım  0538 596 25 27 Eren Dudak",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0538 596 25 27",
+  "needs": "çadır, su, battaniye",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93f29d2bb83efd9101ce"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Yardım tırları köye gelmeden yağmalanıyormuş. Köydeki insanlara battaniye çadır ve odun talep ediyor Pazarcık ördek dede köyü ne acil yardım istedi 0506 505 28 35 ismail Bey",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0506 505 28 35",
+  "needs": "Battaniye, çadır, odun",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93f69d2bb83efd9101cf"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Hatay Orhanlı köyündeki serada yaklaşık 20 kişi var. Soğukta donuyorlar ve suları yok.   Çadır, battaniye ve suya ihtiyaçları var.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "N/A",
+  "needs": "çadırlar, battaniyeler, su",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93f99d2bb83efd9101d0"
+  },
+  "address": "Hatay İskenderun, Arsuz Hüyük Köyü",
+  "locationHierarchy": "Hatay, İskenderun, Arsuz, Hüyük Köyü",
+  "tweet": "Sinan Bıkmaz 0544 591 96 99 Hatay İskenderun, Arsuz Hüyük Köyü,10kişiler, çadır,battaniye,erzak yardımı.",
+  "victimCount": 10,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "İskenderun",
+  "neighborhood": "Arsuz",
+  "phoneNumber": "054459169699",
+  "needs": "çadır, battaniye, erzak",
+  "coordinates": {
+    "latitude": "36.5902266",
+    "longitude": "36.1710354"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db93fe9d2bb83efd9101d1"
+  },
+  "address": "Malatya Merkez Selçuklu Mahallesi Çehre Sokak 54/3",
+  "locationHierarchy": "Malatya, Merkez, Selçuklu Mahallesi, Çehre Sokak No 54/3",
+  "tweet": "Malatya Merkez, Selçuklu Mahallesi, Çehre Sokak  0543 115 63 46  Göknur Karakaş. Yakacak gerekli, yiyecek ve battaniye ihtiyaçları var.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Malatya",
+  "district": "Merkez",
+  "neighborhood": "Selçuklu Mahallesi",
+  "phoneNumber": "0543 115 63 46",
+  "needs": "yakıt, yiyecek, battaniye",
+  "coordinates": {
+    "latitude": "38.3319616",
+    "longitude": "38.3145618"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94029d2bb83efd9101d2"
+  },
+  "address": "Adıyaman Merkez Siteler Mahallesi Karamusa Caddesi No:127/1",
+  "locationHierarchy": "Adıyaman, Merkez, Siteler Mahallesi, Karamusa Caddesi No 127/1",
+  "tweet": "Çok acil, çok soğuk!   Teyitli:  Adıyaman/Merkez, Siteler Mah. Karamusa Cad. No:127/1  7 aile için ÇOK ACİL çadırlara ihtiyaç var. Aile nüfusları kalabalık. Ayrıca insanlar için battaniye, iç çamaşırı ve su gerekiyor.   İletişim: 0538 370 14 61 - Yılmaz Erdoğan",
+  "victimCount": 7,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Merkez",
+  "neighborhood": "Siteler Mahallesi",
+  "phoneNumber": "05383701461",
+  "needs": "çadır, battaniye, iç çamaşırı, su",
+  "coordinates": {
+    "latitude": "37.7602985",
+    "longitude": "38.2772986"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94059d2bb83efd9101d3"
+  },
+  "address": "Gaziantep Şehitkamil Sanayi Mahallesi 60018. Sokak No:117",
+  "locationHierarchy": "Gaziantep, Şehitkamil, Sanayi Mahallesi, 60018. Sokak No117",
+  "tweet": " Yardım çağrısı:   Hocam güncel paylaşır mısın lütfen. Battaniye ve yiyecek ihtiyaçları varmış.+90 543 957 44 20 Nazlı. Sanayi Mh. 60018 sokak - no:117 Şehitkamil Gaziantep.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Gaziantep",
+  "district": "Şehitkamil",
+  "neighborhood": "Sanayi Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.0727587",
+    "longitude": "37.3949769"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94099d2bb83efd9101d4"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Kahramanmaraş / Afşine ACİL gıda,ilaç,ısıtıcı,battaniye ve yatak ihtiyaçları var. Özellikle ısıtıcı ihtiyaçları var çünkü afşinde hava şuan çok soğuk. Bölgede afad çalışıyor fakat koordinasyon sorunu var ve yardımlar ulaşamıyor. LÜTFEN ACİL DESTEK 0539 204 4682 Eren Erkan",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05392044682",
+  "needs": "Gıda, ilaç, ısıtıcılar, battaniyeler, yataklar",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db940d9d2bb83efd9101d5"
+  },
+  "address": "Kahramanmaraş Dulkadiroğlu Aslanbey Mahallesi 77. Sokak",
+  "locationHierarchy": "Kahramanmaraş, Dulkadiroğlu, Aslanbey Mahallesi, 77. Sokak",
+  "tweet": "COK ACİLL GÜNCELL ‼️‼️🚨🚨🚨  Dulkadiroğlu aslanbey mahallesi 77. Sokak Kahramanmaraş Mervenur karaboğa 05510266551 çadır battaniye ihtiyaçları var 5 aylık bebek var hasta lütfen yardım edin lütfen",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Dulkadiroğlu",
+  "neighborhood": "Aslanbey Mahallesi",
+  "phoneNumber": "0551 026 6551",
+  "needs": "çadır, battaniye",
+  "coordinates": {
+    "latitude": "37.5812744",
+    "longitude": "36.927509"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94119d2bb83efd9101d6"
+  },
+  "address": "Hatay Hassa Buhara Köyü",
+  "locationHierarchy": "Hatay, Hassa, Buhara Köyü",
+  "tweet": "!!!ACİL!!! Hatay Hassa Buhara Köyü burası sağlam olduğu için depremzedeler buraya sığındı. 2000-3000 kişi var! Çadır-yorgan-battaniye-gıda gerekiyor! İletişim: Ali Çakmak - 0507 704 16 83",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Hassa",
+  "neighborhood": "Buhara Köyü",
+  "phoneNumber": "0507 704 16 83",
+  "needs": "çadırlar, yataklar, battaniyeler, yiyecekler",
+  "coordinates": {
+    "latitude": "36.8001098",
+    "longitude": "36.5172243"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94159d2bb83efd9101d7"
+  },
+  "address": "Kahramanmaraş Onikişubat Yörük Selim Mahallesi Jandarma Üstü Sosyete Kebap Karşısı Boş Arsa",
+  "locationHierarchy": "Kahramanmaraş, Onikişubat, Yörük Selim Mahallesi, Jandarma Üstü Sosyete Kebap'ın karşısındaki boş arazi.",
+  "tweet": "ACİL  Kahramanmaraş Onikişubat yörük selim mahallesi jandarma üstü sosyete kebab karşısı boş arsa  Çadır, gıda ve powerbank ihtiyaçları var.",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Kahramanmaraş",
+  "district": "Onikişubat",
+  "neighborhood": "Yörük Selim Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "37.5777575",
+    "longitude": "36.923735"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94199d2bb83efd9101d8"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "DE VAR İŞ MAKİNESİ VE KEPÇE NOLURSUNUZ 0533 665 31 83 BARIŞ BEY POWERBANK İHTİYACI DA VARMIŞ",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0533 665 31 83",
+  "needs": "iş makinesi, kepçe, powerbank",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db941c9d2bb83efd9101d9"
+  },
+  "address": "Kahramanmaraş",
+  "locationHierarchy": "İl Kahramanmaraşİlçe DulkadiroğluMahalle Şeyhadil",
+  "tweet": "ERAY MERT KAYA VE AİLESİ- TAHLİYE EDİLECEK KALACAK YER HAZIR, MADDİ DESTEK VE POWERBANK İLETİŞİM  0535 743 06 46 KAHRAMANMARAŞ",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "05357430646",
+  "needs": "Maddi Destek, Powerbank",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94209d2bb83efd9101da"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "Antakya'da Bulunan Doktordan Duyuru  Naciye Hanım  Yardım tırları ulaşıyor fakat dağıtım çok kısıtlı. Halk perişan, hava çok soğuk, yardımları ulaştırmamız gerekiyor. Elektrik yok, powerbank ihtiyacımız bulunmaktadır.  İletişim: 0543 349 23 34",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0543 349 23 34",
+  "needs": "Powerbank",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94249d2bb83efd9101db"
+  },
+  "address": "Hatay Arsuz Hüyük Mahallesi İstiklal Caddesi No:19",
+  "locationHierarchy": "Hatay, Arsuz, Hüyük Mahallesi, İstiklal Caddesi No 19",
+  "tweet": "❗HATAY BİZZAT ARANDI❗  ACİL Çadır ve ısınma ihtiyacı var! Çocuklar için mont ve bot gibi kıyafetler ve powerbank lazım. 25 kişi var 4'ü çocuk.  👉Hatay/Arsuz Hüyük mahallesi İstiklal caddesi no:19  📞 Büşra Reyhani: 0531 495 59 21 ❗Muhtar: Rıdvan Dural  #depremsondakika #ACİL",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Arsuz",
+  "neighborhood": "Hüyük Mahallesi",
+  "phoneNumber": "0531 495 59 21",
+  "needs": "çadırlar, ısıtıcılar, çocuklar için montlar, botlar, powerbankler",
+  "coordinates": {
+    "latitude": "36.4196254",
+    "longitude": "35.9905236"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94289d2bb83efd9101dc"
+  },
+  "address": "Antakya Akevler Mahallesi 4. Akevler Sokak Iraz Apartmanı No 9",
+  "locationHierarchy": "Hatay, Antakya, Akevler Mahallesi, 4. Akevler Sokak, Iraz Apartmanı, No 9",
+  "tweet": "Mazot benzin jeneratör projektör el feneri toz maskesi powerbank lazım ACİLL!!  Antakya akevler mahallesi 4. Akevler sokak ıraz apartmanı no 9 +90 (533) 604 30 32 LÜTFEN ÇOK ACİL YARDIM BEKLİYORLAR!!!",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Antakya",
+  "neighborhood": "Akevler Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "N/A",
+  "coordinates": {
+    "latitude": "36.2036546",
+    "longitude": "36.1637648"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db942c9d2bb83efd9101dd"
+  },
+  "address": "Hatay İskenderun Buluttepe Mahallesi 1723 Sokak No:11",
+  "locationHierarchy": "Hatay, İskenderun, Buluttepe Mahallesi, 1723 Sokak No11",
+  "tweet": "Dm:  Buluttepe mahallesi 1723 sokak no 11 Hatay/İskenderun  Powerbank   Bölgedeki insanların şarjı kalmamış maalesef",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "İskenderun",
+  "neighborhood": "Buluttepe Mahallesi",
+  "phoneNumber": "N/A",
+  "needs": "Powerbank",
+  "coordinates": {
+    "latitude": "36.5902266",
+    "longitude": "36.1710354"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94319d2bb83efd9101de"
+  },
+  "address": "Hatay-İskenderun Mustafa Kemal Mahallesi 1013. Cadde No:6",
+  "locationHierarchy": "Hatay, İskenderun, Mustafa Kemal Mahallesi, 1013. Cadde, Bina Numarası 6",
+  "tweet": "Yusuf Çolak Telefon:05510503364(depremzede Yakını) Kişi Sayısı:4 kişi Adres:Hatay-İskenderun Mustafa Kemal Mah 1013 no 6 İhtiyaç:bebek bezi,battaniye,Powerbank,Isınma teyitli",
+  "victimCount": 4,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "İskenderun",
+  "neighborhood": "Mustafa Kemal Mahallesi",
+  "phoneNumber": "0551 050 3364",
+  "needs": "bebek bezi, battaniye, Powerbank, Isıtıcı (doğrulandı)",
+  "coordinates": {
+    "latitude": "36.5902266",
+    "longitude": "36.1710354"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db94359d2bb83efd9101df"
+  },
+  "address": "Hatay Akcurun Köyü Akcurun Sk. No:39",
+  "locationHierarchy": "Hatay, Samandağ, Akcurun Mahallesi, Akcurun Sokağı No39",
+  "tweet": "05382373994Gamze küçük 05416581691onur küçük 05362572094kısmet yıldırım şebeke ve şarj sıkıntılı olduğu için en ulaşılabilir 3 kişi bunlar Hatay akcurun köyünde akcurun sk. 39. 31060 Hatay  (kırsal kesimdeler )36.206196, 36.253631konumunda Powerbank,erzak battaniye çadır lazım!",
+  "victimCount": 3,
+  "status": "Yardım Bekliyor",
+  "region": "Hatay",
+  "district": "Samandağ",
+  "neighborhood": "Akcurun Mahallesi",
+  "phoneNumber": "0538 237 3994,  0541 658 1691,  0536 257 2094",
+  "needs": "Powerbank, erzak, battaniye, çadır",
+  "coordinates": {
+    "latitude": "36.0851597",
+    "longitude": "35.9799375"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db943b9d2bb83efd9101e0"
+  },
+  "address": "Adıyaman, Bahçelievler Mahallesi, 951. Sokak, Beyaz Saray Oteli'nin solundaki ilk büyük mavi kapının arkasında.",
+  "locationHierarchy": "Adıyaman, Bahçelievler Mahallesi, 951. Sokak, Beyaz Saray Otelinin solundaki ilk büyük mavi kapıya bitişik.",
+  "tweet": "Teyitli ve acil:  Adıyaman, Bahçelievler Mah., 951. Sk, Beyaz Saray Otel'in olduğu aradan girince soldan ilk büyük mavi kapı.  Kömürlükte yaşlı bir kadın ve 2'si bebek 4 çocuk var. Çok üşüyorlar. Acil odun, kömür ve yakınlarına ulaşabilmesi için powerbank lazım.  05393618068",
+  "victimCount": 5,
+  "status": "Yardım Bekliyor",
+  "region": "Adıyaman",
+  "district": "Bahçelievler Mahallesi",
+  "neighborhood": "951. Sokak",
+  "phoneNumber": "05393618068",
+  "needs": "Odun, Kömür, Powerbank",
+  "coordinates": {
+    "latitude": "37.7609949",
+    "longitude": "38.29108310857258"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db943f9d2bb83efd9101e1"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "TEYİTLİ  ACİL🚨  ARKADAŞIM GAZİANTEPTE 1. Battaniye 2. Fener 3. Powerbank 4. Type C şarj aleti  5. Küçük de olsa jeneratör  6. 42-43 erkek ayakkabı (4 adet) 7. 40 kadın ayakkabı (4 adet)  temin edebilirseniz bizzat gelip alacak. bulunduğu yerdeki acil ihtiyaçlar.  542 894 77 79",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "542 894 77 79",
+  "needs": "Battaniye, El feneri, Güç bankası, Tip C şarj cihazı, Jeneratör, Erkek ayakkabısı (boyut 42-43), Kadın ayakkabısı (boyut 40)",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+},
+{
+  "_id": {
+    "$oid": "66db98cae3b4a04cebaf63ce"
+  },
+  "address": "Adres bulunamadı",
+  "locationHierarchy": "Adres bulunamadı.",
+  "tweet": "0539 693 27 99 bu arkadaş Kahramanmaraş’ta çadır yokmuş 20 aylık bebeği var yakın olan konumla bilgisi olan varmı yakında çadırken olur çadır getirecek olur arabasının yakıtı bitmiş askerlik arkadaşımdır kendisi",
+  "victimCount": 1,
+  "status": "Yardım Bekliyor",
+  "phoneNumber": "0539 693 27 99",
+  "needs": "çadır",
+  "coordinates": {
+    "latitude": "N/A",
+    "longitude": "N/A"
+  },
+  "_class": "com.TWOvALL.earthquake.model.Report"
+}]
