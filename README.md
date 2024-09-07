@@ -186,22 +186,22 @@ Here are some visuals from the working SismoLink project:
 ### 1. Homepage
 The homepage provides an overview of recent earthquake reports. Users can filter the reports based on location and status.
 
-![Anasayfa](https://github.com/2vall-hackathon-project/media/giris-ekrani.png?raw=true)
+https://github.com/user-attachments/assets/00eb9fd7-265f-411c-9ae2-a9286561c43f
 
 ### 2. Report Details
 This page shows the detailed information of an earthquake report, including its current status and location details.
 
-![Rapor Görüntüleme](https://github.com/2vall-hackathon-project/media/rapor-goruntuleme.mov)
+https://github.com/user-attachments/assets/8ca2aa36-bd7e-4441-bdd5-49692ad0e5d7
 
 ### 3. Login Page
 The login page allows officials to securely log in and access the earthquake report management system. Only authorized users can access the dashboard.
 
-![Login Page](https://github.com/2vall-hackathon-project/media/giris-ekrani.png?raw=true)
+<img width="1278" alt="giris-ekrani" src="https://github.com/user-attachments/assets/305cd09b-03cf-459a-9834-ff6930cdcde0">
 
 ### 4. Feedback Page
 Users can leave feedback on the accuracy of the reports and provide additional information.
 
-![Feedback Page](https://github.com/2vall-hackathon-project/media/geri-bildirim.mov)
+https://github.com/user-attachments/assets/b01821bb-48e6-43b5-9a3e-1e790cc39f89
 
 ---
 
@@ -217,16 +217,16 @@ https://github.com/user-attachments/assets/00eb9fd7-265f-411c-9ae2-a9286561c43f
 ### 2. Rapor Detayları
 Bu sayfa, bir deprem raporunun ayrıntılı bilgilerini, mevcut durumu ve konum detaylarını gösterir.
 
-
+https://github.com/user-attachments/assets/8ca2aa36-bd7e-4441-bdd5-49692ad0e5d7
 
 ### 3. Giriş Sayfası
 Giriş sayfası, yetkililerin güvenli bir şekilde giriş yaparak deprem rapor yönetim sistemine erişmesini sağlar. Yalnızca yetkili kullanıcılar yönetim paneline erişebilir.
 
-![Giriş Sayfası](https://github.com/2vall-hackathon-project/media/giris-ekrani.png?raw=true)
+<img width="1278" alt="giris-ekrani" src="https://github.com/user-attachments/assets/305cd09b-03cf-459a-9834-ff6930cdcde0">
 
 ### 4. Geri Bildirim Sayfası
 Kullanıcılar, raporların doğruluğu hakkında geri bildirimde bulunabilir ve ek bilgi sağlayabilir.
 
-![Geri Bildirim Sayfası](https://github.com/2vall-hackathon-project/media/geri-bildirim.mov)
+https://github.com/user-attachments/assets/b01821bb-48e6-43b5-9a3e-1e790cc39f89
 
 Her iki sunucu da çalışırken projeyi `http://localhost:3000` adresinden ziyaret edebilirsiniz.
