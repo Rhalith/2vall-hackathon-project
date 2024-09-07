@@ -22,8 +22,8 @@ public class ReportService {
     private static final Logger logger = LoggerFactory.getLogger(ReportService.class);
 
     // The base URL for fetching a report by index
-    private final String TWEET_API = "https://ea14-213-153-185-178.ngrok-free.app/get_address_by_index?index=";
-    private final String KANDILLI_API = "https://ea14-213-153-185-178.ngrok-free.app/check_kandilli";
+    private final String TWEET_API = "http://localhost:5000/get_address_by_index?index=";
+    private final String KANDILLI_API = "http://localhost:5000/check_kandilli";
 
     // Track the current index globally
     private int currentIndex = 0;
