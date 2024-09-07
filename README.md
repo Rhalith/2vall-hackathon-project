@@ -6,7 +6,7 @@
 
 ## Takım Adı: 563275
 - 👤 Nuh Yiğit AKMAN
-- 👤 Selman Dedeakayoğulları
+- 👤 Selman DEDEAKAYOĞULLARI
 
 ## Uygulamadan Ekran Görüntüleri
 
