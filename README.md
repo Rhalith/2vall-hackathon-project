@@ -4,18 +4,11 @@
 # SismoLink
 ## Deprem mağdurlarının attığı tweetleri analiz ederek kurtarma ekiplerinin daha hızlı harekete geçmesini hedefliyoruz.
 
-````
-
-````
-
 ## Takım Adı: 563275
 - 👤 Nuh Yiğit AKMAN
 - 👤 Selman Dedeakayoğulları
-....
 
 ## Uygulamadan Ekran Görüntüleri
-
-## Çalışan Proje
 
 SismoLink projesinin bazı görselleri:
 
