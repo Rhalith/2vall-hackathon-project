@@ -192,6 +192,29 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
           {isCopied ? text[language].copied : text[language].shareLocation}
         </button>
       </div>
+     {/* Dropdown slider for logged-in users with roles */}
+     {userRole && (
+        <div className={styles.statusDropdown}>
+          <button onClick={toggleDropdown} className={styles.buttonStatus}>
+            {text[language].changeStatus}
+          </button>
+          {isDropdownVisible && (
+            <div className={styles.dropdownContent}>
+              {statusOptions[translatedStatus].map((option) => (
+                <button
+                  key={option.label}
+                  onClick={() => handleStatusChange(statusMapping[option.label])} // Send actual status, not label
+                  className={option.className}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+
 
       {/* Dropdown slider for showing the tweet */}
       <div className={`${styles.tweetContainer} ${isTweetVisible ? styles.visible : ''}`}>
