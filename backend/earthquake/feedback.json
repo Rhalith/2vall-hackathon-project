@@ -1,0 +1,26 @@
+{
+"interactionId": "1",
+"userId": "user_001",
+"timestamp": "2024-09-06T23:25:20.873038",
+"input_prompt": "Teyitli, ses var, köpekler tepki veriyor.  Her şey var, sadece iki adet #ekskavatör lazım…  Ürgen paşa mah Atatürk cad Gül Apt 87/6  Nasrettin -Müzehher Maruf Ayda - mehmet Altay   Gassan Cilli 05322271102",
+"response": "Gaziantep, Şehitkamil, Ürgenpaşa Mahallesi, Atatürk Caddesi, Gül Apartmanı, Bina Numarası 87, Daire Numarası 6",
+"rating": "like",
+"feedbackText": "wqewqewq",
+"preferredResponse": "eqweqwweqw",
+"device": "desktop",
+"location": "Unknown",
+"sessionDuration": 0
+},
+{
+"interactionId": "2",
+"userId": "user_001",
+"timestamp": "2024-09-07T00:18:27.732308",
+"input_prompt": "YETERSİZMİŞ ACİL YARDIM GİTMESİ LAZIM ( TEYİTLİ )  HATAY / Samandağ yolu üzeri Koyunoğlu mahallesi Çamlık sokak No 19  Arkadaşımın ailesine ve bir çok insana yardım gerekiyor  battaniye, çadır, erzak, bebek bezi, hijyenik ped lazım  NAZLICAN AKSOY / 0539 478 54 45",
+"response": "Hatay, Samandağ, Koyunoğlu Mahallesi, Çamlık Sokak No 19",
+"rating": "dislike",
+"feedbackText": "Bence olmamış",
+"preferredResponse": "Keşke daha düzgün çekseydi",
+"device": "desktop",
+"location": "Unknown",
+"sessionDuration": 0
+},
