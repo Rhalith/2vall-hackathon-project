@@ -118,3 +118,6 @@ NOT: AI API dosyalarına erişmek için main branch'ine geçmelisiniz.
 ### 6. Proje Hazır!
 
 Frontend ve backend sunucuları çalışırken, tarayıcıda `http://localhost:3000` adresine giderek projeyi kullanabilirsiniz.
+
+NOT: Sınama testiyle alakalı üretilen .json dosyasına backend/earthquake/feedback.json yoluyla ulaşabilirsiniz.
+
