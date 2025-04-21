@@ -8,17 +8,6 @@
     padding: 20px;
   }
   
-  .logoContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .logo {
-    width: 100px;
-    margin: 0 10px;
-  }
-  
   .title {
     font-size: 24px;
     font-weight: bold;
@@ -91,18 +80,4 @@
   .registerForm input:focus {
     outline: 3px solid #2563eb; /* Darker blue for focus state */
     background-color: #ffffff; /* Ensure input background is white on focus */
-  }
-  
-  @media (max-width: 600px) {
-    .registerForm {
-      padding: 20px;
-    }
-  
-    .title {
-      font-size: 20px;
-    }
-  
-    .button {
-      padding: 10px;
-    }
   }

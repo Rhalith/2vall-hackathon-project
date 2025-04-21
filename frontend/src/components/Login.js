@@ -56,14 +56,6 @@ const Login = () => {
 
   return (
     <div className={styles.loginScreen}>
-      {/* Left and Right Logos */}
-      <div className={styles.leftLogo}>
-        <img src={t3aiLogo} alt="T3AI Logo" />
-      </div>
-      <div className={styles.rightLogo}>
-        <img src={teknofestLogo} alt="Teknofest Logo" />
-      </div>
-
       <form onSubmit={handleLogin} className={styles.loginForm}>
         <h1>Giriş Yap</h1>
         <input

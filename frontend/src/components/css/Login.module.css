@@ -9,30 +9,6 @@
   padding: 0 100px; /* Add padding to make space for the logos */
 }
 
-/* Logos on the left and right */
-.leftLogo,
-.rightLogo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); /* Vertically center logos */
-}
-
-.leftLogo {
-  left: 0;
-  padding-left: 300px;
-}
-
-.rightLogo {
-  right: 0;
-  padding-right: 300px;
-}
-
-.leftLogo img,
-.rightLogo img {
-  width: 150px; /* Adjust the size of the logos */
-  height: auto;
-}
-
 /* Login Form Styling */
 .loginForm {
   background-color: white;
@@ -118,20 +94,4 @@
 /* Additional styling for improved visibility */
 input::placeholder {
   color: #9ca3af; /* Softer gray for placeholders */
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .leftLogo,
-  .rightLogo {
-    display: none; /* Hide logos on smaller screens */
-  }
-
-  .loginForm {
-    padding: 20px;
-  }
-
-  .input {
-    width: 100%; /* Full-width input on small screens */
-  }
 }

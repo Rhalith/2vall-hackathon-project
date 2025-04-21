@@ -96,7 +96,7 @@ export default function Home() {
   const handleLogout = () => {
     localStorage.removeItem('jwtToken'); // Remove JWT token from localStorage
     setUser(null); // Set user as logged out
-    navigate('/login'); // Redirect to the login page
+    navigate(0); // Refresh the page
   };
 
   // Language switcher (save language preference in localStorage)

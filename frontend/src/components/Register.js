@@ -32,10 +32,6 @@ export default function Register() {
 
   return (
     <div className={styles.registerContainer}>
-      <div className={styles.logoContainer}>
-        <img src={require('../images/t3ai.png')} alt="T3AI Logo" className={styles.logo} />
-        <img src={require('../images/teknofest.png')} alt="Teknofest Logo" className={styles.logo} />
-      </div>
       <h2 className={styles.title}>Yetkili Kaydı Yap</h2>
       <form onSubmit={handleRegister} className={styles.registerForm}>
         <input

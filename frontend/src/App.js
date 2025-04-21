@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './authcontext/AuthContext';  // Correctly import AuthProvider
 import Home from './components/Home';
 import Login from './components/Login';
-import Logout from './components/Logout';
 import Register from './components/Register';
 import PrivateRoute from './components/PrivateRoute';
 import AllLocationsMap from './components/AllLocationsMap'; // Import AllLocationsMap
@@ -24,7 +23,6 @@ const App = () => {
               path="/register"
               element={<PrivateRoute element={Register} roles={['SUPERADMIN']} />}
             />
-            <Route path="/logout" element={<Logout />} />
             {/* Home Route */}
             <Route path="/" element={<Home />} />
           </Routes>
