@@ -27,6 +27,9 @@ export const tr = {
   login: 'Giriş Yap',
   logout: 'Çıkış Yap',
   languageSwitch: 'EN',
+  fetchError: 'Raporlar alınırken hata oluştu',
+  updateSuccess: 'Durum güncellendi',
+  updateError: 'Durum güncellenirken hata oluştu',
 };
 
 export const en = {
@@ -62,6 +65,9 @@ export const en = {
   loginPlaceholder: 'Username',
   passwordPlaceholder: 'Password',
   languageSwitch: 'TR',
+  fetchError: 'Error fetching reports',
+  updateSuccess: 'Status updated successfully',
+  updateError: 'Error updating status',
 };
 
 export const loginTr = {

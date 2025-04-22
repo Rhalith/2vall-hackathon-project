@@ -65,7 +65,7 @@ export default function HomeScreen() {
         setFilteredReports(freshData);
       }
     } catch (err) {
-      console.error('Error checking new reports:', err);
+      console.error(text.fetchError);
     }
   };
 
@@ -90,10 +90,9 @@ export default function HomeScreen() {
       setFilteredReports(updatedReports);
       await AsyncStorage.setItem('reports', JSON.stringify(updatedReports));
 
-      Alert.alert('Success', 'Status updated successfully');
+      Alert.alert(text.updateSuccess);
     } catch (error) {
-      console.error('Error updating status:', error);
-      Alert.alert('Error', 'Failed to update status');
+      console.error(text.updateError);
     }
   };
 
