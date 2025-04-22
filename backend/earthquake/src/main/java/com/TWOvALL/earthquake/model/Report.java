@@ -23,11 +23,10 @@ public class Report {
     private String neighborhood;
     private String phoneNumber;
     private String needs;
+    private boolean isDroneValidated;
 
-    // New fields for coordinates
-    private Coordinates coordinates;  // This will hold latitude and longitude
+    private Coordinates coordinates;
 
-    // Inner class for coordinates
     @Getter
     @Setter
     public static class Coordinates {

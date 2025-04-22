@@ -30,19 +30,13 @@ public class ReportService {
     private final int MAX_INDEX = 250; // Set the maximum index to 250
     private boolean isKandilliActive;
 
-    @Autowired
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
-    @Autowired
-    private ReportRepository reportRepository;
+    private final ReportRepository reportRepository;
 
-    /**
-     * Fetch all reports from the database.
-     *
-     * @return a list of all reports.
-     */
-    public Iterable<Report> getAllReports() {
-        return reportRepository.findAll();
+    public ReportService(RestTemplate restTemplate, ReportRepository reportRepository) {
+        this.restTemplate = restTemplate;
+        this.reportRepository = reportRepository;
     }
 
     /**

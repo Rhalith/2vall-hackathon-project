@@ -1,0 +1,95 @@
+export const tr = {
+  estimatedVictims: 'Tahmini mağdur sayısı',
+  status: 'Durum',
+  helpNeeded: 'Yardım Bekliyor',
+  visited: 'Gidildi',
+  falseReport: 'Asılsız',
+  showTweet: 'Tweeti göster',
+  hideTweet: 'Tweeti gizle',
+  seeLocation: 'Konumu Gör',
+  shareLocation: 'Konumu Paylaş',
+  noTweet: 'Tweet bulunamadı!',
+  importantInfo: 'Önemli Bilgiler',
+  phoneNumber: 'Telefon Numarası',
+  needs: 'İhtiyaç Listesi',
+  noInfo: 'Bilgi bulunamadı!',
+  changeStatus: 'Durumunu Değiştir',
+  changeToVisited: 'Gidildi olarak değiştir',
+  changeToFalse: 'Asılsız olarak değiştir',
+  changeToHelpNeeded: 'Yardım Bekliyor olarak değiştir',
+  copied: 'Kopyalandı!',
+  feedback: 'Geri Bildirim',
+  welcome: 'Depremzede Raporları',
+  searchPlaceholder: 'Konuma göre ara...',
+  sortByVictims: 'Mağdur sayısına göre sırala',
+  droneValidated: 'Drone ile Doğrulandı',
+  droneNotValidated: 'Drone ile Doğrulanmadı',
+  login: 'Giriş Yap',
+  logout: 'Çıkış Yap',
+  languageSwitch: 'EN',
+};
+
+export const en = {
+  estimatedVictims: 'Estimated Victim Count',
+  status: 'Status',
+  helpNeeded: 'Help Needed',
+  visited: 'Visited',
+  falseReport: 'False Report',
+  showTweet: 'Show Tweet',
+  hideTweet: 'Hide Tweet',
+  seeLocation: 'See Location',
+  shareLocation: 'Share Location',
+  noTweet: 'Tweet not found!',
+  importantInfo: 'Important Information',
+  phoneNumber: 'Phone Number',
+  needs: 'Needs List',
+  noInfo: 'No information found!',
+  changeStatus: 'Change Status',
+  changeToVisited: 'Mark as Visited',
+  changeToFalse: 'Mark as False Report',
+  changeToHelpNeeded: 'Mark as Help Needed',
+  copied: 'Copied!',
+  feedback: 'Feedback',
+  welcome: 'Earthquake Victim Reports',
+  searchPlaceholder: 'Search by location...',
+  sortByVictims: 'Sort by Victim Count',
+  droneValidated: 'Drone Validated',
+  droneNotValidated: 'Not Drone Validated',
+  login: 'Log In',
+  logout: 'Log Out',
+  loginSuccess: 'Login successful',
+  loginError: 'Login error',
+  loginPlaceholder: 'Username',
+  passwordPlaceholder: 'Password',
+  languageSwitch: 'TR',
+};
+
+export const loginTr = {
+  loginMessage: 'Yetkili Girişi',
+  loginSuccess: 'Giriş başarılı',
+  loginError: 'Giriş hatası',
+  loginButton: 'Giriş Yap',
+  invalidCredentials: 'Kullanıcı adı veya şifre hatalı', 
+  loginPlaceholder: 'Kullanıcı adı',
+  passwordPlaceholder: 'Şifre',
+};
+export const loginEn = {
+  loginMessage: 'Authorized Login',
+  loginSuccess: 'Login successful',
+  loginError: 'Login error',
+  loginButton: 'Log In',
+  invalidCredentials: 'Invalid username or password',
+  loginPlaceholder: 'Username',
+  passwordPlaceholder: 'Password',
+};
+
+export type LoginText = typeof loginTr;
+export type LanguageText = typeof tr;
+
+export const getLanguageText = (lang: 'TR' | 'EN'): LanguageText => {
+  return lang === 'TR' ? tr : en;
+};
+
+export const getLoginText = (lang: 'TR' | 'EN'): LoginText => {
+  return lang === 'TR' ? loginTr : loginEn;
+};
