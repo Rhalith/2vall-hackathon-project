@@ -18,19 +18,30 @@ public class Report {
     private String tweet;
     private int victimCount;
     private String status;
-    private String region;
-    private String district;
-    private String neighborhood;
-    private String phoneNumber;
-    private String needs;
     private boolean isDroneValidated;
-
     private Coordinates coordinates;
+    private Location location;
+    private ContactInfo contact;
 
     @Getter
     @Setter
     public static class Coordinates {
-        private String latitude;
-        private String longitude;
+        private double latitude;
+        private double longitude;
+    }
+
+    @Getter
+    @Setter
+    public static class Location {
+        private String region;
+        private String district;
+        private String neighborhood;
+    }
+
+    @Getter
+    @Setter
+    public static class ContactInfo {
+        private String phoneNumber;
+        private String needs;
     }
 }

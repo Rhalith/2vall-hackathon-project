@@ -162,8 +162,10 @@ public class ReportService {
                 String phoneNumber = parsePhoneNumber(importantInfo);
                 String needs = parseNeeds(importantInfo);
 
-                report.setPhoneNumber(phoneNumber);
-                report.setNeeds(needs);
+                Report.ContactInfo contactInfo = new Report.ContactInfo();
+                contactInfo.setPhoneNumber(phoneNumber);
+                contactInfo.setNeeds(needs);
+                report.setContact(contactInfo); // Set the contact info object in the report
 
                 logger.info("Parsed important info - Phone: {}, Needs: {}", phoneNumber, needs);
             }
@@ -186,8 +188,8 @@ public class ReportService {
             // Set coordinates (latitude and longitude)
             if (coordinates != null) {
                 Report.Coordinates coord = new Report.Coordinates();
-                coord.setLatitude(coordinates.getOrDefault("latitude", "N/A"));
-                coord.setLongitude(coordinates.getOrDefault("longitude", "N/A"));
+                coord.setLatitude(coordinates.get("latitude") != null ? Double.parseDouble(coordinates.get("latitude")) : 0.0);
+                coord.setLongitude(coordinates.get("longitude") != null ? Double.parseDouble(coordinates.get("longitude")) : 0.0);
                 report.setCoordinates(coord); // Set the coordinates object in the report
             }
 
@@ -211,9 +213,11 @@ public class ReportService {
         if (locationHierarchy != null && !locationHierarchy.trim().isEmpty() && !locationHierarchy.equalsIgnoreCase("Unknown Address")) {
             String[] locationParts = locationHierarchy.split(", ");
             if (locationParts.length >= 3) {
-                report.setRegion(locationParts[0]); // Set region from locationHierarchy
-                report.setDistrict(locationParts[1]); // Set district from locationHierarchy
-                report.setNeighborhood(locationParts[2]); // Set neighborhood from locationHierarchy
+                Report.Location location = new Report.Location();
+                location.setRegion(locationParts[0]);
+                location.setDistrict(locationParts[1]);
+                location.setNeighborhood(locationParts[2]);
+                report.setLocation(location); // Set the location object in the report
             } else {
                 logger.warn("Insufficient location parts for report: {}", locationHierarchy);
             }
