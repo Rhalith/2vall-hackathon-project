@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import { jwtDecode } from 'jwt-decode'; // Import jwtDecode to decode the JWT token
@@ -29,55 +27,79 @@ export default function Home() {
     try {
       const response = await api.get('/api/reports');
       const reports = response.data;
-
-      // Filter out reports with 'Adres Bulunamadı' or empty region values
-      const validReports = reports.filter((report) => 
-        report.locationHierarchy !== 'Adres Bulunamadı.' &&
+  
+      console.log('Fetched reports:', reports);
+  
+      const parsedReports = reports.map((report) => {
+        const parts = report.a?.split(' ') || [];
+  
+        let region = '';
+        let district = '';
+        let neighborhood = '';
+  
+        if (parts.length >= 2) {
+          region = parts[0];
+          district = parts[1];
+          neighborhood = parts[2];
+        }
+  
+        return {
+          id: report._id?.$oid || '', // fallback to empty if not present
+          address: report.a,
+          tweet: report.t,
+          coordinates: report.c,
+          contact: report.ct,
+          victimCount: report.v,
+          status: report.s,
+          isDroneValidated: report.d,
+          region,
+          district,
+          neighborhood,
+        };
+      });
+  
+      console.log('Parsed reports:', parsedReports);
+  
+      const validReports = parsedReports.filter((report) =>
+        report.address &&
+        report.address.trim() !== '' &&
         report.region &&
-        report.region.trim() !== '' &&
-        report.coordinates && // Ensure coordinates exist
-        report.coordinates.latitude !== 'N/A' &&
-        report.coordinates.longitude !== 'N/A'
+        report.district &&
+        report.neighborhood &&
+        report.coordinates &&
+        report.coordinates.lat !== 'N/A' &&
+        report.coordinates.lng !== 'N/A'
       );
-
-      setFilteredReports(validReports); // Set filtered reports
-      setAllReports(validReports); // Store all reports for reset
-
-      // Extract regions, districts, and neighborhoods from the location_hierarchy
-      const regions = [...new Set(validReports.map((report) => report.region))]; // Unique regions
+  
+      console.log('Valid reports:', validReports);
+  
+      setFilteredReports(validReports);
+      setAllReports(validReports);
+  
+      const regions = [...new Set(validReports.map((r) => r.region))];
       const districtsByRegion = {};
       const neighborhoodsByDistrict = {};
-
-      // Group districts and neighborhoods based on regions and districts
-      validReports.forEach((report) => {
-        const { region, district, neighborhood } = report;
-
-        if (region && district && neighborhood) {
-          if (!districtsByRegion[region]) {
-            districtsByRegion[region] = [];
-          }
-          if (!districtsByRegion[region].includes(district)) {
-            districtsByRegion[region].push(district);
-          }
-
-          if (!neighborhoodsByDistrict[district]) {
-            neighborhoodsByDistrict[district] = [];
-          }
-          if (!neighborhoodsByDistrict[district].includes(neighborhood)) {
-            neighborhoodsByDistrict[district].push(neighborhood);
-          }
+  
+      validReports.forEach(({ region, district, neighborhood }) => {
+        if (!districtsByRegion[region]) districtsByRegion[region] = [];
+        if (!districtsByRegion[region].includes(district)) {
+          districtsByRegion[region].push(district);
+        }
+  
+        if (!neighborhoodsByDistrict[district]) neighborhoodsByDistrict[district] = [];
+        if (!neighborhoodsByDistrict[district].includes(neighborhood)) {
+          neighborhoodsByDistrict[district].push(neighborhood);
         }
       });
-
-      setRegions(regions); // Set regions for the dropdown
-      setDistrictsByRegion(districtsByRegion); // Set districts grouped by region
-      setNeighborhoodsByDistrict(neighborhoodsByDistrict); // Set neighborhoods grouped by district
-
+  
+      setRegions(regions);
+      setDistrictsByRegion(districtsByRegion);
+      setNeighborhoodsByDistrict(neighborhoodsByDistrict);
     } catch (error) {
       console.error('Error fetching reports:', error);
     }
   };
-
+  
   // Check if user is logged in
   const checkUserStatus = () => {
     const token = localStorage.getItem('jwtToken'); // Get JWT token from localStorage
@@ -389,18 +411,18 @@ export default function Home() {
           <div className={styles.grid}>
             {filteredReports.length > 0 ? (
               filteredReports.map((report) => (
-                <ReportCard
-                  key={report.id}
-                  address={report.locationHierarchy}
-                  victimCount={report.victimCount}
-                  status={report.status}
-                  tweet={report.tweet}
-                  coordinates={[report.coordinates.latitude, report.coordinates.longitude]} // Pass coordinates here
-                  phoneNumber={report.phoneNumber}
-                  needs={report.needs}
-                  language={language} // Pass the language for translation
-                  onUpdateStatus={(newStatus) => handleUpdateStatus(report.id, newStatus)} // Pass the update handler
-                />
+<ReportCard
+  key={report.id}
+  address={report.address}
+  victimCount={report.victimCount}
+  status={report.status}
+  tweet={report.tweet}
+  coordinates={[report.coordinates.lat, report.coordinates.lng]}
+  phoneNumber={report.contact?.p}
+  needs={report.contact?.n}
+  language={language}
+  onUpdateStatus={(newStatus) => handleUpdateStatus(report.id, newStatus)}
+/>
               ))
             ) : (
               <p>{text[language].noResults}</p>

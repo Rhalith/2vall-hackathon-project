@@ -18,8 +18,8 @@ export default function AllLocationsMap() {
   const groupLocationsByCoordinates = (reports) => {
     const locationMap = {};
     reports.forEach((report) => {
-      const lat = parseFloat(report.coordinates.latitude);
-      const lon = parseFloat(report.coordinates.longitude);
+      const lat = parseFloat(report.c.lat);
+      const lon = parseFloat(report.c.lng);
       if (!isNaN(lat) && !isNaN(lon)) {
         const key = `${lat},${lon}`;
         if (!locationMap[key]) {
@@ -44,17 +44,44 @@ export default function AllLocationsMap() {
     try {
       const response = await api.get('/api/reports');
       const reports = response.data;
-      const validLocations = reports.filter(
+  
+      const parsedReports = reports.map((report) => {
+        const parts = report.a?.split(' ') || [];
+  
+        let region = '';
+        let district = '';
+        let neighborhood = '';
+  
+        if (parts.length >= 2) {
+          region = parts[0]; // e.g., Kahramanmaraş
+          district = parts[1]; // e.g., Türkoğlu
+          neighborhood = parts[2]
+        }
+  
+        return {
+          ...report,
+          id: report._id?.$oid || '',
+          region,
+          district,
+          neighborhood,
+          victimCount: report.v,
+          locationHierarchy: `${region}${district ? `, ${district}` : ''}${neighborhood ? `, ${neighborhood}` : ''}`,
+        };
+      });
+  
+      const validLocations = parsedReports.filter(
         (report) =>
-          report.coordinates.latitude !== 'N/A' &&
-          report.coordinates.longitude !== 'N/A'
+          report.c?.lat !== 'N/A' &&
+          report.c?.lng !== 'N/A'
       );
+  
       const grouped = groupLocationsByCoordinates(validLocations);
       setGroupedLocations(grouped);
     } catch (error) {
       console.error('Error fetching locations:', error);
     }
   };
+  
 
   useEffect(() => {
     fetchLocations();

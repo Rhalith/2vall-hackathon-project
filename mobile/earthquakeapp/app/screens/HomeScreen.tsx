@@ -53,21 +53,63 @@ export default function HomeScreen() {
 
   const checkForNewReports = async () => {
     try {
-      const response = await axios.get<Report[]>('http://172.26.200.127:8080/api/reports');
-      const freshData = response.data;
-
+      const response = await axios.get<any[]>('http://192.168.1.144:8080/api/reports'); // Replace with your backend URL
+      const rawReports = response.data;
+  
+      console.log('Fetched reports:', rawReports);
+      // Parse backend short property format
+      const parsed = rawReports.map((report: any) => {
+        const parts = report.a?.split(' ') || [];
+  
+        let region = '';
+        let district = '';
+        let neighborhood = '';
+  
+        if (parts.length >= 2) {
+          region = parts[0];
+          district = parts[1];
+  
+          const neighborhoodIndex = parts.findIndex(p =>
+            p.toLowerCase().includes('köyü') || p.toLowerCase().includes('mahallesi')
+          );
+          if (neighborhoodIndex !== -1) {
+            neighborhood = parts.slice(neighborhoodIndex, neighborhoodIndex + 2).join(' ');
+          }
+        }
+  
+        return {
+          id: report._id?.$oid || '',
+          address: report.a,
+          tweet: report.t,
+          victimCount: report.v,
+          status: report.s,
+          isDroneValidated: report.d,
+          coordinates: {
+            latitude: String(report.c?.lat ?? ''),
+            longitude: String(report.c?.lng ?? ''),
+          },
+          phoneNumber: report.ct?.p || '',
+          needs: report.ct?.n || '',
+          region,
+          district,
+          neighborhood,
+          locationHierarchy: report.a, // used for filtering
+        };
+      });
+  
       const stored = await AsyncStorage.getItem('reports');
-      const existing: Report[] = stored ? JSON.parse(stored) : [];
-
-      if (JSON.stringify(existing) !== JSON.stringify(freshData)) {
-        await AsyncStorage.setItem('reports', JSON.stringify(freshData));
-        setReports(freshData);
-        setFilteredReports(freshData);
+      const existing = stored ? JSON.parse(stored) : [];
+  
+      if (JSON.stringify(existing) !== JSON.stringify(parsed)) {
+        await AsyncStorage.setItem('reports', JSON.stringify(parsed));
+        setReports(parsed);
+        setFilteredReports(parsed);
       }
     } catch (err) {
       console.error(text.fetchError);
     }
   };
+  
 
   const handleSearch = () => {
     const query = searchQuery.toLowerCase();
@@ -129,7 +171,7 @@ export default function HomeScreen() {
         {filteredReports.map((report) => (
           <ReportCard
             key={report.id}
-            address={report.locationHierarchy}
+            address={report.address}
             victimCount={report.victimCount}
             status={report.status}
             tweet={report.tweet}

@@ -29,27 +29,14 @@ public class Report {
     @JsonProperty("c")
     private Coordinates coordinates;
 
-    @JsonProperty("l")
-    private Location location;
-
     @JsonProperty("ct")
     private ContactInfo contact;
-
-    // Sub-classes
 
     @Getter
     @Setter
     public static class Coordinates {
         @JsonProperty("lat") private double latitude;
         @JsonProperty("lng") private double longitude;
-    }
-
-    @Getter
-    @Setter
-    public static class Location {
-        @JsonProperty("r") private String region;
-        @JsonProperty("d") private String district;
-        @JsonProperty("n") private String neighborhood;
     }
 
     @Getter

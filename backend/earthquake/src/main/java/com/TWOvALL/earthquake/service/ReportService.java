@@ -2,6 +2,7 @@ package com.TWOvALL.earthquake.service;
 
 import com.TWOvALL.earthquake.model.Report;
 import com.TWOvALL.earthquake.repository.ReportRepository;
+import com.TWOvALL.earthquake.util.NormalizerUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -10,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 
@@ -42,6 +44,7 @@ public class ReportService {
     @PostConstruct
     public void fetchReportOnStartup() {
         logger.info("Fetching report on startup...");
+        testNormalization();
         fetchAndSaveSingleReport();
     }
 
@@ -58,6 +61,39 @@ public class ReportService {
             i++;
         }
     }
+
+    public void testNormalization() {
+        Map<String, Object> testData = Map.of(
+                "coordinates", Map.of(
+                        "latitude", "37.3847896",
+                        "longitude", "36.8459691"
+                ),
+                "droneVerified", true,
+                "important_info", Map.of(
+                        "address", "Kahramanmaraş, Türkoğlu, Şekeroba Köyü, Çağrı Sokak, No: 4",
+                        "needs", "Çadır, yatak, ısıtıcı, kefen",
+                        "phone", "05435379496",
+                        "victims", "En az 1 kişi"
+                ),
+                "index", 0,
+                "tweet", "Kahramanmaraş türkoğlu ilçesi şekeroba köyü çağrı sokak no 4 çadır yatak ısıtıcı ölen insanlae için de kefen ihtiyacı var iletişim:05435379496"
+        );
+
+
+        saveSingleReport(testData);
+
+        Report report = reportRepository.findAll().get(0); // assuming it's the only one
+        System.out.println("📦 Normalized Report Stored in MongoDB:");
+        System.out.println("Address:        " + report.getAddress());
+        System.out.println("Tweet:          " + report.getTweet());
+        System.out.println("Phone:          " + report.getContact().getPhoneNumber());
+        System.out.println("Needs:          " + report.getContact().getNeeds());
+        System.out.println("Victim Count:   " + report.getVictimCount());
+        System.out.println("Latitude:       " + report.getCoordinates().getLatitude());
+        System.out.println("Longitude:      " + report.getCoordinates().getLongitude());
+        System.out.println("Drone Verified: " + report.isDroneValidated());
+    }
+
 
     private void checkKandilli() {
         try {
@@ -141,17 +177,20 @@ public class ReportService {
             }
 
             Report report = new Report();
-            report.setAddress(address);
-            report.setTweet(tweet);
+            report.setAddress(NormalizerUtil.normalizeText(address));
+            System.out.println("RAW TWEET: " + tweet);
+            report.setTweet(NormalizerUtil.normalizeText(tweet));
             report.setStatus("Yardım Bekliyor");
+
 
             if (importantInfoMap != null) {
                 String phoneNumber = (String) importantInfoMap.get("phone");
+
                 String needs = (String) importantInfoMap.get("needs");
 
                 Report.ContactInfo contactInfo = new Report.ContactInfo();
-                contactInfo.setPhoneNumber(phoneNumber != null ? phoneNumber : "N/A");
-                contactInfo.setNeeds(needs != null ? needs : "N/A");
+                contactInfo.setPhoneNumber(NormalizerUtil.normalizePhoneNumber(phoneNumber));
+                contactInfo.setNeeds(NormalizerUtil.normalizeText(needs));
                 report.setContact(contactInfo);
             }
 
@@ -214,5 +253,4 @@ public class ReportService {
     public List<Report> getAllReports() {
         return reportRepository.findAll();  // findAll() returns a List<Report>
     }
-
 }
