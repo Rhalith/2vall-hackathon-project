@@ -2,7 +2,6 @@ package com.TWOvALL.earthquake.service;
 
 import com.TWOvALL.earthquake.model.Report;
 import com.TWOvALL.earthquake.repository.ReportRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -13,8 +12,6 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @Service
 public class ReportService {
@@ -119,17 +116,12 @@ public class ReportService {
      */
     private void saveSingleReport(Map<String, Object> reportData) {
         try {
-            String address = (String) reportData.get("address");
-            String locationHierarchy = (String) reportData.get("location_hierarchy");
-            String tweet = (String) reportData.get("tweet");
-            String victims = (String) reportData.get("victims");
-
-            // New coordinate data from the API response
+            Map<String, Object> importantInfoMap = (Map<String, Object>) reportData.get("important_info");
             Map<String, String> coordinates = (Map<String, String>) reportData.get("coordinates");
 
-            // Important info (contains phone number and needs)
-            String importantInfo = (String) reportData.get("important_info");
-            System.out.println("Important Info: " + importantInfo);
+            String address = importantInfoMap != null ? (String) importantInfoMap.get("address") : "Unknown Address";
+            String tweet = (String) reportData.get("tweet");
+            String victims = importantInfoMap != null ? (String) importantInfoMap.get("victims") : null;
 
             if (address == null || address.trim().isEmpty()) {
                 logger.warn("Address not found for tweet: {}", tweet);
@@ -141,59 +133,54 @@ public class ReportService {
                 tweet = "Unknown Tweet";
             }
 
-            // Check if report with this address already exists
             if (!reportRepository.findAllByAddress(address).isEmpty()) {
                 if (!address.equals("Adres bulunamadı")) {
                     logger.info("Report with address '{}' already exists. Skipping save.", address);
-                    return; // Skip saving if there are existing reports with this address
+                    return;
                 }
             }
 
-            // Create and populate the report object
             Report report = new Report();
             report.setAddress(address);
-            report.setLocationHierarchy(locationHierarchy);
             report.setTweet(tweet);
             report.setStatus("Yardım Bekliyor");
 
-            // Set important info
-            if (importantInfo != null && !importantInfo.trim().isEmpty()) {
-                // Parse phone number and needs from the importantInfo field
-                String phoneNumber = parsePhoneNumber(importantInfo);
-                String needs = parseNeeds(importantInfo);
+            if (importantInfoMap != null) {
+                String phoneNumber = (String) importantInfoMap.get("phone");
+                String needs = (String) importantInfoMap.get("needs");
 
                 Report.ContactInfo contactInfo = new Report.ContactInfo();
-                contactInfo.setPhoneNumber(phoneNumber);
-                contactInfo.setNeeds(needs);
-                report.setContact(contactInfo); // Set the contact info object in the report
-
-                logger.info("Parsed important info - Phone: {}, Needs: {}", phoneNumber, needs);
+                contactInfo.setPhoneNumber(phoneNumber != null ? phoneNumber : "N/A");
+                contactInfo.setNeeds(needs != null ? needs : "N/A");
+                report.setContact(contactInfo);
             }
 
-            // Handle victim count
             if (victims != null && !victims.equalsIgnoreCase("Depremzede sayısı bulunamadı")) {
                 try {
                     report.setVictimCount(Integer.parseInt(victims.replaceAll("[^0-9]", "")));
                 } catch (NumberFormatException e) {
                     logger.warn("Unable to parse victim count for tweet: {}", tweet);
-                    report.setVictimCount(1); // Default if parsing fails
+                    report.setVictimCount(1);
                 }
             } else {
-                report.setVictimCount(1); // Default victim count
+                report.setVictimCount(1);
             }
 
-            // Parse location hierarchy to set region, district, and neighborhood
-            parseLocationHierarchy(report);
-
-            // Set coordinates (latitude and longitude)
+            // Set coordinates
             if (coordinates != null) {
                 Report.Coordinates coord = new Report.Coordinates();
                 coord.setLatitude(coordinates.get("latitude") != null ? Double.parseDouble(coordinates.get("latitude")) : 0.0);
                 coord.setLongitude(coordinates.get("longitude") != null ? Double.parseDouble(coordinates.get("longitude")) : 0.0);
-                report.setCoordinates(coord); // Set the coordinates object in the report
+                report.setCoordinates(coord);
             }
 
-            // Save the report in the repository
+            // Set drone verification if present
+            Boolean droneVerified = (Boolean) reportData.get("droneVerified");
+            if (droneVerified != null) {
+                report.setDroneValidated(droneVerified);
+            }
+
+            // Save the report
             reportRepository.save(report);
             logger.info("Saved report with address: {}", report.getAddress());
 
@@ -202,29 +189,6 @@ public class ReportService {
         }
     }
 
-    /**
-     * Helper method to parse the location hierarchy string and set region, district, and neighborhood fields.
-     *
-     * @param report the report whose locationHierarchy is to be parsed.
-     */
-    private void parseLocationHierarchy(Report report) {
-        String locationHierarchy = report.getLocationHierarchy();
-
-        if (locationHierarchy != null && !locationHierarchy.trim().isEmpty() && !locationHierarchy.equalsIgnoreCase("Unknown Address")) {
-            String[] locationParts = locationHierarchy.split(", ");
-            if (locationParts.length >= 3) {
-                Report.Location location = new Report.Location();
-                location.setRegion(locationParts[0]);
-                location.setDistrict(locationParts[1]);
-                location.setNeighborhood(locationParts[2]);
-                report.setLocation(location); // Set the location object in the report
-            } else {
-                logger.warn("Insufficient location parts for report: {}", locationHierarchy);
-            }
-        } else {
-            logger.warn("LocationHierarchy is null or empty for report with tweet: {}", report.getTweet());
-        }
-    }
 
     /**
      * Updates the status of a report based on its ID.
@@ -247,38 +211,8 @@ public class ReportService {
         }
     }
 
-    public List<Report> getAllReports(boolean test) {
+    public List<Report> getAllReports() {
         return reportRepository.findAll();  // findAll() returns a List<Report>
     }
 
-    /**
-     * Helper method to parse the phone number from the important info string.
-     */
-    private String parsePhoneNumber(String importantInfo) {
-        // Regex pattern to match phone numbers in various formats, including multiple phone numbers
-        Pattern pattern = Pattern.compile("Telefon Numarası: ([\\d\\s\\(\\)\\+,-]+)");
-        Matcher matcher = pattern.matcher(importantInfo);
-
-        if (matcher.find()) {
-            // Get the matched phone number string and split by comma if there are multiple numbers
-            String phoneNumbers = matcher.group(1).trim();
-
-            // Return the phone numbers, with each phone number trimmed
-            return String.join(", ", phoneNumbers.split(",")).trim();
-        }
-
-        return "N/A";
-    }
-
-    /**
-     * Helper method to parse the needs from the important info string.
-     */
-    private String parseNeeds(String importantInfo) {
-        Pattern pattern = Pattern.compile("(İhtiyaç Listesi|Gereksinimler Listesi): (.+)");
-        Matcher matcher = pattern.matcher(importantInfo);
-        if (matcher.find()) {
-            return matcher.group(2).trim(); // group(2) will contain the needs list
-        }
-        return "N/A";
-    }
 }

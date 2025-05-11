@@ -18,7 +18,7 @@ public class ReportController {
 
     @GetMapping
     public ResponseEntity<List<Report>> getAllReports() {
-        return ResponseEntity.ok(reportService.getAllReports(true));
+        return ResponseEntity.ok(reportService.getAllReports());
     }
 
     @PatchMapping("/updateStatus/{id}")
