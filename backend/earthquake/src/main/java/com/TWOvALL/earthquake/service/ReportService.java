@@ -21,8 +21,9 @@ public class ReportService {
     private static final Logger logger = LoggerFactory.getLogger(ReportService.class);
 
     // The base URL for fetching a report by index
-    private final String TWEET_API = "https://2574-213-153-185-178.ngrok-free.app/get_address_by_index?index=";
-    private final String KANDILLI_API = "https://2574-213-153-185-178.ngrok-free.app/check_kandilli";
+    private final String TWEET_API = "https://e34c-31-223-46-91.ngrok-free.app/get_address_by_index?index="; // one by one
+    private final String TWEET_API_ALL = "https://e34c-31-223-46-91.ngrok-free.app/get_all_addresses"; // all at once
+    private final String KANDILLI_API = "https://e34c-31-223-46-91.ngrok-free.app/check_kandilli";
 
     // Track the current index globally
     private int currentIndex = 0;
@@ -44,22 +45,36 @@ public class ReportService {
     @PostConstruct
     public void fetchReportOnStartup() {
         logger.info("Fetching report on startup...");
-        testNormalization();
-        fetchAndSaveSingleReport();
+        fetchAndSaveAllReports();
+        //testForAPI();
+        //testNormalization();
+        //fetchAndSaveSingleReport();
+        //for (int i = 0; i < MAX_INDEX; i++) {
+        //    fetchAndSaveSingleReport();
+        //    i++;
+        //}
     }
 
     /**
      * This method will periodically fetch a single report (every 1 hour) and save it to the database.
      */
-    @Scheduled(fixedRate = 3600000) // 1 hour in milliseconds
+    //@Scheduled(fixedRate = 3600000) // 1 hour in milliseconds
     public void fetchReportPeriodically() {
-        checkKandilli();
-        if(!isKandilliActive) return;
+        //checkKandilli();
+        if(isKandilliActive) return;
         logger.info("Fetching report periodically...");
         for (int i = 0; i < MAX_INDEX; i++) {
             fetchAndSaveSingleReport();
             i++;
         }
+    }
+
+    public void testForAPI(){
+        System.out.println("Testing API...");
+
+        Map<String, Object> response = restTemplate.getForObject(TWEET_API, Map.class);
+
+        System.out.println("API Response:" + response);
     }
 
     public void testNormalization() {
@@ -70,9 +85,9 @@ public class ReportService {
                 ),
                 "droneVerified", true,
                 "important_info", Map.of(
-                        "address", "Kahramanmaraş, Türkoğlu, Şekeroba Köyü, Çağrı Sokak, No: 4",
+                        "address", "Kahramanmaraş, Osmanoğlu, Şekeroba Köyü, Çağrı Sokak, No: 4",
                         "needs", "Çadır, yatak, ısıtıcı, kefen",
-                        "phone", "05435379496",
+                        "phone", "05435379496, +905442341234, 5314380388, 50522702111",
                         "victims", "En az 1 kişi"
                 ),
                 "index", 0,
@@ -127,11 +142,12 @@ public class ReportService {
         try {
             // Construct the URL with the current index
             String url = TWEET_API + currentIndex;
+            System.out.println("Fetching report from URL: " + url);
 
             // Fetch data from the external API
             Map<String, Object> response = restTemplate.getForObject(url, Map.class);
 
-            if (response != null && response.containsKey("address")) {
+            if (response != null && response.containsKey("coordinates")) {
                 logger.info("Fetched report for index {}: {}", currentIndex, response);
                 saveSingleReport(response);
 
@@ -144,6 +160,38 @@ public class ReportService {
             logger.error("Error while fetching report for index {}: ", currentIndex, e);
         }
     }
+
+    public void fetchAndSaveAllReports() {
+        try {
+            Map<String, Object> response = restTemplate.getForObject(TWEET_API_ALL, Map.class);
+
+            if (response == null || !response.containsKey("addresses")) {
+                logger.warn("No addresses found in the response.");
+                return;
+            }
+
+            List<Object> addresses = (List<Object>) response.get("addresses");
+
+            for (Object rawReport : addresses) {
+                if (rawReport instanceof Map) {
+                    Map<String, Object> reportMap = (Map<String, Object>) rawReport;
+                    System.out.println("RAW REPORT: " + reportMap);
+                    try {
+                        logger.info("Processing report: {}", reportMap);
+                        saveSingleReport(reportMap);
+                    } catch (Exception e) {
+                        logger.error("Error saving report: {}", e.getMessage());
+                    }
+                } else {
+                    logger.warn("Skipping non-map report entry.");
+                }
+            }
+
+        } catch (Exception e) {
+            logger.error("Error fetching reports: ", e);
+        }
+    }
+
 
     /**
      * Helper method to save a single report.
@@ -208,8 +256,10 @@ public class ReportService {
             // Set coordinates
             if (coordinates != null) {
                 Report.Coordinates coord = new Report.Coordinates();
-                coord.setLatitude(coordinates.get("latitude") != null ? Double.parseDouble(coordinates.get("latitude")) : 0.0);
-                coord.setLongitude(coordinates.get("longitude") != null ? Double.parseDouble(coordinates.get("longitude")) : 0.0);
+                String latStr = coordinates.get("latitude");
+                String lonStr = coordinates.get("longitude");
+                coord.setLatitude((latStr != null && latStr.matches("-?\\d+(\\.\\d+)?")) ? Double.parseDouble(latStr) : 0.0);
+                coord.setLongitude((lonStr != null && lonStr.matches("-?\\d+(\\.\\d+)?")) ? Double.parseDouble(lonStr) : 0.0);
                 report.setCoordinates(coord);
             }
 
