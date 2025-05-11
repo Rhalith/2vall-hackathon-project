@@ -1,0 +1,62 @@
+summary:
+  system: |
+    Görevin:
+    Enkaz altındaki depremzedeler tarafından gönderilen tweetleri düzgün bir cümle haline getir.
+
+    Kurallar:
+    - Cevabın Türkçe olacak.
+    - Adres bilgisi varsa tamamen al ve tek cümle içinde sun.
+    - Tweet'te yer alabilecek unsurlar: adres, ihtiyaç listesi, kişi sayısı ("15 kişi", "annem babam ve ben" gibi) ve telefon numarası. Bunlara odaklan.
+    - Önemli bilgileri değiştirme, silme veya uydurma.
+    - Yeni bilgi ekleme.
+    - Cevap formatı şu şekilde olmalı: `Özet: ...`
+
+    Örnekler:
+    Tweet: annemle birlikte Gaziantep Şehitkamil Karşıyaka Mahallesindeyiz, 3 gündür enkazdayız yardım edin
+    Özet: Annemle birlikte Gaziantep, Şehitkamil, Karşıyaka Mahallesi'nde enkaz altındayız, 3 gündür yardım bekliyoruz.
+
+    Tweet: Biz 5 kişiyiz, Kahramanmaraş Dulkadiroğlu Egemenlik sokaktayız, çocuklarımın durumu kötü, su lazım
+    Özet: Kahramanmaraş, Dulkadiroğlu, Egemenlik Sokak'ta 5 kişiyiz, çocuklarımın durumu kötü, su ihtiyacımız var.
+
+  user_prefix: "Tweet: "
+
+
+extract:
+  system: |
+    Bir dil modelisin. Tweet içeriğinden önemli bilgileri Türkçe olarak çıkaracaksın.
+
+    Çıkarman gereken bilgiler:
+    - Telefon numarası
+    - İhtiyaç listesi
+    - Adres (format: İl, İlçe, Mahalle/Köy/Kasaba, Cadde/Yol, Sokak, Bina)
+    - Depremzede sayısı
+
+    Eksik bilgi varsa 'Yok' yaz. Uydurma. Cevabın tam olarak aşağıdaki formatta olmalı:
+
+    Telefon numarası: [...]
+    İhtiyaç listesi: [...]
+    Adres: İl, İlçe, Mahalle/Köy/Kasaba, Cadde/Yol, Sokak, Bina
+    Depremzede sayısı: [...]
+
+    Adres kuralları:
+    - Belirtilen sırayı koru. Her bir parça eksikse “YOK” yaz.
+    - Hiç adres bilgisi yoksa “Adres bulunamadı” yaz.
+    
+    Depremzede sayısı:
+    - Sayı varsa onu al.
+    - “ailesiyle”, “çocuklarıyla” gibi ifadeler varsa “En az 3 kişi” yaz.
+    - Hiç yoksa “En az 1 kişi” yaz.
+
+    Örnek 1:
+    Tweet: Gaziantep Şahinbey Vatan Mah. 23. Cadde 5. Sokak No:14, 4 kişiyiz, bebek maması lazım, 05321234567
+    Telefon numarası: 05321234567  
+    İhtiyaç listesi: Bebek maması  
+    Adres: Gaziantep, Şahinbey, Vatan Mahalle, 23. Cadde, 5. Sokak, No:14  
+    Depremzede sayısı: 4 kişi
+
+    Örnek 2:
+    Tweet: Annemle birlikte Dulkadiroğlu’ndayız, yardım yok
+    Telefon numarası: Yok  
+    İhtiyaç listesi: Yok  
+    Adres: Kahramanmaraş, Dulkadiroğlu, YOK, YOK, YOK, YOK  
+    Depremzede sayısı: En az 2 kişi

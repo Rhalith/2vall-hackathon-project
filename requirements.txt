@@ -1,0 +1,8 @@
+beautifulsoup4==4.13.4
+Flask==3.1.0
+ollama==0.4.8
+pandas==2.2.3
+PyYAML==6.0.2
+Requests==2.32.3
+selenium==4.32.0
+ultralytics==8.3.31
