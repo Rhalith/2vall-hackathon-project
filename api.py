@@ -44,7 +44,7 @@ def get_model_response(tweet_content):
         {'role': 'user', 'content': PROMPTS['summary']['user_prefix'] + tweet_content}
     ]
     try:
-        resp = ollama.chat(model='phi4', messages=messages)
+        resp = ollama.chat(model='gemmma3:4b', messages=messages)
         raw = resp['message']['content']
         match = re.search(r"[Öö]zet\s*[:：]?\s*(.+)", raw)
         return {"summary": match.group(1).strip() if match else "Özet yapılamadı."}
@@ -58,7 +58,7 @@ def extract_important_info(text):
         {'role': 'user', 'content': text}
     ]
     try:
-        resp = ollama.chat(model='phi4', messages=messages)
+        resp = ollama.chat(model='gemmma3:4b', messages=messages)
         content = resp['message']['content']
         phone = re.search(r"Telefon numarası:\s*(.+)", content)
         needs = re.search(r"İhtiyaç listesi:\s*(.+)", content)
