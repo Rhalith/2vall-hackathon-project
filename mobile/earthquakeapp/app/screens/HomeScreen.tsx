@@ -164,14 +164,6 @@ export default function HomeScreen() {
     }
   };
 
-
-  const handleSearch = () => {
-    const query = searchQuery.toLowerCase();
-    const filtered = reports.filter((r) =>
-      r.locationHierarchy.toLowerCase().includes(query)
-    );
-    setFilteredReports(filtered);
-  };
   const handleSortByVictims = () => {
     const sortedReports = [...filteredReports].sort((a, b) => {
       if (sortDirection === 'asc') {
@@ -301,7 +293,7 @@ export default function HomeScreen() {
         {filteredReports.map((report) => (
           <ReportCard
             key={report.id}
-            address={report.address}
+            address={report.address === 'Adres bulunamadı' ? text.noAddress : report.address}
             victimCount={report.victimCount}
             status={report.status}
             tweet={report.tweet}
