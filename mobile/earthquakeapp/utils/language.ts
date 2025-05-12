@@ -30,6 +30,7 @@ export const tr = {
   fetchError: 'Raporlar alınırken hata oluştu',
   updateSuccess: 'Durum güncellendi',
   updateError: 'Durum güncellenirken hata oluştu',
+  dataUpdating: 'Veri güncelleniyor...',
 };
 
 export const en = {
@@ -68,6 +69,7 @@ export const en = {
   fetchError: 'Error fetching reports',
   updateSuccess: 'Status updated successfully',
   updateError: 'Error updating status',
+  dataUpdating: 'Data is updating...',
 };
 
 export const loginTr = {

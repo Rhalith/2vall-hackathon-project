@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import * as Clipboard from 'expo-clipboard';
 import { getLanguageText } from '../../utils/language';
-import { getUserRoles, isUserLoggedIn } from '../../utils/auth'; 
+import { getUserRoles, isUserLoggedIn } from '../../utils/auth';
 
 type Language = 'TR' | 'EN';
 
@@ -96,30 +96,30 @@ export default function ReportCard({
         {
           backgroundColor:
             status === 'Yardım Bekliyor' ? '#fef08a' :
-            status === 'Gidildi' ? '#86efac' :
-            '#fecaca',
+              status === 'Gidildi' ? '#86efac' :
+                '#fecaca',
           color:
             status === 'Yardım Bekliyor' ? '#92400e' :
-            status === 'Gidildi' ? '#065f46' :
-            '#b91c1c',
+              status === 'Gidildi' ? '#065f46' :
+                '#b91c1c',
         }
       ]}>
         {translatedStatus}
       </Text>
       <View style={[
-  styles.droneStatus,
-  {
-    backgroundColor: isDroneValidated ? '#bbf7d0' : '#065f46',
-    borderColor: isDroneValidated ? '#fef08a' : '#92400e',
-  }
-]}>
-  <Text style={[
-    styles.droneStatusText,
-    { color: isDroneValidated ? '#065f46' : '#991b1b' }
-  ]}>
-    {isDroneValidated ? text.droneValidated : text.droneNotValidated}
-  </Text>
-</View>
+        styles.droneStatus,
+        {
+          backgroundColor: isDroneValidated ? '#bbf7d0' : '#fef08a',
+          borderColor: isDroneValidated ? '#bbf7d0' : '#fef08a',
+        }
+      ]}>
+        <Text style={[
+          styles.droneStatusText,
+          { color: isDroneValidated ? '#065f46' : '#92400e' }
+        ]}>
+          {isDroneValidated ? text.droneValidated : text.droneNotValidated}
+        </Text>
+      </View>
 
       <View style={styles.infoBox}>
         <Text style={styles.infoTitle}>{text.importantInfo}</Text>
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     marginTop: 4,
   },
-  
+
   droneStatusText: {
     fontSize: 12,
     fontWeight: '500',
