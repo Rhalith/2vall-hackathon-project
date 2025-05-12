@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import * as Clipboard from 'expo-clipboard';
 import { getLanguageText } from '../../utils/language';
-import { getUserRoles, isUserLoggedIn } from '../../utils/auth';
 
 type Language = 'TR' | 'EN';
 

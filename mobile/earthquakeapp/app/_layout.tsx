@@ -14,7 +14,7 @@ export default function RootLayout() {
   if (!loaded) return <Text>Loading...</Text>;
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={DefaultTheme}>
       <Stack />
       <StatusBar style="auto" />
     </ThemeProvider>

@@ -206,6 +206,7 @@ export default function HomeScreen() {
     <ScrollView style={{ padding: 16 }}>
       <View style={{ marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
         <Button title={text.languageSwitch || 'Dil Değiştir'} onPress={handleLanguageSwitch} />
+        <Button title={"MAP"} onPress={() => router.push('/map')} />
         {userLoggedIn ? (
           <Button title={text.logout} onPress={() => { logout(); setUserLoggedIn(false); }} />
         ) : (
@@ -290,9 +291,9 @@ export default function HomeScreen() {
       <Button title={text.sortByVictims} onPress={handleSortByVictims} />
 
       <View style={{ marginTop: 16 }}>
-        {filteredReports.map((report) => (
+        {filteredReports.map((report, index) => (
           <ReportCard
-            key={report.id}
+            key={report.id || `${report.address}-${index}`}
             address={report.address === 'Adres bulunamadı' ? text.noAddress : report.address}
             victimCount={report.victimCount}
             status={report.status}
