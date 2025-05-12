@@ -19,87 +19,123 @@ export default function Home() {
   const [user, setUser] = useState(null); // Track if the user is logged in
   const [language, setLanguage] = useState('TR'); // Default language
   const [sortDirection, setSortDirection] = useState('asc'); // Sort direction for victim count
+  const [onlyDroneValidated, setOnlyDroneValidated] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState(null);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const navigate = useNavigate(); // Initialize the useNavigate hook
 
   // Fetch reports from the backend and group by region, district, and neighborhood
-  const fetchReports = async () => {
+  const loadFromCache = async () => {
+    const cached = localStorage.getItem('cachedReports');
+    if (!cached) return false;
     try {
-      const response = await api.get('/api/reports');
-      const reports = response.data;
-  
-      console.log('Fetched reports:', reports);
-  
-      const parsedReports = reports.map((report) => {
-        const parts = report.a?.split(' ') || [];
-  
-        let region = '';
-        let district = '';
-        let neighborhood = '';
-  
-        if (parts.length >= 2) {
-          region = parts[0];
-          district = parts[1];
-          neighborhood = parts[2];
-        }
-  
-        return {
-          id: report._id?.$oid || '', // fallback to empty if not present
-          address: report.a,
-          tweet: report.t,
-          coordinates: report.c,
-          contact: report.ct,
-          victimCount: report.v,
-          status: report.s,
-          isDroneValidated: report.d,
-          region,
-          district,
-          neighborhood,
-        };
-      });
-  
-      console.log('Parsed reports:', parsedReports);
-  
-      const validReports = parsedReports.filter((report) =>
-        report.address &&
-        report.address.trim() !== '' &&
-        report.region &&
-        report.district &&
-        report.neighborhood &&
-        report.coordinates &&
-        report.coordinates.lat !== 'N/A' &&
-        report.coordinates.lng !== 'N/A'
-      );
-  
-      console.log('Valid reports:', validReports);
-  
-      setFilteredReports(validReports);
-      setAllReports(validReports);
-  
-      const regions = [...new Set(validReports.map((r) => r.region))];
+      const cachedReports = JSON.parse(cached);
+
+      const cachedTimestamp = localStorage.getItem('cachedReportsTimestamp');
+      if (cachedTimestamp) {
+        setLastUpdated(new Date(cachedTimestamp));
+      }
+
+      setAllReports(cachedReports); // wait until this is set
+      setFilteredReports(cachedReports);
+
+      const regions = [...new Set(cachedReports.map((r) => r.region))];
       const districtsByRegion = {};
       const neighborhoodsByDistrict = {};
-  
-      validReports.forEach(({ region, district, neighborhood }) => {
+
+      cachedReports.forEach(({ region, district, neighborhood }) => {
         if (!districtsByRegion[region]) districtsByRegion[region] = [];
         if (!districtsByRegion[region].includes(district)) {
           districtsByRegion[region].push(district);
         }
-  
+
         if (!neighborhoodsByDistrict[district]) neighborhoodsByDistrict[district] = [];
         if (!neighborhoodsByDistrict[district].includes(neighborhood)) {
           neighborhoodsByDistrict[district].push(neighborhood);
         }
       });
-  
+
+      setRegions(regions);
+      setDistrictsByRegion(districtsByRegion);
+      setNeighborhoodsByDistrict(neighborhoodsByDistrict);
+
+      return true;
+    } catch (err) {
+      console.warn('Failed to parse cached reports:', err);
+      return false;
+    }
+  };
+
+
+  const refreshFromAPI = async () => {
+    setIsRefreshing(true);
+    try {
+      const response = await api.get('/api/reports');
+      const reports = response.data;
+
+      const parsedReports = reports.map((r) => {
+
+        const parts = r.a?.split(' ') || [];
+        return {
+          id: r._id?.$oid || '',
+          address: r.a,
+          tweet: r.t,
+          coordinates: r.c,
+          contact: r.ct,
+          victimCount: r.v,
+          status: r.s,
+          isDroneValidated: r.d,
+          region: parts[0] || '',
+          district: parts[1] || '',
+          neighborhood: parts[2] || '',
+        };
+      });
+
+      const validReports = parsedReports.filter((r) =>
+        r.address?.trim() &&
+        r.region &&
+        r.district &&
+        r.neighborhood &&
+        r.coordinates?.lat !== 'N/A' &&
+        r.coordinates?.lng !== 'N/A'
+      );
+
+      localStorage.setItem('cachedReports', JSON.stringify(validReports));
+      localStorage.setItem('cachedReportsTimestamp', new Date().toISOString());
+      setLastUpdated(new Date());
+
+      // Same rendering logic:
+      setFilteredReports(validReports);
+      setAllReports(validReports);
+
+      const regions = [...new Set(validReports.map((r) => r.region))];
+      const districtsByRegion = {};
+      const neighborhoodsByDistrict = {};
+
+      validReports.forEach(({ region, district, neighborhood }) => {
+        if (!districtsByRegion[region]) districtsByRegion[region] = [];
+        if (!districtsByRegion[region].includes(district)) {
+          districtsByRegion[region].push(district);
+        }
+
+        if (!neighborhoodsByDistrict[district]) neighborhoodsByDistrict[district] = [];
+        if (!neighborhoodsByDistrict[district].includes(neighborhood)) {
+          neighborhoodsByDistrict[district].push(neighborhood);
+        }
+      });
+
       setRegions(regions);
       setDistrictsByRegion(districtsByRegion);
       setNeighborhoodsByDistrict(neighborhoodsByDistrict);
     } catch (error) {
-      console.error('Error fetching reports:', error);
+      const cached = localStorage.getItem('cachedReports');
+      console.error('Error fetching reports from API:', error);
+    } finally {
+      setIsRefreshing(false);
     }
   };
-  
+
   // Check if user is logged in
   const checkUserStatus = () => {
     const token = localStorage.getItem('jwtToken'); // Get JWT token from localStorage
@@ -127,6 +163,12 @@ export default function Home() {
     localStorage.setItem('language', language === 'TR' ? 'EN' : 'TR'); // Save new language to localStorage
   };
 
+  useEffect(() => {
+    if (allReports.length > 0) {
+      handleFilterReports();
+    }
+  }, [allReports]);
+
   // Load saved language preference from localStorage
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language');
@@ -143,6 +185,7 @@ export default function Home() {
       helpWaiting: 'Yardım Bekliyor',
       visited: 'Gidildi',
       false: 'Asılsız',
+      isDroneValidated: 'Drone ile Doğrulandı',
       searchPlaceholder: 'Konuma göre ara...',
       regionPlaceholder: 'İl (Bölge)',
       districtPlaceholder: 'İlçe',
@@ -151,6 +194,7 @@ export default function Home() {
       logout: 'Çıkış Yap',
       noResults: 'Sonuç bulunamadı',
       sortByVictims: 'Mağdur sayısına göre sırala',
+      dataUpdating: 'Veriler güncelleniyor...',
     },
     EN: {
       welcome: 'Earthquake Victim Reports',
@@ -158,6 +202,7 @@ export default function Home() {
       helpWaiting: 'Help Needed',
       visited: 'Visited',
       false: 'False Report',
+      isDroneValidated: 'Drone Validated',
       searchPlaceholder: 'Search by location...',
       regionPlaceholder: 'Region',
       districtPlaceholder: 'District',
@@ -166,13 +211,28 @@ export default function Home() {
       logout: 'Log Out',
       noResults: 'No results found',
       sortByVictims: 'Sort by Victim Count',
+      dataUpdating: 'Refreshing data...',
     },
   };
 
   useEffect(() => {
-    fetchReports(); // Fetch reports when the component mounts
-    checkUserStatus(); // Check if the user is logged in
+    const init = async () => {
+      const loaded = await loadFromCache();
+      await refreshFromAPI();
+      checkUserStatus();
+    };
+    init();
   }, []);
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      refreshFromAPI();
+    }, 10 * 60 * 1000); // every 10 minutes
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   // Function to handle search and filtering
   const handleFilterReports = () => {
@@ -182,12 +242,16 @@ export default function Home() {
         statusFilters.length === 3 ||
         statusFilters.includes(report.status);
 
+      const droneCondition =
+        !onlyDroneValidated || report.isDroneValidated;
+
       return (
         (region === '' || report.region === region) &&
         (district === '' || report.district === district) &&
         (neighborhood === '' || report.neighborhood === neighborhood) &&
         statusCondition &&
-        (searchQuery === '' || report.locationHierarchy.toLowerCase().includes(searchQuery.toLowerCase()))
+        droneCondition &&
+        (searchQuery === '' || report.address?.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     });
 
@@ -210,7 +274,7 @@ export default function Home() {
   // Whenever the region, district, or neighborhood changes, filter the reports
   useEffect(() => {
     handleFilterReports();
-  }, [region, district, neighborhood, statusFilters, searchQuery]);
+  }, [region, district, neighborhood, statusFilters, searchQuery, onlyDroneValidated]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -267,14 +331,14 @@ export default function Home() {
       <header className={styles.header}>
         {/* Display Login or Logout button */}
         {user ? (
-          <button 
+          <button
             onClick={handleLogout} // Call logout function
             className={styles.loginButton}
           >
             {text[language].logout}
           </button>
         ) : (
-          <button 
+          <button
             onClick={() => navigate('/login')} // Navigate to /login if not logged in
             className={styles.loginButton}
           >
@@ -284,17 +348,24 @@ export default function Home() {
 
         {/* Language Switcher */}
         <div className={styles.languageSwitcher}>
-        <button 
-          onClick={toggleLanguage} // Toggle the language on click
-          className={styles.languageButton}
-        >
-          {language === 'TR' ? 'EN' : 'TR'}
-        </button>
+          <button
+            onClick={toggleLanguage} // Toggle the language on click
+            className={styles.languageButton}
+          >
+            {language === 'TR' ? 'EN' : 'TR'}
+          </button>
         </div>
       </header>
       <main className={styles.main}>
         <div className={styles.content}>
           <h1 className={styles.title}>{text[language].welcome}</h1>
+
+          {lastUpdated && (
+            <p className={styles.lastUpdated}>
+              {language === 'TR' ? 'Son güncelleme: ' : 'Last updated: '}
+              {lastUpdated.toLocaleString(language === 'TR' ? 'tr-TR' : 'en-US')}
+            </p>
+          )}
 
           {/* Combined Form with Search Bar, Dropdowns, Filter Buttons, and Sort Button */}
           <form onSubmit={handleSearch} className={styles.form}>
@@ -384,9 +455,15 @@ export default function Home() {
               >
                 {text[language].false}
               </button>
-
+              <button
+                type="button"
+                className={`${styles.filterButton} ${onlyDroneValidated ? styles.active : ''}`}
+                onClick={() => setOnlyDroneValidated(!onlyDroneValidated)}
+              >
+                {text[language].isDroneValidated}
+              </button>
               {/* Button to navigate to all locations map */}
-              <button 
+              <button
                 type="button"
                 className={styles.allLocationsButton}
                 onClick={() => navigate('/locations')} // Navigate to /locations
@@ -407,22 +484,30 @@ export default function Home() {
             </div>
           </form>
 
+          {/* Loading Indicator */}
+          {isRefreshing && (
+            <p className={styles.refreshingMessage}>
+              {text[language].dataUpdating}
+            </p>
+          )}
+
           {/* Display the Filtered Reports */}
           <div className={styles.grid}>
             {filteredReports.length > 0 ? (
               filteredReports.map((report) => (
-<ReportCard
-  key={report.id}
-  address={report.address}
-  victimCount={report.victimCount}
-  status={report.status}
-  tweet={report.tweet}
-  coordinates={[report.coordinates.lat, report.coordinates.lng]}
-  phoneNumber={report.contact?.p}
-  needs={report.contact?.n}
-  language={language}
-  onUpdateStatus={(newStatus) => handleUpdateStatus(report.id, newStatus)}
-/>
+                <ReportCard
+                  key={report.id}
+                  address={report.address}
+                  victimCount={report.victimCount}
+                  status={report.status}
+                  tweet={report.tweet}
+                  coordinates={[report.coordinates.lat, report.coordinates.lng]}
+                  phoneNumber={report.contact?.p}
+                  isDroneValidated={report.isDroneValidated}
+                  needs={report.contact?.n}
+                  language={language}
+                  onUpdateStatus={(newStatus) => handleUpdateStatus(report.id, newStatus)}
+                />
               ))
             ) : (
               <p>{text[language].noResults}</p>

@@ -5,7 +5,7 @@ import LeafletMap from './LeafletMap'; // Import the LeafletMap component
 import FeedbackPopup from './FeedbackPopup'; // Import the FeedbackPopup component
 import { jwtDecode } from 'jwt-decode'; // Import jwtDecode to decode JWT token
 
-export default function ReportCard({ address, victimCount, status, tweet, coordinates, phoneNumber, needs, language, onUpdateStatus }) {
+export default function ReportCard({ address, victimCount, status, tweet, coordinates, phoneNumber, isDroneValidated, needs, language, onUpdateStatus }) {
   const [isTweetVisible, setIsTweetVisible] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false); // State for dropdown visibility
@@ -60,6 +60,8 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       seeLocation: 'Konumu Gör',
       shareLocation: 'Konumu Paylaş',
       noTweet: 'Tweet bulunamadı!',
+      droneValidated: 'Drone ile doğrulandı',
+      droneNotValidated: 'Drone ile doğrulanmadı',
       importantInfo: 'Önemli Bilgiler',
       phoneNumber: 'Telefon Numarası',
       needs: 'İhtiyaç Listesi',
@@ -82,6 +84,8 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       seeLocation: 'See Location',
       shareLocation: 'Share Location',
       noTweet: 'Tweet not found!',
+      droneValidated: 'Validated by Drone',
+      droneNotValidated: 'Not validated by Drone',
       importantInfo: 'Important Information',
       phoneNumber: 'Phone Number',
       needs: 'Needs List',
@@ -161,6 +165,9 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       <div className={`${styles.status} ${translatedStatus === text[language].helpNeeded ? styles.statusWaiting : translatedStatus === text[language].visited ? styles.statusVisited : styles.statusFalse}`}>
         {translatedStatus}
       </div>
+      <div className={`${styles.droneValidation} ${isDroneValidated ? styles.droneValidated : styles.droneNotValidated}`}>
+        {isDroneValidated ? text[language].droneValidated : text[language].droneNotValidated}
+      </div>
 
       {/* Display Important Information */}
       <div className={styles.importantInfo}>
@@ -170,30 +177,30 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       </div>
 
       <div className={styles.buttonGroup}>
-        <button 
-          className={styles.buttonTweet} 
+        <button
+          className={styles.buttonTweet}
           onClick={toggleTweetVisibility}
         >
           {isTweetVisible ? text[language].hideTweet : text[language].showTweet}
         </button>
 
-        <button 
-          className={styles.buttonMap} 
+        <button
+          className={styles.buttonMap}
           onClick={toggleMap}
         >
           {text[language].seeLocation}
         </button>
 
         {/* New "Konumu Paylaş" Button */}
-        <button 
-          className={styles.buttonShare} 
+        <button
+          className={styles.buttonShare}
           onClick={copyToClipboard}
         >
           {isCopied ? text[language].copied : text[language].shareLocation}
         </button>
       </div>
-     {/* Dropdown slider for logged-in users with roles */}
-     {userRole && (
+      {/* Dropdown slider for logged-in users with roles */}
+      {userRole && (
         <div className={styles.statusDropdown}>
           <button onClick={toggleDropdown} className={styles.buttonStatus}>
             {text[language].changeStatus}
@@ -223,8 +230,8 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       {/* Show the "Geri Bildirim" button only after the tweet is visible */}
       {isTweetVisible && (
         <>
-          <button 
-            className={styles.buttonFeedback} 
+          <button
+            className={styles.buttonFeedback}
             onClick={handleOpenFeedbackPopup}
           >
             {text[language].feedback}
@@ -235,11 +242,11 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       {/* Feedback Popup */}
       {isFeedbackPopupOpen && (
         <FeedbackPopup
-        tweet={tweet}
-        address={address}
-        language={language} // Pass language prop here
-        onClose={handleCloseFeedbackPopup}
-        onSubmit={(feedbackData) => console.log("Feedback submitted:", feedbackData)}
+          tweet={tweet}
+          address={address}
+          language={language} // Pass language prop here
+          onClose={handleCloseFeedbackPopup}
+          onSubmit={(feedbackData) => console.log("Feedback submitted:", feedbackData)}
         />
       )}
 
@@ -247,7 +254,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
 
       {/* Popup for the Leaflet Map */}
       {isMapOpen && (
-        <Popup 
+        <Popup
           content={<LeafletMap coordinates={coordinates} address={address} />} // Pass coordinates and address to LeafletMap
           onClose={toggleMap}
         />

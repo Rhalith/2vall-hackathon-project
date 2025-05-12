@@ -23,6 +23,36 @@
     transition: background-color 0.3s ease;
 }
 
+/* Last updated timestamp */
+.lastUpdated {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Data refreshing indicator */
+.updatingMessage {
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2a52be;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+
 .backButton:hover {
     background-color: #0e2d6f; /* Darker blue for better contrast */
 }

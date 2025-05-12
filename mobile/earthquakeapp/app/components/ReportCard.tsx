@@ -109,8 +109,8 @@ export default function ReportCard({
       <View style={[
   styles.droneStatus,
   {
-    backgroundColor: isDroneValidated ? '#bbf7d0' : '#fef2f2',
-    borderColor: isDroneValidated ? '#10b981' : '#ef4444',
+    backgroundColor: isDroneValidated ? '#bbf7d0' : '#065f46',
+    borderColor: isDroneValidated ? '#fef08a' : '#92400e',
   }
 ]}>
   <Text style={[

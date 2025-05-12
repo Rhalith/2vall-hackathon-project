@@ -68,13 +68,7 @@ export default function HomeScreen() {
         if (parts.length >= 2) {
           region = parts[0];
           district = parts[1];
-  
-          const neighborhoodIndex = parts.findIndex(p =>
-            p.toLowerCase().includes('köyü') || p.toLowerCase().includes('mahallesi')
-          );
-          if (neighborhoodIndex !== -1) {
-            neighborhood = parts.slice(neighborhoodIndex, neighborhoodIndex + 2).join(' ');
-          }
+          neighborhood = parts[2]
         }
   
         return {

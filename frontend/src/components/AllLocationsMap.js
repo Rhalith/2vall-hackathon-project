@@ -10,16 +10,18 @@ import styles from './css/AllLocationsMap.module.css';
 
 export default function AllLocationsMap() {
   const [groupedLocations, setGroupedLocations] = useState([]);
-  const [language, setLanguage] = useState('TR'); // Language state (default to TR)
-  const [copiedReportId, setCopiedReportId] = useState(null); // Track which report has been copied
+  const [language, setLanguage] = useState('TR');
+  const [copiedReportId, setCopiedReportId] = useState(null);
+  const [lastUpdated, setLastUpdated] = useState(null);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const navigate = useNavigate();
 
   const groupLocationsByCoordinates = (reports) => {
     const locationMap = {};
     reports.forEach((report) => {
-      const lat = parseFloat(report.c.lat);
-      const lon = parseFloat(report.c.lng);
+      const lat = parseFloat(report.coordinates?.lat);
+      const lon = parseFloat(report.coordinates?.lng);
       if (!isNaN(lat) && !isNaN(lon)) {
         const key = `${lat},${lon}`;
         if (!locationMap[key]) {
@@ -40,51 +42,83 @@ export default function AllLocationsMap() {
     });
   };
 
-  const fetchLocations = async () => {
+  const loadFromCache = async () => {
+    const cached = localStorage.getItem('cachedReports');
+    const cachedTimestamp = localStorage.getItem('cachedReportsTimestamp');
+    if (!cached) return false;
+
+    try {
+      const parsed = JSON.parse(cached);
+      const validLocations = parsed.filter(
+        (report) => report.coordinates?.lat !== 'N/A' && report.coordinates?.lng !== 'N/A'
+      );
+      const grouped = groupLocationsByCoordinates(validLocations);
+      setGroupedLocations(grouped);
+      if (cachedTimestamp) {
+        setLastUpdated(new Date(cachedTimestamp));
+      }
+      return true;
+    } catch (e) {
+      console.warn('Invalid cachedReports format:', e);
+      return false;
+    }
+  };
+
+  const refreshFromAPI = async () => {
+    setIsRefreshing(true);
     try {
       const response = await api.get('/api/reports');
       const reports = response.data;
-  
+
       const parsedReports = reports.map((report) => {
         const parts = report.a?.split(' ') || [];
-  
-        let region = '';
-        let district = '';
-        let neighborhood = '';
-  
-        if (parts.length >= 2) {
-          region = parts[0]; // e.g., Kahramanmaraş
-          district = parts[1]; // e.g., Türkoğlu
-          neighborhood = parts[2]
-        }
-  
         return {
-          ...report,
           id: report._id?.$oid || '',
-          region,
-          district,
-          neighborhood,
+          address: report.a,
+          tweet: report.t,
+          coordinates: report.c,
+          contact: report.ct,
           victimCount: report.v,
-          locationHierarchy: `${region}${district ? `, ${district}` : ''}${neighborhood ? `, ${neighborhood}` : ''}`,
+          status: report.s,
+          isDroneValidated: report.d,
+          region: parts[0] || '',
+          district: parts[1] || '',
+          neighborhood: parts[2] || '',
+          locationHierarchy: `${parts[0] || ''}${parts[1] ? `, ${parts[1]}` : ''}${parts[2] ? `, ${parts[2]}` : ''}`,
         };
       });
-  
+
       const validLocations = parsedReports.filter(
-        (report) =>
-          report.c?.lat !== 'N/A' &&
-          report.c?.lng !== 'N/A'
+        (report) => report.coordinates?.lat !== 'N/A' && report.coordinates?.lng !== 'N/A'
       );
-  
+
       const grouped = groupLocationsByCoordinates(validLocations);
       setGroupedLocations(grouped);
-    } catch (error) {
-      console.error('Error fetching locations:', error);
+      setLastUpdated(new Date());
+
+      localStorage.setItem('cachedReports', JSON.stringify(parsedReports));
+      localStorage.setItem('cachedReportsTimestamp', new Date().toISOString());
+    } catch (err) {
+      console.error('Error fetching locations from API:', err);
+    } finally {
+      setIsRefreshing(false);
     }
   };
-  
 
   useEffect(() => {
-    fetchLocations();
+    const init = async () => {
+      await loadFromCache();
+      await refreshFromAPI();
+    };
+    init();
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      refreshFromAPI();
+    }, 10 * 60 * 1000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const defaultCenter = [39.9334, 32.8597];
@@ -99,11 +133,10 @@ export default function AllLocationsMap() {
 
   const copyToClipboard = (text, reportId) => {
     navigator.clipboard.writeText(text);
-    setCopiedReportId(reportId); // Mark this report as copied
-    setTimeout(() => setCopiedReportId(null), 2000); // Reset after 2 seconds
+    setCopiedReportId(reportId);
+    setTimeout(() => setCopiedReportId(null), 2000);
   };
 
-  // Define text for different languages
   const text = {
     TR: {
       backButton: 'Ana Sayfaya Dön',
@@ -115,6 +148,8 @@ export default function AllLocationsMap() {
       helpNeeded: 'Yardım Bekliyor',
       visited: 'Gidildi',
       falseReport: 'Asılsız',
+      lastUpdated: 'Son güncelleme',
+      updating: 'Veriler güncelleniyor...',
     },
     EN: {
       backButton: 'Go Back to Homepage',
@@ -126,32 +161,42 @@ export default function AllLocationsMap() {
       helpNeeded: 'Help Needed',
       visited: 'Visited',
       falseReport: 'False Report',
+      lastUpdated: 'Last updated',
+      updating: 'Refreshing data...',
     },
   };
 
-  // Turkish to English status translation
   const statusTranslation = {
     'Yardım Bekliyor': text[language].helpNeeded,
     'Gidildi': text[language].visited,
     'Asılsız': text[language].falseReport,
   };
 
-  // Convert the Turkish status to the selected language for display
   const translateStatus = (status) => {
     return statusTranslation[status] || status;
   };
 
   return (
     <div className={styles.mapContainer}>
-      {/* TR/EN Language Toggle Button */}
       <button onClick={() => setLanguage((prev) => (prev === 'TR' ? 'EN' : 'TR'))} className={styles.langButton}>
         {text[language].switchLang}
       </button>
 
-      {/* Back Button */}
       <button onClick={() => navigate('/')} className={styles.backButton}>
         {text[language].backButton}
       </button>
+
+      {lastUpdated && (
+        <p className={styles.lastUpdated}>
+          {text[language].lastUpdated}: {lastUpdated.toLocaleString(language === 'TR' ? 'tr-TR' : 'en-US')}
+        </p>
+      )}
+
+      {isRefreshing && (
+        <p className={styles.updatingMessage}>
+          {text[language].updating}
+        </p>
+      )}
 
       <MapContainer center={defaultCenter} zoom={6} className={styles.map}>
         <TileLayer
@@ -170,7 +215,6 @@ export default function AllLocationsMap() {
                 <div key={index} className={styles.popupReport}>
                   <div className={styles.popupAddress}>
                     {report.locationHierarchy}
-                    {/* Add Copy Button with feedback */}
                     <button
                       onClick={() => copyToClipboard(report.locationHierarchy, report.id)}
                       className={styles.copyButton}

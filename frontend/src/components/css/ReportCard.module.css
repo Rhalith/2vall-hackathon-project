@@ -41,12 +41,39 @@
   color: #b91c1c; /* Dark red for text */
 }
 
+.droneValidation {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.droneValidated {
+  background-color: #bbf7d0; /* Light green for validated */
+  color: #065f46; /* Dark green text */
+}
+
+.droneNotValidated {
+  background-color: #fef08a; /* Yellow for not validated */
+  color: #92400e; /* Dark brown text */
+}
+
 /* Button group container */
 .buttonGroup {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
 }
+
+.refreshingMessage {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
 
 /* Tweet button */
 .buttonTweet {
