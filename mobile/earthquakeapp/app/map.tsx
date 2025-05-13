@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
 import Clipboard from 'expo-clipboard';
@@ -7,6 +7,7 @@ import { getLanguageText } from '@/utils/language';
 import { Report } from '@/types/Report';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
+import { API_BACKEND } from '@/utils/api';
 
 interface LocationGroupType {
   lat: number;
@@ -23,6 +24,7 @@ export default function MapScreen() {
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   const text = getLanguageText(language);
+  const mapRef = useRef<MapView | null>(null);
 
   const groupLocationsByCoordinates = (reports: Report[]) => {
     const locationMap: Record<string, { count: number; reports: Report[] }> = {};
@@ -79,7 +81,7 @@ export default function MapScreen() {
   const refreshFromAPI = async () => {
     setIsRefreshing(true);
     try {
-      const response = await axios.get<any[]>('http://192.168.1.144:8080/api/reports');
+      const response = await axios.get<any[]>(API_BACKEND+'/api/reports');
       const rawReports = response.data;
       const parsedReports: Report[] = rawReports
         .filter(r => r.c && typeof r.c.lat === 'number' && typeof r.c.lng === 'number')
@@ -134,6 +136,20 @@ export default function MapScreen() {
     setTimeout(() => setCopiedReportId(null), 2000);
   };
 
+  useEffect(() => {
+    if (groupedLocations.length > 0 && mapRef.current) {
+      const coords = groupedLocations.map(loc => ({
+        latitude: loc.lat,
+        longitude: loc.lon,
+      }));
+  
+      mapRef.current.fitToCoordinates(coords, {
+        edgePadding: { top: 80, right: 80, bottom: 80, left: 80 },
+        animated: true,
+      });
+    }
+  }, [groupedLocations]);
+
   const statusTranslation: Record<'Yardım Bekliyor' | 'Gidildi' | 'Asılsız', string> = {
     'Yardım Bekliyor': text.helpNeeded,
     'Gidildi': text.visited,
@@ -164,15 +180,10 @@ export default function MapScreen() {
     </Text>
   )}
 
-  <MapView
-    style={{ flex: 1 }}
-    initialRegion={{
-      latitude: 39.9334,
-      longitude: 32.8597,
-      latitudeDelta: 5,
-      longitudeDelta: 5,
-    }}
-  >
+<MapView
+  ref={mapRef}
+  style={{ flex: 1 }}
+>
     {groupedLocations.map(loc => (
       <Marker
         key={`${loc.lat}-${loc.lon}`}

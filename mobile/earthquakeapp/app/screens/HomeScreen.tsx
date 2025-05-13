@@ -10,6 +10,7 @@ import { Report } from '../../types/Report';
 import axios from 'axios';
 import { COLORS } from '@/utils/colors';
 import Dropdown from '../components/Dropdown';
+import { API_BACKEND } from '@/utils/api';
 
 export default function HomeScreen() {
   const [reports, setReports] = useState<Report[]>([]);
@@ -109,7 +110,7 @@ export default function HomeScreen() {
   const checkForNewReports = async () => {
     try {
       setIsRefreshing(true);
-      const response = await axios.get<any[]>('http://192.168.1.144:8080/api/reports'); // Replace with your backend URL
+      const response = await axios.get<any[]>(API_BACKEND+'/api/reports'); // Replace with your backend URL
       const rawReports = response.data;
 
       // Parse backend short property format
@@ -192,7 +193,7 @@ export default function HomeScreen() {
 
   const handleUpdateStatus = async (id: string, newStatus: string) => {
     try {
-      const response = await axios.patch(`http://172.26.200.127:8080/api/reports/updateStatus/${id}`, {
+      const response = await axios.patch(API_BACKEND+`/api/reports/updateStatus/${id}`, {
         newStatus,
       });
 

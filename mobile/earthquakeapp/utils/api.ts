@@ -1,0 +1,1 @@
+export const API_BACKEND = 'https://d047-178-240-212-222.ngrok-free.app'; // Replace with ngrok url
