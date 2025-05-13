@@ -4,6 +4,7 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { router } from 'expo-router';
 import { getLoginText } from '../utils/language';
+import { API_BACKEND } from '@/utils/api';
 
 export default function LoginScreen() {
   const [username, setUsername] = useState('');
@@ -47,7 +48,7 @@ export default function LoginScreen() {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://172.26.200.127:8080/api/auth/login', {
+      const response = await axios.post(API_BACKEND+'/api/auth/login', {
         username,
         password,
       });

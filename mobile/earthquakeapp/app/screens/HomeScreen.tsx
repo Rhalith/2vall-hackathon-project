@@ -30,11 +30,11 @@ export default function HomeScreen() {
 
   const text = getLanguageText(language);
   const regionOptions = [...new Set(reports.map(r => r.region))]
-  .map(o => ({ value: o, label: o }));
+    .map(o => ({ value: o, label: o }));
   const districtOptions = [...new Set(reports.filter(r => r.region === region).map(r => r.district))]
-  .map(o => ({ value: o, label: o }));
+    .map(o => ({ value: o, label: o }));
   const neighborhoodOptions = [...new Set(reports.filter(r => r.district === district).map(r => r.neighborhood))]
-  .map(o => ({ value: o, label: o }));
+    .map(o => ({ value: o, label: o }));
 
   useEffect(() => {
     loadLanguage();
