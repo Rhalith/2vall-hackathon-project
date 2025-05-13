@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, Text, View, TextInput, Alert, TouchableOpacity, StyleSheet, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform} from 'react-native';
-import RNPickerSelect from 'react-native-picker-select';
+import { ScrollView, Text, View, TextInput, Alert, TouchableOpacity } from 'react-native';
 import { router, useFocusEffect } from 'expo-router';
 import { getLanguageText } from '../../utils/language';
 import { isUserLoggedIn, logout } from '../../utils/auth';
@@ -31,11 +30,11 @@ export default function HomeScreen() {
 
   const text = getLanguageText(language);
 
-    useEffect(() => {
-      loadLanguage();
-      loadReportsFromStorage();
-      checkLoginStatus();
-    }, []);
+  useEffect(() => {
+    loadLanguage();
+    loadReportsFromStorage();
+    checkLoginStatus();
+  }, []);
 
   useFocusEffect(
     React.useCallback(() => {
@@ -110,7 +109,7 @@ export default function HomeScreen() {
   const checkForNewReports = async () => {
     try {
       setIsRefreshing(true);
-      const response = await axios.get<any[]>(API_BACKEND+'/api/reports'); // Replace with your backend URL
+      const response = await axios.get<any[]>(API_BACKEND + '/api/reports'); // Replace with your backend URL
       const rawReports = response.data;
 
       // Parse backend short property format
@@ -193,7 +192,7 @@ export default function HomeScreen() {
 
   const handleUpdateStatus = async (id: string, newStatus: string) => {
     try {
-      const response = await axios.patch(API_BACKEND+`/api/reports/updateStatus/${id}`, {
+      const response = await axios.patch(API_BACKEND + `/api/reports/updateStatus/${id}`, {
         newStatus,
       });
 
@@ -218,15 +217,15 @@ export default function HomeScreen() {
 
   return (
     <ScrollView style={{ padding: 16 }}>
-<View style={{ marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-  <StyledButton title={text.languageSwitch || 'Dil Değiştir'} onPress={handleLanguageSwitch} />
-  <StyledButton title="MAP" onPress={() => router.push('/map')} />
-  {userLoggedIn ? (
-    <StyledButton title={text.logout} onPress={() => { logout(); setUserLoggedIn(false); }} />
-  ) : (
-    <StyledButton title={text.login} onPress={() => router.push('/login')} />
-  )}
-</View>
+      <View style={{ marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <StyledButton title={text.languageSwitch || 'Dil Değiştir'} onPress={handleLanguageSwitch} />
+        <StyledButton title={text.mapPage} onPress={() => router.push('/map')} />
+        {userLoggedIn ? (
+          <StyledButton title={text.logout} onPress={() => { logout(); setUserLoggedIn(false); }} />
+        ) : (
+          <StyledButton title={text.login} onPress={() => router.push('/login')} />
+        )}
+      </View>
 
       <Text style={{ fontSize: 22, fontWeight: 'bold', marginBottom: 16, textAlign: 'center' }}>
         {text.welcome}
@@ -243,53 +242,53 @@ export default function HomeScreen() {
           {text.dataUpdating || 'Veriler güncelleniyor...'}
         </Text>
       )}
-<TextInput
-  placeholder={text.searchPlaceholder}
-  placeholderTextColor="#999"
-  value={searchQuery}
-  onChangeText={setSearchQuery}
-  style={{
-    borderWidth: 1,
-    borderColor: '#ccc',
-    backgroundColor: '#fff',
-    padding: 12,
-    borderRadius: 6,
-    marginBottom: 10,
-    color: '#000',
-  }}
-/>
-<View style={{ marginTop: 10, marginBottom: 8, minHeight: 100, overflow: 'hidden' }}>
-<Dropdown
-  label={text.chooseRegionPlaceholder}
-  options={[...new Set(reports.map(r => r.region))]}
-  selectedValue={region}
-  onValueChange={(newRegion) => {
-    setRegion(newRegion);
-    setDistrict('');
-    setNeighborhood('');
-  }}
-  clearText={text.clearSelection}
-/>
+      <TextInput
+        placeholder={text.searchPlaceholder}
+        placeholderTextColor="#999"
+        value={searchQuery}
+        onChangeText={setSearchQuery}
+        style={{
+          borderWidth: 1,
+          borderColor: '#ccc',
+          backgroundColor: '#fff',
+          padding: 12,
+          borderRadius: 6,
+          marginBottom: 10,
+          color: '#000',
+        }}
+      />
+      <View style={{ marginTop: 10, marginBottom: 8, minHeight: 100, overflow: 'hidden' }}>
+        <Dropdown
+          label={text.chooseRegionPlaceholder}
+          options={[...new Set(reports.map(r => r.region))]}
+          selectedValue={region}
+          onValueChange={(newRegion) => {
+            setRegion(newRegion);
+            setDistrict('');
+            setNeighborhood('');
+          }}
+          clearText={text.clearSelection}
+        />
 
-<Dropdown
-  label={text.chooseDistrictPlaceholder}
-  options={[...new Set(reports.filter(r => r.region === region).map(r => r.district))]}
-  selectedValue={district}
-  onValueChange={(newDistrict) => {
-    setDistrict(newDistrict);
-    setNeighborhood('');
-  }}
-  clearText={text.clearSelection}
-/>
+        <Dropdown
+          label={text.chooseDistrictPlaceholder}
+          options={[...new Set(reports.filter(r => r.region === region).map(r => r.district))]}
+          selectedValue={district}
+          onValueChange={(newDistrict) => {
+            setDistrict(newDistrict);
+            setNeighborhood('');
+          }}
+          clearText={text.clearSelection}
+        />
 
-<Dropdown
-  label={text.chooseNeighborhoodPlaceholder}
-  options={[...new Set(reports.filter(r => r.district === district).map(r => r.neighborhood))]}
-  selectedValue={neighborhood}
-  onValueChange={setNeighborhood}
-  clearText={text.clearSelection}
-/>
-</View>
+        <Dropdown
+          label={text.chooseNeighborhoodPlaceholder}
+          options={[...new Set(reports.filter(r => r.district === district).map(r => r.neighborhood))]}
+          selectedValue={neighborhood}
+          onValueChange={setNeighborhood}
+          clearText={text.clearSelection}
+        />
+      </View>
 
       <View style={{
         flexDirection: 'row',
@@ -299,21 +298,21 @@ export default function HomeScreen() {
         backgroundColor: '#f3f4f6',
         marginBottom: 8
       }}>
-{[text.helpNeeded, text.visited, text.falseReport].map(status => (
-  <StyledButton
-    key={status}
-    title={status}
-    onPress={() =>
-      setStatusFilters(prev => prev.includes(status) ? prev.filter(s => s !== status) : [...prev, status])
-    }
-    active={statusFilters.includes(status)}
-  />
-))}
-<StyledButton
-  title="Drone ile Doğrulandı"
-  onPress={() => setOnlyDroneValidated(prev => !prev)}
-  active={onlyDroneValidated}
-/>
+        {[text.helpNeeded, text.visited, text.falseReport].map(status => (
+          <StyledButton
+            key={status}
+            title={status}
+            onPress={() =>
+              setStatusFilters(prev => prev.includes(status) ? prev.filter(s => s !== status) : [...prev, status])
+            }
+            active={statusFilters.includes(status)}
+          />
+        ))}
+        <StyledButton
+          title="Drone ile Doğrulandı"
+          onPress={() => setOnlyDroneValidated(prev => !prev)}
+          active={onlyDroneValidated}
+        />
       </View>
 
       <StyledButton title={text.sortByVictims} onPress={handleSortByVictims} />

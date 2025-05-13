@@ -36,6 +36,8 @@ export const tr = {
   chooseDistrictPlaceholder: 'İlçe Seçiniz',
   chooseNeighborhoodPlaceholder: 'Mahalle Seçiniz',
   clearSelection: 'Seçiniz',
+  mainPage: 'Ana Sayfa',
+  mapPage: 'Harita',
 };
 
 export const en = {
@@ -80,6 +82,8 @@ export const en = {
   chooseDistrictPlaceholder: 'Select District',
   chooseNeighborhoodPlaceholder: 'Select Neighborhood',
   clearSelection: 'Select',
+  mainPage: 'Home',
+  mapPage: 'Map',
 };
 
 export const loginTr = {
