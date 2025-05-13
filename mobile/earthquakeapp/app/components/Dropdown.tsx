@@ -1,98 +1,162 @@
-import React, { useState } from 'react';
+import React, { useCallback, useRef, useState, useEffect } from 'react';
 import {
   View,
   Text,
   TouchableOpacity,
   Modal,
   FlatList,
+  TouchableWithoutFeedback,
   StyleSheet,
-  Pressable,
   Dimensions,
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
+const { height: screenHeight } = Dimensions.get('window');
+
+export interface OptionItem {
+  value: string;
+  label: string;
+}
 
 interface DropdownProps {
-  label: string;
-  options: string[];
-  selectedValue: string;
-  onValueChange: (value: string) => void;
+  data: OptionItem[];
+  placeholder: string;
+  onChange: (item: OptionItem) => void;
   clearText?: string;
+  selectedValue?: string;
 }
 
 export default function Dropdown({
-  label,
-  options,
-  selectedValue,
-  onValueChange,
+  data,
+  placeholder,
+  onChange,
   clearText = 'Clear selection',
+  selectedValue,
 }: DropdownProps) {
-  const [visible, setVisible] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [value, setValue] = useState<OptionItem | null>(null);
 
-  const fullOptions = [''].concat(options); // Add empty string to represent "clear selection"
+  useEffect(() => {
+    if (selectedValue === undefined) return;
 
-  const handleSelect = (value: string) => {
-    onValueChange(value);
-    setVisible(false);
-  };
+    if (selectedValue === '') {
+      setValue(null);
+    } else if (selectedValue !== value?.value) {
+      const match = data.find((o) => o.value === selectedValue) || null;
+      setValue(match);
+    }
+  }, [selectedValue, data, value]);
+  const buttonRef = useRef<View>(null);
 
+  const [sheetPos, setSheetPos] = useState({
+    top: 0,
+    left: 0,
+    width: 200,
+    maxHeight: 250,
+    openUpwards: false,
+  });
+
+  const fullData = clearText
+    ? [{ value: '', label: clearText }, ...data]
+    : data;
+
+  const openSheet = useCallback(() => {
+    buttonRef.current?.measureInWindow((x, y, width, height) => {
+      const spaceBelow = screenHeight - (y + height);
+      const neededHeight = Math.min(40 * fullData.length + 20, 250);
+      const openUpwards = spaceBelow < neededHeight + 16;
+
+      const top = openUpwards ? y - neededHeight - 4 : y + height + 4;
+
+      setSheetPos({
+        top,
+        left: x,
+        width,
+        maxHeight: neededHeight,
+        openUpwards,
+      });
+      setExpanded(true);
+    });
+  }, [fullData.length]);
+
+  const onSelect = useCallback(
+    (item: OptionItem) => {
+      setValue(item.value ? item : null);
+      onChange(item);
+      setExpanded(false);
+    },
+    [onChange],
+  );
   return (
-    <View style={{ marginBottom: 16, width: '100%' }}>
+    <View ref={buttonRef}>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => setVisible(true)}
-        activeOpacity={0.7}
+        activeOpacity={0.8}
+        onPress={openSheet}
       >
-        <Text style={[styles.buttonText, !selectedValue && { color: '#aaa' }]}>
-          {selectedValue || label}
+        <Text style={[styles.buttonText, !value && { color: '#aaa' }]}>
+          {value?.label || placeholder}
         </Text>
-        <Ionicons name="chevron-down" size={20} color="#555" />
+        <Ionicons
+          name={expanded ? 'chevron-up' : 'chevron-down'}
+          size={18}
+          color="#555"
+        />
       </TouchableOpacity>
-
-      <Modal
-        animationType="fade"
-        transparent
-        visible={visible}
-        onRequestClose={() => setVisible(false)}
-      >
-        <Pressable
-          style={styles.modalOverlay}
-          onPress={() => setVisible(false)}
-        >
-          <View style={styles.modal}>
-            <Text style={styles.modalTitle}>{label}</Text>
-            <FlatList
-              data={fullOptions}
-              keyExtractor={(item, index) => `${item}-${index}`}
-              renderItem={({ item }) => (
-                <TouchableOpacity
-                  style={styles.option}
-                  onPress={() => handleSelect(item)}
-                >
-                  <Text style={styles.optionText}>
-                    {item === '' ? clearText : item}
-                  </Text>
-                </TouchableOpacity>
-              )}
-              contentContainerStyle={{ paddingBottom: 12 }}
-              showsVerticalScrollIndicator={false}
-            />
-          </View>
-        </Pressable>
-      </Modal>
+      {expanded && (
+        <Modal visible transparent animationType="fade" statusBarTranslucent>
+          <TouchableWithoutFeedback onPress={() => setExpanded(false)}>
+            <View style={styles.backdrop}>
+              <View
+                style={[
+                  styles.sheet,
+                  {
+                    top: sheetPos.top,
+                    left: sheetPos.left,
+                    width: sheetPos.width,
+                    maxHeight: sheetPos.maxHeight,
+                    borderBottomRightRadius: sheetPos.openUpwards ? 8 : 0,
+                    borderBottomLeftRadius: sheetPos.openUpwards ? 8 : 0,
+                    borderTopLeftRadius: sheetPos.openUpwards ? 0 : 8,
+                    borderTopRightRadius: sheetPos.openUpwards ? 0 : 8,
+                  },
+                ]}
+              >
+                <FlatList
+                  data={fullData}
+                  keyExtractor={(item) => item.value + item.label}
+                  renderItem={({ item }) => (
+                    <TouchableOpacity
+                      style={styles.option}
+                      activeOpacity={0.8}
+                      onPress={() => onSelect(item)}
+                    >
+                      <Text
+                        style={[
+                          styles.optionText,
+                          item.value === value?.value && { fontWeight: '600' },
+                        ]}
+                      >
+                        {item.label}
+                      </Text>
+                    </TouchableOpacity>
+                  )}
+                  ItemSeparatorComponent={() => (
+                    <View style={styles.separator} />
+                  )}
+                  showsVerticalScrollIndicator={false}
+                />
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+        </Modal>
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  label: {
-    fontWeight: '500',
-    fontSize: Platform.OS === 'android' ? 13 : 15,
-    marginBottom: 6,
-    color: '#333',
-  },
   button: {
     borderWidth: 1,
     borderColor: '#ccc',
@@ -108,39 +172,30 @@ const styles = StyleSheet.create({
     fontSize: Platform.OS === 'android' ? 14 : 16,
     color: '#000',
   },
-  modalOverlay: {
+  backdrop: {
     flex: 1,
-    justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    backgroundColor: 'rgba(0,0,0,0.15)',
   },
-  modal: {
+  sheet: {
+    position: 'absolute',
     backgroundColor: '#fff',
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
-    paddingVertical: 20,
-    paddingHorizontal: 20,
-    maxHeight: 380,
-    width: screenWidth,
     elevation: 4,
     shadowColor: '#000',
     shadowOpacity: 0.15,
     shadowRadius: 6,
-    shadowOffset: { width: 0, height: -2 },
-  },
-  modalTitle: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    marginBottom: 12,
-    color: '#222',
+    shadowOffset: { width: 0, height: 2 },
+    overflow: 'hidden',
   },
   option: {
     paddingVertical: 12,
-    paddingHorizontal: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    paddingHorizontal: 12,
   },
   optionText: {
     fontSize: 15,
     color: '#333',
+  },
+  separator: {
+    height: 1,
+    backgroundColor: '#eee',
   },
 });

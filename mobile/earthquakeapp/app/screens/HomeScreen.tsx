@@ -29,6 +29,12 @@ export default function HomeScreen() {
 
 
   const text = getLanguageText(language);
+  const regionOptions = [...new Set(reports.map(r => r.region))]
+  .map(o => ({ value: o, label: o }));
+  const districtOptions = [...new Set(reports.filter(r => r.region === region).map(r => r.district))]
+  .map(o => ({ value: o, label: o }));
+  const neighborhoodOptions = [...new Set(reports.filter(r => r.district === district).map(r => r.neighborhood))]
+  .map(o => ({ value: o, label: o }));
 
   useEffect(() => {
     loadLanguage();
@@ -259,34 +265,36 @@ export default function HomeScreen() {
       />
       <View style={{ marginTop: 10, marginBottom: 8, minHeight: 100, overflow: 'hidden' }}>
         <Dropdown
-          label={text.chooseRegionPlaceholder}
-          options={[...new Set(reports.map(r => r.region))]}
+          placeholder={text.chooseRegionPlaceholder}
+          data={regionOptions}
+          clearText={text.clearSelection}
           selectedValue={region}
-          onValueChange={(newRegion) => {
-            setRegion(newRegion);
+          onChange={({ value }) => {
+            setRegion(value);      // - same as before
             setDistrict('');
             setNeighborhood('');
           }}
-          clearText={text.clearSelection}
         />
 
         <Dropdown
-          label={text.chooseDistrictPlaceholder}
-          options={[...new Set(reports.filter(r => r.region === region).map(r => r.district))]}
+          placeholder={text.chooseDistrictPlaceholder}
+          data={districtOptions}
+          clearText={text.clearSelection}
           selectedValue={district}
-          onValueChange={(newDistrict) => {
-            setDistrict(newDistrict);
+          onChange={({ value }) => {
+            setDistrict(value);
             setNeighborhood('');
           }}
-          clearText={text.clearSelection}
         />
 
         <Dropdown
-          label={text.chooseNeighborhoodPlaceholder}
-          options={[...new Set(reports.filter(r => r.district === district).map(r => r.neighborhood))]}
-          selectedValue={neighborhood}
-          onValueChange={setNeighborhood}
+          placeholder={text.chooseNeighborhoodPlaceholder}
+          data={neighborhoodOptions}
           clearText={text.clearSelection}
+          selectedValue={neighborhood}
+          onChange={({ value }) => {
+            setNeighborhood(value);
+          }}
         />
       </View>
 
