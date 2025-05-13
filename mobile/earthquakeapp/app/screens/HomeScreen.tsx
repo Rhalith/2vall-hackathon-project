@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, Text, View, TextInput, Button, Alert } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+import { ScrollView, Text, View, TextInput, Alert, TouchableOpacity, StyleSheet, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform} from 'react-native';
+import RNPickerSelect from 'react-native-picker-select';
 import { router, useFocusEffect } from 'expo-router';
 import { getLanguageText } from '../../utils/language';
 import { isUserLoggedIn, logout } from '../../utils/auth';
@@ -9,6 +9,7 @@ import ReportCard from '../components/ReportCard';
 import { Report } from '../../types/Report';
 import axios from 'axios';
 import { COLORS } from '@/utils/colors';
+import Dropdown from '../components/Dropdown';
 
 export default function HomeScreen() {
   const [reports, setReports] = useState<Report[]>([]);
@@ -69,7 +70,6 @@ export default function HomeScreen() {
     }
   };
 
-
   const applyFilters = () => {
     const query = searchQuery.toLowerCase();
 
@@ -112,7 +112,6 @@ export default function HomeScreen() {
       const response = await axios.get<any[]>('http://192.168.1.144:8080/api/reports'); // Replace with your backend URL
       const rawReports = response.data;
 
-      console.log('Fetched reports:', rawReports);
       // Parse backend short property format
       const parsed = rawReports.map((report: any) => {
         const parts = report.a?.split(' ') || [];
@@ -176,6 +175,20 @@ export default function HomeScreen() {
     setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc'); // Toggle sorting direction
   };
 
+  const StyledButton = ({ title, onPress, active }: { title: string; onPress: () => void; active?: boolean }) => (
+    <TouchableOpacity
+      onPress={onPress}
+      style={{
+        backgroundColor: active ? COLORS.greenDark : COLORS.blue,
+        paddingVertical: 10,
+        paddingHorizontal: 14,
+        borderRadius: 6,
+        margin: 4,
+      }}
+    >
+      <Text style={{ color: 'white', fontWeight: 'bold', textAlign: 'center' }}>{title}</Text>
+    </TouchableOpacity>
+  );
 
   const handleUpdateStatus = async (id: string, newStatus: string) => {
     try {
@@ -204,15 +217,15 @@ export default function HomeScreen() {
 
   return (
     <ScrollView style={{ padding: 16 }}>
-      <View style={{ marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Button title={text.languageSwitch || 'Dil Değiştir'} onPress={handleLanguageSwitch} />
-        <Button title={"MAP"} onPress={() => router.push('/map')} />
-        {userLoggedIn ? (
-          <Button title={text.logout} onPress={() => { logout(); setUserLoggedIn(false); }} />
-        ) : (
-          <Button title={text.login} onPress={() => router.push('/login')} />
-        )}
-      </View>
+<View style={{ marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+  <StyledButton title={text.languageSwitch || 'Dil Değiştir'} onPress={handleLanguageSwitch} />
+  <StyledButton title="MAP" onPress={() => router.push('/map')} />
+  {userLoggedIn ? (
+    <StyledButton title={text.logout} onPress={() => { logout(); setUserLoggedIn(false); }} />
+  ) : (
+    <StyledButton title={text.login} onPress={() => router.push('/login')} />
+  )}
+</View>
 
       <Text style={{ fontSize: 22, fontWeight: 'bold', marginBottom: 16, textAlign: 'center' }}>
         {text.welcome}
@@ -229,66 +242,80 @@ export default function HomeScreen() {
           {text.dataUpdating || 'Veriler güncelleniyor...'}
         </Text>
       )}
-      <TextInput
-        placeholder={text.searchPlaceholder}
-        value={searchQuery}
-        onChangeText={setSearchQuery}
-        style={{ borderWidth: 1, padding: 8, marginBottom: 10 }}
-      />
-      <View style={{
-        marginTop: 10,
-        backgroundColor: '#f3f4f6',
-        marginBottom: 8
-      }}>
-        <Picker selectedValue={region} onValueChange={setRegion} style={{ backgroundColor: '#f2f2f2', marginBottom: 8 }}>
-          <Picker.Item label="İl Seç" value="" />
-          {[...new Set(reports.map(r => r.region))].map(r =>
-            <Picker.Item key={r} label={r} value={r} />
-          )}
-        </Picker>
+<TextInput
+  placeholder={text.searchPlaceholder}
+  placeholderTextColor="#999"
+  value={searchQuery}
+  onChangeText={setSearchQuery}
+  style={{
+    borderWidth: 1,
+    borderColor: '#ccc',
+    backgroundColor: '#fff',
+    padding: 12,
+    borderRadius: 6,
+    marginBottom: 10,
+    color: '#000',
+  }}
+/>
+<View style={{ marginTop: 10, marginBottom: 8, minHeight: 100, overflow: 'hidden' }}>
+<Dropdown
+  label={text.chooseRegionPlaceholder}
+  options={[...new Set(reports.map(r => r.region))]}
+  selectedValue={region}
+  onValueChange={(newRegion) => {
+    setRegion(newRegion);
+    setDistrict('');
+    setNeighborhood('');
+  }}
+  clearText={text.clearSelection}
+/>
 
-        <Picker selectedValue={district} onValueChange={setDistrict} style={{ backgroundColor: '#f2f2f2', marginBottom: 8 }}>
-          <Picker.Item label="İlçe Seç" value="" />
-          {[...new Set(reports.filter(r => r.region === region).map(r => r.district))].map(d =>
-            <Picker.Item key={d} label={d} value={d} />
-          )}
-        </Picker>
+<Dropdown
+  label={text.chooseDistrictPlaceholder}
+  options={[...new Set(reports.filter(r => r.region === region).map(r => r.district))]}
+  selectedValue={district}
+  onValueChange={(newDistrict) => {
+    setDistrict(newDistrict);
+    setNeighborhood('');
+  }}
+  clearText={text.clearSelection}
+/>
 
-        <Picker selectedValue={neighborhood} onValueChange={setNeighborhood} style={{ backgroundColor: '#f2f2f2' }}>
-          <Picker.Item label="Mahalle Seç" value="" />
-          {[...new Set(reports.filter(r => r.district === district).map(r => r.neighborhood))].map(n =>
-            <Picker.Item key={n} label={n} value={n} />
-          )}
-        </Picker>
-      </View>
+<Dropdown
+  label={text.chooseNeighborhoodPlaceholder}
+  options={[...new Set(reports.filter(r => r.district === district).map(r => r.neighborhood))]}
+  selectedValue={neighborhood}
+  onValueChange={setNeighborhood}
+  clearText={text.clearSelection}
+/>
+</View>
 
       <View style={{
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'space-between',
         marginTop: 10,
         gap: 6,
         backgroundColor: '#f3f4f6',
         marginBottom: 8
       }}>
-        {['Yardım Bekliyor', 'Gidildi', 'Asılsız'].map(status => (
-          <Button
-            key={status}
-            title={status}
-            onPress={() =>
-              setStatusFilters(prev => prev.includes(status) ? prev.filter(s => s !== status) : [...prev, status])
-            }
-            color={statusFilters.includes(status) ? COLORS.greenDark : COLORS.blue}
-          />
-        ))}
-        <Button
-          title="Drone ile Doğrulandı"
-          onPress={() => setOnlyDroneValidated(prev => !prev)}
-          color={onlyDroneValidated ? COLORS.greenDark : COLORS.blue}
-        />
+{[text.helpNeeded, text.visited, text.falseReport].map(status => (
+  <StyledButton
+    key={status}
+    title={status}
+    onPress={() =>
+      setStatusFilters(prev => prev.includes(status) ? prev.filter(s => s !== status) : [...prev, status])
+    }
+    active={statusFilters.includes(status)}
+  />
+))}
+<StyledButton
+  title="Drone ile Doğrulandı"
+  onPress={() => setOnlyDroneValidated(prev => !prev)}
+  active={onlyDroneValidated}
+/>
       </View>
 
-      <Button title={text.sortByVictims} onPress={handleSortByVictims} />
+      <StyledButton title={text.sortByVictims} onPress={handleSortByVictims} />
 
       <View style={{ marginTop: 16 }}>
         {filteredReports.map((report, index) => (

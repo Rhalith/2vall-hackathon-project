@@ -32,6 +32,10 @@ export const tr = {
   updateSuccess: 'Durum güncellendi',
   updateError: 'Durum güncellenirken hata oluştu',
   dataUpdating: 'Veri güncelleniyor...',
+  chooseRegionPlaceholder: 'İl Seçiniz',
+  chooseDistrictPlaceholder: 'İlçe Seçiniz',
+  chooseNeighborhoodPlaceholder: 'Mahalle Seçiniz',
+  clearSelection: 'Seçiniz',
 };
 
 export const en = {
@@ -72,6 +76,10 @@ export const en = {
   updateSuccess: 'Status updated successfully',
   updateError: 'Error updating status',
   dataUpdating: 'Data is updating...',
+  chooseRegionPlaceholder: 'Select Region',
+  chooseDistrictPlaceholder: 'Select District',
+  chooseNeighborhoodPlaceholder: 'Select Neighborhood',
+  clearSelection: 'Select',
 };
 
 export const loginTr = {
