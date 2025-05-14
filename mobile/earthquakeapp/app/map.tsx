@@ -166,6 +166,16 @@ export default function MapScreen() {
     Asılsız: text.falseReport,
   };
 
+  const goToLocation = (lat: number, lon: number) => {
+    if (!mapRef.current) return;
+    mapRef.current.animateToRegion({
+      latitude: lat,
+      longitude: lon,
+      latitudeDelta: 0.01,
+      longitudeDelta: 0.01,
+    });
+  };
+
   return (
     <View style={styles.container}>
       {/* Top Bar */}
@@ -284,15 +294,29 @@ export default function MapScreen() {
                     </Text>
                   </View>
                 </View>
-
+                <View style={styles.buttonRow}>
                 <TouchableOpacity
                   onPress={() => handleCopy(r.locationHierarchy, r.id)}
-                  style={styles.copyLink}
+                  style={[styles.actionButton, styles.copyLink]}
                 >
                   <Text style={{ color: "white", fontWeight: "bold" }}>
                     {copiedReportId === r.id ? text.copied : text.shareLocation}
                   </Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    goToLocation(
+                      parseFloat(r.coordinates.latitude),
+                      parseFloat(r.coordinates.longitude)
+                    )
+                  }
+                  style={[styles.actionButton, styles.goButton]}
+                >
+                  <Text style={styles.goButtonText}>
+                    {text.goLocation || "Konuma Git"}
+                  </Text>
+                </TouchableOpacity>
+                </View>
                 {i < selectedMarker.reports.length - 1 && (
                   <View style={styles.divider} />
                 )}
@@ -379,13 +403,6 @@ const styles = StyleSheet.create({
   },
   copyLink: {
     backgroundColor: "#2563eb",
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 6,
-    alignSelf: "flex-start",
-    color: "white",
-    fontWeight: "bold",
-    marginVertical: 8,
   },
 
   info: {
@@ -432,13 +449,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   statusRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginTop: 8,
     gap: 8, // spacing between badges
   },
-
 
   droneStatus: {
     flex: 1,
@@ -450,6 +466,31 @@ const styles = StyleSheet.create({
 
   droneStatusText: {
     fontSize: 14,
+    fontWeight: "bold",
+  },
+  buttonRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: 8,
+    marginTop: 10,
+  },
+  actionButton: {
+    flex: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 6,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  
+
+  goButton: {
+    backgroundColor: "#4ade80",
+  },
+  
+  goButtonText: {
+    color: "#064e3b", // green-900
     fontWeight: "bold",
   },
 });
