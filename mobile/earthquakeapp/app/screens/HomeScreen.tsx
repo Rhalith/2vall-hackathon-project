@@ -4,6 +4,7 @@ import { router, useFocusEffect } from 'expo-router';
 import { getLanguageText } from '../../utils/language';
 import { isUserLoggedIn, logout } from '../../utils/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import ReportCard from '../components/ReportCard';
 import { Report } from '../../types/Report';
 import axios from 'axios';
@@ -222,6 +223,7 @@ export default function HomeScreen() {
   };
 
   return (
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
     <ScrollView style={{ padding: 16 }}>
       <View style={{ marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
         <StyledButton title={text.languageSwitch || 'Dil Değiştir'} onPress={handleLanguageSwitch} />
@@ -344,5 +346,6 @@ export default function HomeScreen() {
         ))}
       </View>
     </ScrollView>
+    </SafeAreaView>
   );
 }

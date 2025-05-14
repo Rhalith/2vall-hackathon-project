@@ -8,6 +8,7 @@ import {
   Dimensions,
 } from "react-native";
 import MapView, { Marker } from "react-native-maps";
+import { SafeAreaView } from "react-native-safe-area-context";
 import * as Clipboard from "expo-clipboard";
 import { router } from "expo-router";
 import { getLanguageText } from "@/utils/language";
@@ -177,155 +178,165 @@ export default function MapScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      {/* Top Bar */}
-      <View style={styles.topBar}>
-        <TouchableOpacity onPress={handleLanguageSwitch} style={styles.button}>
-          <Text style={styles.buttonText}>{text.languageSwitch}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => router.push("/")}
-          style={styles.button}
-        >
-          <Text style={styles.buttonText}>{text.mainPage}</Text>
-        </TouchableOpacity>
-      </View>
-      {/* Timestamps */}
-      {lastUpdated && (
-        <Text style={styles.timestamp}>
-          {language === "TR" ? "Son güncelleme: " : "Last updated: "}
-          {lastUpdated.toLocaleString(language === "TR" ? "tr-TR" : "en-US")}
-        </Text>
-      )}
-      {isRefreshing && (
-        <Text style={styles.timestamp}>{text.dataUpdating}</Text>
-      )}
-      {/* Map */}
-      <MapView ref={mapRef} style={styles.map}>
-        {groupedLocations.map((loc) => (
-          <Marker
-            key={`${loc.lat}-${loc.lon}`}
-            coordinate={{ latitude: loc.lat, longitude: loc.lon }}
-            onPress={() => setSelectedMarker(loc)}
-            tracksViewChanges={
-              selectedMarker?.lat === loc.lat && selectedMarker?.lon === loc.lon
-            }
-          />
-        ))}
-      </MapView>
-      {selectedMarker && <View style={styles.backdrop} />}
-      {selectedMarker && (
-        <View style={[styles.overlayContainer]}>
-          <ScrollView
-            style={styles.scrollArea}
-            contentContainerStyle={styles.scrollContent}
-            showsVerticalScrollIndicator={false}
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+      <View style={styles.container}>
+        {/* Top Bar */}
+        <View style={styles.topBar}>
+          <TouchableOpacity
+            onPress={handleLanguageSwitch}
+            style={styles.button}
           >
-            <TouchableOpacity
-              onPress={() => setSelectedMarker(null)}
-              style={styles.closeButton}
+            <Text style={styles.buttonText}>{text.languageSwitch}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => router.push("/")}
+            style={styles.button}
+          >
+            <Text style={styles.buttonText}>{text.mainPage}</Text>
+          </TouchableOpacity>
+        </View>
+        {/* Timestamps */}
+        {lastUpdated && (
+          <Text style={styles.timestamp}>
+            {language === "TR" ? "Son güncelleme: " : "Last updated: "}
+            {lastUpdated.toLocaleString(language === "TR" ? "tr-TR" : "en-US")}
+          </Text>
+        )}
+        {isRefreshing && (
+          <Text style={styles.timestamp}>{text.dataUpdating}</Text>
+        )}
+        {/* Map */}
+        <MapView ref={mapRef} style={styles.map}>
+          {groupedLocations.map((loc) => (
+            <Marker
+              key={`${loc.lat}-${loc.lon}`}
+              coordinate={{ latitude: loc.lat, longitude: loc.lon }}
+              onPress={() => setSelectedMarker(loc)}
+              tracksViewChanges={
+                selectedMarker?.lat === loc.lat &&
+                selectedMarker?.lon === loc.lon
+              }
+            />
+          ))}
+        </MapView>
+        {selectedMarker && <View style={styles.backdrop} />}
+        {selectedMarker && (
+          <View style={[styles.overlayContainer]}>
+            <ScrollView
+              style={styles.scrollArea}
+              contentContainerStyle={styles.scrollContent}
+              showsVerticalScrollIndicator={false}
             >
-              <Text style={styles.closeText}>×</Text>
-            </TouchableOpacity>
-            {selectedMarker.reports.slice(0, 3).map((r, i) => (
-              <View key={r.id || `${i}`} style={styles.reportBlock}>
-                <Text style={styles.address}>
-                  {r.locationHierarchy ||
-                    (language === "TR" ? "Adres yok" : "No address")}
-                </Text>
+              <TouchableOpacity
+                onPress={() => setSelectedMarker(null)}
+                style={styles.closeButton}
+              >
+                <Text style={styles.closeText}>×</Text>
+              </TouchableOpacity>
+              {selectedMarker.reports.slice(0, 3).map((r, i) => (
+                <View key={r.id || `${i}`} style={styles.reportBlock}>
+                  <Text style={styles.address}>
+                    {r.locationHierarchy ||
+                      (language === "TR" ? "Adres yok" : "No address")}
+                  </Text>
 
-                <Text style={styles.victimInfo}>
-                  {text.estimatedVictims}: {r.victimCount || "—"}
-                </Text>
+                  <Text style={styles.victimInfo}>
+                    {text.estimatedVictims}: {r.victimCount || "—"}
+                  </Text>
 
-                <View style={styles.statusRow}>
-                  <View
-                    style={[
-                      styles.droneStatus,
-                      {
-                        backgroundColor: r.isDroneValidated
-                          ? "#bbf7d0"
-                          : "#fef08a",
-                        borderColor: r.isDroneValidated ? "#bbf7d0" : "#fef08a",
-                      },
-                    ]}
-                  >
-                    <Text
+                  <View style={styles.statusRow}>
+                    <View
                       style={[
-                        styles.droneStatusText,
-                        { color: r.isDroneValidated ? "#065f46" : "#92400e" },
-                      ]}
-                    >
-                      {r.isDroneValidated
-                        ? text.droneValidated
-                        : text.droneNotValidated}
-                    </Text>
-                  </View>
-
-                  <View
-                    style={[
-                      styles.statusBadge,
-                      {
-                        backgroundColor:
-                          r.status === "Yardım Bekliyor"
-                            ? "#fef08a"
-                            : r.status === "Gidildi"
-                            ? "#86efac"
-                            : "#fecaca",
-                      },
-                    ]}
-                  >
-                    <Text
-                      style={[
-                        styles.statusText,
+                        styles.droneStatus,
                         {
-                          color:
-                            r.status === "Yardım Bekliyor"
-                              ? "#92400e"
-                              : r.status === "Gidildi"
-                              ? "#065f46"
-                              : "#b91c1c",
+                          backgroundColor: r.isDroneValidated
+                            ? "#bbf7d0"
+                            : "#fef08a",
+                          borderColor: r.isDroneValidated
+                            ? "#bbf7d0"
+                            : "#fef08a",
                         },
                       ]}
                     >
-                      {statusTranslation[
-                        r.status as keyof typeof statusTranslation
-                      ] || r.status}
-                    </Text>
+                      <Text
+                        style={[
+                          styles.droneStatusText,
+                          { color: r.isDroneValidated ? "#065f46" : "#92400e" },
+                        ]}
+                      >
+                        {r.isDroneValidated
+                          ? text.droneValidated
+                          : text.droneNotValidated}
+                      </Text>
+                    </View>
+
+                    <View
+                      style={[
+                        styles.statusBadge,
+                        {
+                          backgroundColor:
+                            r.status === "Yardım Bekliyor"
+                              ? "#fef08a"
+                              : r.status === "Gidildi"
+                              ? "#86efac"
+                              : "#fecaca",
+                        },
+                      ]}
+                    >
+                      <Text
+                        style={[
+                          styles.statusText,
+                          {
+                            color:
+                              r.status === "Yardım Bekliyor"
+                                ? "#92400e"
+                                : r.status === "Gidildi"
+                                ? "#065f46"
+                                : "#b91c1c",
+                          },
+                        ]}
+                      >
+                        {statusTranslation[
+                          r.status as keyof typeof statusTranslation
+                        ] || r.status}
+                      </Text>
+                    </View>
                   </View>
+                  <View style={styles.buttonRow}>
+                    <TouchableOpacity
+                      onPress={() => handleCopy(r.locationHierarchy, r.id)}
+                      style={[styles.actionButton, styles.copyLink]}
+                    >
+                      <Text style={{ color: "white", fontWeight: "bold" }}>
+                        {copiedReportId === r.id
+                          ? text.copied
+                          : text.shareLocation}
+                      </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      onPress={() =>
+                        goToLocation(
+                          parseFloat(r.coordinates.latitude),
+                          parseFloat(r.coordinates.longitude)
+                        )
+                      }
+                      style={[styles.actionButton, styles.goButton]}
+                    >
+                      <Text style={styles.goButtonText}>
+                        {text.goLocation || "Konuma Git"}
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                  {i < selectedMarker.reports.length - 1 && (
+                    <View style={styles.divider} />
+                  )}
                 </View>
-                <View style={styles.buttonRow}>
-                <TouchableOpacity
-                  onPress={() => handleCopy(r.locationHierarchy, r.id)}
-                  style={[styles.actionButton, styles.copyLink]}
-                >
-                  <Text style={{ color: "white", fontWeight: "bold" }}>
-                    {copiedReportId === r.id ? text.copied : text.shareLocation}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() =>
-                    goToLocation(
-                      parseFloat(r.coordinates.latitude),
-                      parseFloat(r.coordinates.longitude)
-                    )
-                  }
-                  style={[styles.actionButton, styles.goButton]}
-                >
-                  <Text style={styles.goButtonText}>
-                    {text.goLocation || "Konuma Git"}
-                  </Text>
-                </TouchableOpacity>
-                </View>
-                {i < selectedMarker.reports.length - 1 && (
-                  <View style={styles.divider} />
-                )}
-              </View>
-            ))}
-          </ScrollView>
-        </View>
-      )}
-    </View>
+              ))}
+            </ScrollView>
+          </View>
+        )}
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -483,12 +494,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  
 
   goButton: {
     backgroundColor: "#4ade80",
   },
-  
+
   goButtonText: {
     color: "#064e3b", // green-900
     fontWeight: "bold",
