@@ -8,11 +8,9 @@ interface DecodedToken {
 
 export async function isUserLoggedIn(): Promise<boolean> {
   const token = await AsyncStorage.getItem('jwtToken');
-  console.log('Token:', token);
   if (!token) return false;
   try {
     jwtDecode<DecodedToken>(token);
-    console.log('Token is valid');
     return true;
   } catch (err) {
     console.log('Token is invalid:', err);
