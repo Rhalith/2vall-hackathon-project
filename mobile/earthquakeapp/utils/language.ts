@@ -24,7 +24,7 @@ export const tr = {
   welcome: 'Depremzede Raporları',
   searchPlaceholder: 'Konuma göre ara...',
   sortByVictims: 'Mağdur sayısına göre sırala',
-  droneValidated: 'Drone ile Doğrulandı',
+  droneValidated: 'Drone Onaylı',
   droneNotValidated: 'Drone ile Doğrulanmadı',
   login: 'Giriş Yap',
   logout: 'Çıkış Yap',
@@ -38,7 +38,7 @@ export const tr = {
   chooseNeighborhoodPlaceholder: 'Mahalle Seçiniz',
   clearSelection: 'Seçiniz',
   mainPage: 'Ana Sayfa',
-  mapPage: 'Harita',
+  mapPage: 'Tüm Konumları Göster',
 };
 
 export const en = {
@@ -85,7 +85,7 @@ export const en = {
   chooseNeighborhoodPlaceholder: 'Select Neighborhood',
   clearSelection: 'Select',
   mainPage: 'Home',
-  mapPage: 'Map',
+  mapPage: 'Show All Locations',
 };
 
 export const loginTr = {
