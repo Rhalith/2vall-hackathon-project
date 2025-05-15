@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { router, useFocusEffect } from "expo-router";
-import { getLanguageText } from "../../utils/language";
+import { getLanguageText, tr } from "../../utils/language";
 import { isUserLoggedIn, logout } from "../../utils/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -387,12 +387,12 @@ export default function HomeScreen() {
               title={text.helpNeeded}
               onPress={() =>
                 setStatusFilters((prev) =>
-                  prev.includes(text.helpNeeded)
-                    ? prev.filter((s) => s !== text.helpNeeded)
-                    : [...prev, text.helpNeeded]
+                  prev.includes(tr.helpNeeded)
+                    ? prev.filter((s) => s !== tr.helpNeeded)
+                    : [...prev, tr.helpNeeded]
                 )
               }
-              active={statusFilters.includes(text.helpNeeded)}
+              active={statusFilters.includes(tr.helpNeeded)}
             />
           </View>
 
@@ -401,12 +401,12 @@ export default function HomeScreen() {
               title={text.visited}
               onPress={() =>
                 setStatusFilters((prev) =>
-                  prev.includes(text.visited)
-                    ? prev.filter((s) => s !== text.visited)
-                    : [...prev, text.visited]
+                  prev.includes(tr.visited)
+                    ? prev.filter((s) => s !== tr.visited)
+                    : [...prev, tr.visited]
                 )
               }
-              active={statusFilters.includes(text.visited)}
+              active={statusFilters.includes(tr.visited)}
             />
           </View>
 
@@ -423,12 +423,12 @@ export default function HomeScreen() {
               title={text.falseReport}
               onPress={() =>
                 setStatusFilters((prev) =>
-                  prev.includes(text.falseReport)
-                    ? prev.filter((s) => s !== text.falseReport)
-                    : [...prev, text.falseReport]
+                  prev.includes(tr.falseReport)
+                    ? prev.filter((s) => s !== tr.falseReport)
+                    : [...prev, tr.falseReport]
                 )
               }
-              active={statusFilters.includes(text.falseReport)}
+              active={statusFilters.includes(tr.falseReport)}
             />
           </View>
         </View>
