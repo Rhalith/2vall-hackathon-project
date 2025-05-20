@@ -269,23 +269,74 @@ export default function HomeScreen() {
             alignItems: "center",
           }}
         >
-          <StyledButton
-            title={text.languageSwitch || "Dil Değiştir"}
+          <TouchableOpacity
             onPress={handleLanguageSwitch}
-          />
+            style={{
+              borderWidth: 1,
+              borderColor: COLORS.blue,
+              paddingVertical: 10,
+              paddingHorizontal: 14,
+              borderRadius: 6,
+              margin: 4,
+            }}
+          >
+            <Text
+              style={{
+                color: COLORS.blue,
+                fontWeight: "bold",
+                textAlign: "center",
+              }}
+            >
+              {text.languageSwitch || "Dil Değiştir"}
+            </Text>
+          </TouchableOpacity>
           {userLoggedIn ? (
-            <StyledButton
-              title={text.logout}
+            <TouchableOpacity
               onPress={() => {
                 logout();
                 setUserLoggedIn(false);
               }}
-            />
+              style={{
+                borderWidth: 1,
+                borderColor: COLORS.blue,
+                paddingVertical: 10,
+                paddingHorizontal: 14,
+                borderRadius: 6,
+                margin: 4,
+              }}
+            >
+              <Text
+                style={{
+                  color: COLORS.blue,
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}
+              >
+                {text.logout}
+              </Text>
+            </TouchableOpacity>
           ) : (
-            <StyledButton
-              title={text.login}
+            <TouchableOpacity
               onPress={() => router.push("/login")}
-            />
+              style={{
+                borderWidth: 1,
+                borderColor: COLORS.blue,
+                paddingVertical: 10,
+                paddingHorizontal: 14,
+                borderRadius: 6,
+                margin: 4,
+              }}
+            >
+              <Text
+                style={{
+                  color: COLORS.blue,
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}
+              >
+                {text.login}
+              </Text>
+            </TouchableOpacity>
           )}
         </View>
 
@@ -312,10 +363,6 @@ export default function HomeScreen() {
             {lastUpdated.toLocaleString(language === "TR" ? "tr-TR" : "en-US")}
           </Text>
         )}
-        <StyledButton
-          title={text.mapPage}
-          onPress={() => router.push("/map")}
-        />
         <TextInput
           placeholder={text.searchPlaceholder}
           placeholderTextColor="#999"
@@ -327,10 +374,13 @@ export default function HomeScreen() {
             backgroundColor: "#fff",
             padding: 12,
             borderRadius: 6,
-            marginTop: 10,
             marginBottom: 10,
             color: "#000",
           }}
+        />
+        <StyledButton
+          title={text.mapPage}
+          onPress={() => router.push("/map")}
         />
         <View
           style={{

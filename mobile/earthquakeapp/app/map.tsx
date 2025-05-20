@@ -349,12 +349,14 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   button: {
-    backgroundColor: COLORS.blue,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
+    borderWidth: 1,
+    borderColor: COLORS.blue,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
     borderRadius: 6,
+    margin: 4,
   },
-  buttonText: { color: "white", fontWeight: "bold" },
+  buttonText: { color: COLORS.blue, fontWeight: "bold", textAlign: "center" },
   timestamp: { textAlign: "center", marginBottom: 5 },
   map: { flex: 1 },
   backdrop: {
