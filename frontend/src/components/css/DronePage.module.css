@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.topBar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.langButton,
+.homeButton {
+  padding: 8px 14px;
+  background-color: #1f77b4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.langButton:hover,
+.homeButton:hover {
+  background-color: #0053a0;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap; /* Optional: allows wrapping on small screens */
+}
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttonHeader {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #333;
+}
+.droneButton {
+  padding: 14px 28px;
+  background-color: #0a5d30;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-width: 200px;
+}
+
+.droneButton:hover {
+  background-color: #08862b;
+}

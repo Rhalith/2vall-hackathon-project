@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './authcontext/AuthContext';  // Correctly import AuthProvider
 import Home from './components/Home';
 import Login from './components/Login';
+import DronePage from './components/DronePage';
 import Register from './components/Register';
 import PrivateRoute from './components/PrivateRoute';
 import AllLocationsMap from './components/AllLocationsMap'; // Import AllLocationsMap
@@ -25,6 +26,11 @@ const App = () => {
             />
             {/* Home Route */}
             <Route path="/" element={<Home />} />
+            {/* Private Route for ADMIN */}
+            <Route
+              path="/drone"
+              element={<PrivateRoute element={DronePage} roles={['OFFICIAL', 'SUPERADMIN']} />}
+            />
           </Routes>
         </div>
       </AuthProvider>

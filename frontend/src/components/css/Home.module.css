@@ -130,6 +130,35 @@
     background-color: #003d80; /* Darker blue for hover state */
 }
 
+.leftHeader {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .rightHeader {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  
+  .droneButton {
+    background-color: #0a5d30;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .droneButton:hover {
+    background-color: #08862b;
+  }
+
 .allLocationsButton {
     background-color: #1f9d55; /* Accessible green */
     color: white;
