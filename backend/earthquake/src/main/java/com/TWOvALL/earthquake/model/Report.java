@@ -2,6 +2,7 @@ package com.TWOvALL.earthquake.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -11,6 +12,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Setter
 @CompoundIndex(name = "address_unique_idx", def = "{'address': 1}", unique = true)
 public class Report {
+
+    @Id
+    @JsonProperty("i")
+    private String id;
+
     @JsonProperty("a")
     private String address;
 
