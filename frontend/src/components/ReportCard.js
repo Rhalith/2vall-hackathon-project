@@ -255,7 +255,7 @@ export default function ReportCard({ address, victimCount, status, tweet, coordi
       {/* Popup for the Leaflet Map */}
       {isMapOpen && (
         <Popup
-          content={<LeafletMap coordinates={coordinates} address={address} />} // Pass coordinates and address to LeafletMap
+          content={<LeafletMap coordinates={coordinates} address={address} language={language} />} // Pass coordinates and address to LeafletMap
           onClose={toggleMap}
         />
       )}

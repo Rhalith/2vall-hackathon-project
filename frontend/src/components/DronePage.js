@@ -41,7 +41,9 @@ export default function DronePage() {
     const { region, district } = locationInfo[selectedIndex];
 
     const reportsToUpdate = cachedReports.filter(
-      (r) => r.region === region && r.district === district
+      (r) =>
+        (r.region || "").replaceAll(",", "").trim() === region &&
+        (r.district || "").replaceAll(",", "").trim() === district
     );
 
     try {
@@ -56,7 +58,8 @@ export default function DronePage() {
 
       // Update local cached state
       const updated = cachedReports.map((report) =>
-        report.region === region && report.district === district
+        (report.region || "").replaceAll(",", "").trim() === region &&
+        (report.district || "").replaceAll(",", "").trim() === district
           ? { ...report, isDroneValidated: isValid }
           : report
       );
@@ -104,7 +107,9 @@ export default function DronePage() {
     const { name, region, district } = locationInfo[index];
 
     const filtered = cachedReports.filter(
-      (r) => r.region === region && r.district === district
+      (r) =>
+        (r.region || "").replaceAll(",", "").trim() === region &&
+        (r.district || "").replaceAll(",", "").trim() === district
     );
     const victimCount = filtered.reduce(
       (acc, curr) => acc + (curr.victimCount || 0),

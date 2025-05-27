@@ -19,6 +19,8 @@ export default function DroneModal({
       status: "Durum",
       verify: "Doğrula",
       deny: "Reddet",
+      droneValidated: "Drone ile Doğrulandı",
+      droneNotValidated: "Drone ile Doğrulanmadı",
     },
     EN: {
       loading: "Loading...",
@@ -27,6 +29,8 @@ export default function DroneModal({
       status: "Status",
       verify: "Verify",
       deny: "Deny",
+      droneValidated: "Drone Validated",
+      droneNotValidated: "Drone Not Validated",
     },
   };
   if (!isOpen) return null;
@@ -48,7 +52,7 @@ export default function DroneModal({
 
               <div className={styles.statBlock}>
                 <p className={styles.statText}>
-                  Estimated Victim Count:{" "}
+                {text[language].victims}{" : "}
                   <strong>{stats?.victimCount ?? "—"}</strong>
                 </p>
 
@@ -59,8 +63,8 @@ export default function DroneModal({
                       : styles.droneNotValidated
                   }
                 >
-                  Drone Status:{" "}
-                  {stats?.isDroneValidated ? "Validated" : "Not Validated"}
+                  {text[language].status}{" : "}
+                  {stats?.isDroneValidated ? text[language].droneValidated : text[language].droneNotValidated}
                 </div>
               </div>
             </div>

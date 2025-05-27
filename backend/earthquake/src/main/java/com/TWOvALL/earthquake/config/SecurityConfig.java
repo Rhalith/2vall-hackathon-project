@@ -24,7 +24,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())  // Disable CSRF for stateless JWT authentication
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.GET, "/api/reports/**").permitAll()
-                        .requestMatchers("/api/reports/**").authenticated()// Public access to reports
+                        .requestMatchers("/api/reports/**").permitAll() // Public access to reports
                         .requestMatchers("/api/auth/**").permitAll()    // Public access to auth endpoints
                         .requestMatchers("/api/feedback/**").permitAll() // Public access to feedback
                         .anyRequest().authenticated()  // All other requests require authentication

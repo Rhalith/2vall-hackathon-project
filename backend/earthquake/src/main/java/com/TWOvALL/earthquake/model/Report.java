@@ -41,8 +41,8 @@ public class Report {
     @Getter
     @Setter
     public static class Coordinates {
-        @JsonProperty("lat") private double latitude;
-        @JsonProperty("lng") private double longitude;
+        @JsonProperty("lat") private Double latitude;
+        @JsonProperty("lng") private Double longitude;
     }
 
     @Getter

@@ -75,7 +75,8 @@ export default function Home() {
       const reports = response.data;
 
       const parsedReports = reports.map((r) => {
-        const parts = r.a?.split(" ") || [];
+        const cleanedAddress = r.a?.replace(/,/g, "") || ""; // remove all commas
+        const parts = cleanedAddress.split(/\s+/); // split by one or more spaces
         return {
           id: r.i,
           address: r.a,
