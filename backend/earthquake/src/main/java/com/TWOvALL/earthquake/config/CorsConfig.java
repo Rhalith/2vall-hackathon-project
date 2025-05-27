@@ -7,6 +7,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Configuration
@@ -17,10 +18,10 @@ public class CorsConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowCredentials(true); // Allow credentials (e.g., Authorization headers)
-        config.setAllowedOriginPatterns(List.of("http://localhost:3000", "http://localhost:8081", "https://*.ngrok-free.app"));
-        config.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type")); // Allow specific headers
-        config.setAllowedMethods(Arrays.asList("GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS")); // Allow specific HTTP methods
+        config.setAllowCredentials(false); // ÖNEMLİ: false olmazsa "*" çalışmaz
+        config.setAllowedOrigins(Collections.singletonList("*")); // Her yerden istek kabul et
+        config.setAllowedHeaders(Collections.singletonList("*")); // Tüm header'lara izin ver
+        config.setAllowedMethods(Collections.singletonList("*")); // Tüm method'lara izin ver
 
         source.registerCorsConfiguration("/**", config); // Apply to all routes
         return new CorsFilter(source);
