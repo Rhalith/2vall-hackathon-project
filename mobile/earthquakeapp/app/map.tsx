@@ -97,7 +97,7 @@ export default function MapScreen() {
         .map(
           (r) =>
             ({
-              id: r._id?.$oid || "",
+              id: r.i,
               locationHierarchy: r.a || "",
               victimCount: r.v || 0,
               status: r.s || "",

@@ -152,7 +152,7 @@ export default function HomeScreen() {
         }
 
         return {
-          id: report._id?.$oid || "",
+          id: report.i,
           address: report.a,
           tweet: report.t,
           victimCount: report.v,

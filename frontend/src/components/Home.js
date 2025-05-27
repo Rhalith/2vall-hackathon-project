@@ -77,7 +77,7 @@ export default function Home() {
       const parsedReports = reports.map((r) => {
         const parts = r.a?.split(" ") || [];
         return {
-          id: r._id?.$oid || "",
+          id: r.i,
           address: r.a,
           tweet: r.t,
           coordinates: r.c,
