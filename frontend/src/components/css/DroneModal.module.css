@@ -14,10 +14,13 @@
 .modal {
   background: white;
   padding: 20px;
-  width: 90%;
-  max-width: 800px;
+  width: 95%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
   border-radius: 8px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .closeButton {
@@ -47,26 +50,100 @@
   height: auto;
 }
 
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.video {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  border-radius: 6px;
+  object-fit: contain;
 }
 
+/* Responsive image grid */
 .images img {
-  width: calc(33.33% - 10px);
-  border-radius: 4px;
+  width: calc(50% - 10px); /* Eskiden 33.33% idi */
+  max-height: 200px;
   object-fit: cover;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+/* Make layout more mobile-friendly */
+@media (max-width: 768px) {
+  .images img {
+    width: 100%;
+    max-height: 240px;
+  }
+
+  .modal {
+    padding: 12px;
+    width: 98%;
+    max-height: 95vh;
+  }
+
+  .video {
+    max-height: 40vh;
+  }
+
+  .statsSection {
+    font-size: 14px;
+  }
+
+  .verifyButton,
+  .denyButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
 
 .statsSection {
   margin-bottom: 20px;
-  text-align: left;
-  font-size: 15px;
-  color: #333;
+  padding: 16px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.actionButtons {
+.location {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.statText {
+  font-size: 16px;
+  margin: 4px 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.statBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.droneValidated {
+  background-color: #86efac; /* Light green */
+  color: #065f46; /* Dark green */
+  padding: 4px 12px;
+  border-radius: 9999px; /* Pill shape */
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.droneNotValidated {
+  background-color: #fecaca; /* Light red */
+  color: #b91c1c; /* Dark red */
+  padding: 4px 12px;
+  border-radius: 9999px; /* Pill shape */
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 6px;
+}
+ß .actionButtons {
   margin-top: 20px;
   display: flex;
   justify-content: center;

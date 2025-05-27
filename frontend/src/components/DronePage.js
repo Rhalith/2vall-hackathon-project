@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./css/DronePage.module.css";
 import DroneModal from "./DroneModal";
+import api from "./axiosconfig/Api";
 
 export default function DronePage() {
   const [language, setLanguage] = useState("TR");
@@ -14,10 +15,21 @@ export default function DronePage() {
     victimCount: null,
     status: "",
   });
-
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [cachedReports, setCachedReports] = useState([]);
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language");
     if (savedLanguage) setLanguage(savedLanguage);
+
+    const cached = localStorage.getItem("cachedReports");
+    if (cached) {
+      try {
+        const parsed = JSON.parse(cached);
+        setCachedReports(parsed);
+      } catch (err) {
+        console.error("Failed to parse cachedReports:", err);
+      }
+    }
   }, []);
 
   const toggleLanguage = () => {
@@ -25,6 +37,46 @@ export default function DronePage() {
     setLanguage(newLang);
     localStorage.setItem("language", newLang);
   };
+  const handleDroneValidationUpdate = async (isValid) => {
+    const { region, district } = locationInfo[selectedIndex];
+
+    const reportsToUpdate = cachedReports.filter(
+      (r) => r.region === region && r.district === district
+    );
+
+    try {
+      await Promise.all(
+        reportsToUpdate.map((report) =>
+          api.patch(`/api/reports/updateStatus/${report.id}`, {
+            newStatus: report.status, // reusing the same field
+            isDroneValidated: isValid, // new field added to backend
+          })
+        )
+      );
+
+      // Update local cached state
+      const updated = cachedReports.map((report) =>
+        report.region === region && report.district === district
+          ? { ...report, isDroneValidated: isValid }
+          : report
+      );
+
+      setCachedReports(updated);
+      setStats((prev) => ({ ...prev, isDroneValidated: isValid }));
+    } catch (error) {
+      console.error("Error updating drone validation:", error);
+    }
+  };
+
+  const locationInfo = [
+    {
+      name: "Kahramanmaraş Türkoğlu",
+      region: "Kahramanmaraş",
+      district: "Türkoğlu",
+    },
+    { name: "Hatay Antakya", region: "Hatay", district: "Antakya" },
+    { name: "Adıyaman Merkez", region: "Adıyaman", district: "Bahçecik" },
+  ];
 
   const text = {
     TR: {
@@ -49,23 +101,40 @@ export default function DronePage() {
     setModalOpen(true);
     setIsLoading(true);
 
-    const locationNames = [
-      "Kahramanmaraş Türkoğlu",
-      "Hatay Antakya",
-      "Adıyaman Merkez",
-    ];
+    const { name, region, district } = locationInfo[index];
+
+    const filtered = cachedReports.filter(
+      (r) => r.region === region && r.district === district
+    );
+    const victimCount = filtered.reduce(
+      (acc, curr) => acc + (curr.victimCount || 0),
+      0
+    );
+
     setStats({
-      location: locationNames[index],
-      victimCount: Math.floor(Math.random() * 10) + 1,
-      status: "Yardım Bekliyor",
+      location: name,
+      victimCount,
+      isDroneValidated: filtered.some((r) => r.isDroneValidated),
     });
 
-    // Simulate backend delay — later you'll replace this with an actual API call
+    const mediaMap = {
+      0: {
+        images: ["/mock/demo1-1.png", "/mock/demo1-2.png"],
+        video: "/mock/demo1.mp4",
+      },
+      1: {
+        images: ["/mock/demo2-1.png", "/mock/demo2-2.png"],
+        video: "/mock/demo2.mp4",
+      },
+      2: {
+        images: ["/mock/demo3-1.png", "/mock/demo3-2.png"],
+        video: "/mock/demo3.mp4",
+      },
+    };
+    setSelectedIndex(index);
+
     setTimeout(() => {
-      setMedia({
-        images: ["/mock/drone1.jpeg", "/mock/drone2.jpeg", "/mock/drone3.webp"],
-        video: "/mock/sample-video.mp4",
-      });
+      setMedia(mediaMap[index]);
       setIsLoading(false);
     }, 2000);
   };
@@ -106,6 +175,8 @@ export default function DronePage() {
           media={media}
           stats={stats}
           language={language}
+          onVerify={() => handleDroneValidationUpdate(true)}
+          onDeny={() => handleDroneValidationUpdate(false)}
         />
       </div>
     </div>

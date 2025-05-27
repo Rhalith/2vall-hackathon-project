@@ -22,9 +22,15 @@ public class ReportController {
     }
 
     @PatchMapping("/updateStatus/{id}")
-    public ResponseEntity<Report> updateReportStatus(@PathVariable String id, @RequestBody Map<String, String> statusMap) {
-        String newStatus = statusMap.get("newStatus");
-        Report updatedReport = reportService.updateReportStatus(id, newStatus);
+    public ResponseEntity<Report> updateReportStatus(
+            @PathVariable String id,
+            @RequestBody Map<String, Object> statusMap) {
+
+        System.out.println("Received status update for report ID: " + id);
+        String newStatus = (String) statusMap.get("newStatus");
+        Boolean isDroneValidated = (Boolean) statusMap.get("isDroneValidated");
+
+        Report updatedReport = reportService.updateReportStatus(id, newStatus, isDroneValidated);
         return ResponseEntity.ok(updatedReport);
     }
 }

@@ -286,13 +286,21 @@ public class ReportService {
      * @param newStatus the new status to be set.
      * @return the updated report.
      */
-    public Report updateReportStatus(String reportId, String newStatus) {
+    public Report updateReportStatus(String reportId, String newStatus, Boolean isDroneValidated) {
         Optional<Report> reportOptional = reportRepository.findById(reportId);
         if (reportOptional.isPresent()) {
             Report report = reportOptional.get();
-            report.setStatus(newStatus);
-            logger.info("Updated report status for ID: {}", reportId);
-            logger.info("New status: {}", newStatus);
+
+            if (newStatus != null) {
+                report.setStatus(newStatus);
+                logger.info("Updated status for report ID {}: {}", reportId, newStatus);
+            }
+
+            if (isDroneValidated != null) {
+                report.setDroneValidated(isDroneValidated);
+                logger.info("Updated drone validation for report ID {}: {}", reportId, isDroneValidated);
+            }
+
             return reportRepository.save(report);
         } else {
             logger.warn("Report with ID {} not found", reportId);

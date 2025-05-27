@@ -8,6 +8,8 @@ export default function DroneModal({
   media,
   stats,
   language,
+  onVerify,
+  onDeny,
 }) {
   const text = {
     TR: {
@@ -42,19 +44,26 @@ export default function DroneModal({
           <div className={styles.content}>
             {/* Stats Section */}
             <div className={styles.statsSection}>
-              <p>
-                <strong>{text[language].location}:</strong>{" "}
-                {stats?.location || "—"}
-              </p>
-              <p>
-                <strong>{text[language].victims}:</strong>{" "}
-                {stats?.victimCount ?? "—"}
-              </p>
-              <p>
-                <strong>{text[language].status}:</strong> {stats?.status || "—"}
-              </p>
-            </div>
+              <h2 className={styles.location}>{stats?.location || "—"}</h2>
 
+              <div className={styles.statBlock}>
+                <p className={styles.statText}>
+                  Estimated Victim Count:{" "}
+                  <strong>{stats?.victimCount ?? "—"}</strong>
+                </p>
+
+                <div
+                  className={
+                    stats?.isDroneValidated
+                      ? styles.droneValidated
+                      : styles.droneNotValidated
+                  }
+                >
+                  Drone Status:{" "}
+                  {stats?.isDroneValidated ? "Validated" : "Not Validated"}
+                </div>
+              </div>
+            </div>
             {/* Media Section */}
             {media.video && (
               <video className={styles.video} controls>
@@ -71,10 +80,10 @@ export default function DroneModal({
 
             {/* Action Buttons */}
             <div className={styles.actionButtons}>
-              <button className={styles.verifyButton} onClick={onClose}>
+              <button className={styles.verifyButton} onClick={onVerify}>
                 {text[language].verify}
               </button>
-              <button className={styles.denyButton} onClick={onClose}>
+              <button className={styles.denyButton} onClick={onDeny}>
                 {text[language].deny}
               </button>
             </div>
