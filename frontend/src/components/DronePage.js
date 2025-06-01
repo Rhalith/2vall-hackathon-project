@@ -72,13 +72,14 @@ export default function DronePage() {
   };
 
   const locationInfo = [
-    {
-      name: "Kahramanmaraş Türkoğlu",
-      region: "Kahramanmaraş",
-      district: "Türkoğlu",
-    },
     { name: "Hatay Antakya", region: "Hatay", district: "Antakya" },
-    { name: "Adıyaman Merkez", region: "Adıyaman", district: "Bahçecik" },
+    { name: "Gaziantep Şahinbey", region: "Gaziantep", district: "Şahinbey" },
+    {
+      name: "Kahramanmaraş Onikişubat",
+      region: "Kahramanmaraş",
+      district: "Onikişubat",
+    },
+    
   ];
 
   const text = {
@@ -158,7 +159,7 @@ export default function DronePage() {
       <h1 className={styles.title}>{text[language].title}</h1>
 
       <div className={styles.buttonGroup}>
-        {["Kahramanmaraş Türkoğlu", "Hatay Antakya", "Adıyaman Merkez"].map(
+        {["Hatay Antakya", "Gaziantep Şahinbey", "Kahramanmaraş Onikişubat"].map(
           (location, index) => (
             <div key={index} className={styles.buttonWrapper}>
               <div className={styles.buttonHeader}>{location}</div>
